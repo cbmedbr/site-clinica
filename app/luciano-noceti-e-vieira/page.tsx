@@ -3,13 +3,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { MessageCircle, MapPin, Monitor, ArrowLeft, Instagram, Linkedin } from 'lucide-react'
 import DevNav from '@/components/DevNav'
+import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata: Metadata = {
   title: 'Luciano Noceti e Vieira | Psicanalista em Florianópolis — CRP 12/02627',
   description:
     'Psicólogo e psicanalista com 25 anos de experiência em Florianópolis. Atendimento presencial e online. Psicanálise Freudo-Lacaniana. Agende sua consulta.',
-  keywords:
-    'Luciano Noceti, psicanalista Florianópolis, psicanálise, CRP 12/02627',
+  keywords: 'Luciano Noceti, psicanalista Florianópolis, psicanálise, CRP 12/02627',
   openGraph: {
     title: 'Luciano Noceti e Vieira | Psicanalista',
     description: '25 anos de Psicanálise Freudo-Lacaniana. Florianópolis.',
@@ -18,7 +18,6 @@ export const metadata: Metadata = {
   },
 }
 
-/* ─── Links e contato ─── */
 const INSTAGRAM_URL = 'https://instagram.com/clinicalucianonoceti'
 const LINKEDIN_URL: string | null = null
 const WA_LINK =
@@ -27,17 +26,14 @@ const WA_LINK =
     'Olá, venho do site e tenho interesse em realizar um agendamento com o profissional Luciano Noceti e Vieira. Poderia me auxiliar?'
   )
 
-/* ─── Campos condicionais — null = seção não renderiza ─── */
 const MANIFESTO: string | null = null
 
-const POS_GRADUACOES: Array<{
-  tipo: string; curso: string; instituicao: string; ano: string
-}> | null = null
+const POS_GRADUACOES: Array<{ tipo: string; curso: string; instituicao: string; ano: string }> | null = null
 
 const ABORDAGEM_NOME = 'Psicanálise Freudo-Lacaniana'
-const ABORDAGEM_EXPLICADA: string | null = null
+const ABORDAGEM_EXPLICADA: string | null =
+  'A Psicanálise Freudo-Lacaniana parte da escuta singular de cada sujeito para compreender o que está por trás dos sintomas — não como defeitos a corrigir, mas como mensagens do inconsciente que pedem decifração. Com Jacques Lacan, a psicanálise se renova: a linguagem ocupa o centro, e o trabalho clínico revela como nossa história, nossas palavras e nossos vínculos moldam quem somos. O espaço analítico permite falar livremente, sem julgamentos, e descobrir novas possibilidades de ser e de se relacionar.'
 
-/* ─── Config global da clínica — sempre renderiza ─── */
 const PRIMEIRA_SESSAO_PASSOS = [
   'Você entra em contato pelo WhatsApp ou formulário',
   'Agendamos um horário que funcione para você',
@@ -60,26 +56,33 @@ const CONVENIOS = [
 
 export default function LucianoPage() {
   return (
-    <div className="min-h-screen bg-white font-sans text-neutral-800">
+    <div className="min-h-screen font-sans" style={{ background: '#FAF7F4', color: '#2D1A1E' }}>
       <style>{`
-        html { scrollbar-color: #000 #f5f5f5; scrollbar-width: thin; }
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #f5f5f5; }
-        ::-webkit-scrollbar-thumb { background: #000; border-radius: 4px; }
+        html { scrollbar-color: #7C2C3B #FAF7F4; scrollbar-width: thin; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #FAF7F4; }
+        ::-webkit-scrollbar-thumb { background: #7C2C3B; border-radius: 3px; }
+        .tag-pill { transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease; }
+        .tag-pill:hover { background: #7C2C3B; color: white; border-color: #7C2C3B; }
+        .btn-ghost-white { transition: border-color 0.18s ease, color 0.18s ease; }
+        .btn-ghost-white:hover { border-color: rgba(255,255,255,0.5) !important; color: white !important; }
       `}</style>
 
       {/* ── Barra topo ── */}
-      <div className="bg-[#7C2C3B] text-white text-center py-2 px-4">
-        <Link href="/" className="inline-flex items-center gap-1.5 text-xs font-medium opacity-80 hover:opacity-100 transition-opacity">
-          <ArrowLeft className="w-3 h-3" />
-          Voltar para a Clínica Luciano Noceti
-        </Link>
+      <div style={{ background: '#1A0B0E' }} className="py-2.5 px-4">
+        <div className="max-w-5xl mx-auto flex items-center justify-between">
+          <Link href="/" className="inline-flex items-center gap-1.5 text-white/60 hover:text-white text-xs font-medium transition-colors">
+            <ArrowLeft className="w-3 h-3" />
+            Clínica Luciano Noceti
+          </Link>
+          <span className="text-white/30 text-[10px] font-mono tracking-wide">CRP 12/02627</span>
+        </div>
       </div>
 
       {/* ══════════════════════════════════════════════
-          HERO
+          HERO — dark cinematic
       ══════════════════════════════════════════════ */}
-      <section className="relative py-10 px-4 sm:px-6 overflow-hidden">
+      <section className="relative overflow-hidden" style={{ minHeight: '480px' }}>
         <Image
           src="/hero_landing_page.png"
           alt=""
@@ -88,58 +91,82 @@ export default function LucianoPage() {
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(255,255,255,0.72) 0%, rgba(255,255,255,0.45) 50%, rgba(255,255,255,0.15) 100%)' }} />
-        <div className="relative max-w-4xl mx-auto flex flex-col sm:flex-row items-center gap-7">
+        <div
+          className="absolute inset-0"
+          style={{ background: 'linear-gradient(110deg, rgba(26,11,14,0.96) 0%, rgba(26,11,14,0.88) 45%, rgba(26,11,14,0.5) 75%, rgba(26,11,14,0.2) 100%)' }}
+        />
+
+        <div className="relative max-w-5xl mx-auto px-5 sm:px-8 py-14 flex flex-col sm:flex-row items-center gap-10">
 
           {/* Foto */}
-          <div className="flex-shrink-0">
-            <div className="relative w-36 h-36 sm:w-44 sm:h-44 rounded-full overflow-hidden border-4 border-white"
-              style={{ boxShadow: '0 0 0 5px rgba(124,44,59,0.12), 0 12px 40px rgba(0,0,0,0.14)' }}>
-              <Image src="/equipe/luciano_psico.avif" alt="Foto de Luciano Noceti e Vieira, psicanalista"
-                fill className="object-cover" priority sizes="176px" />
+          <div className="order-first sm:order-last flex-shrink-0">
+            <div
+              className="relative w-36 h-36 sm:w-52 sm:h-52 overflow-hidden"
+              style={{
+                borderRadius: '18px',
+                boxShadow: '0 0 0 3px rgba(184,136,58,0.4), 0 20px 60px rgba(0,0,0,0.5)',
+              }}
+            >
+              <Image
+                src="/equipe/luciano_psico.avif"
+                alt="Foto de Luciano Noceti e Vieira, psicanalista"
+                fill
+                className="object-cover"
+                priority
+                sizes="208px"
+              />
             </div>
           </div>
 
           {/* Texto */}
-          <div className="text-center sm:text-left flex-1">
-            <span className="inline-block text-[#7C2C3B] text-[10px] font-bold tracking-[0.22em] uppercase mb-1">
+          <div className="flex-1 text-white text-center sm:text-left">
+            <span
+              className="inline-block text-[10px] font-bold tracking-[0.25em] uppercase mb-3"
+              style={{ color: '#B8883A' }}
+            >
               Psicólogo · Psicanalista · CRP 12/02627
             </span>
-            <h1 className="font-serif font-bold text-slate-800 text-3xl sm:text-4xl leading-tight">
-              Luciano <span className="text-[#7C2C3B]">Noceti e Vieira</span>
+
+            <h1 className="font-serif font-bold leading-tight mb-2" style={{ fontSize: 'clamp(2rem, 5vw, 3rem)' }}>
+              Luciano{' '}
+              <span style={{ color: '#E8B97A' }}>Noceti e Vieira</span>
             </h1>
-            <p className="text-slate-500 text-sm font-medium mt-1 mb-3">
+
+            <p className="text-white/60 text-sm font-medium mb-5">
               Psicanálise Freudo-Lacaniana · 25 anos de experiência
             </p>
 
-            <div className="flex flex-wrap gap-2 justify-center sm:justify-start mb-4">
-              <span className="inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-semibold bg-[#F4E6E9] text-[#7C2C3B] border border-[#7C2C3B]/20">
-                <MapPin className="w-3 h-3" /> Presencial — Florianópolis
+            <div className="flex flex-wrap gap-2 justify-center sm:justify-start mb-6">
+              <span className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full"
+                style={{ background: 'rgba(184,136,58,0.15)', color: '#E8B97A', border: '1px solid rgba(184,136,58,0.3)' }}>
+                <MapPin className="w-3 h-3" /> Presencial · Florianópolis
               </span>
-              <span className="inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-semibold bg-sky-50 text-sky-700 border border-sky-200">
+              <span className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full"
+                style={{ background: 'rgba(255,255,255,0.08)', color: 'rgba(255,255,255,0.75)', border: '1px solid rgba(255,255,255,0.15)' }}>
                 <Monitor className="w-3 h-3" /> Online
               </span>
             </div>
 
-            {/* CTAs */}
             <div className="flex flex-col sm:flex-row flex-wrap gap-2.5 justify-center sm:justify-start">
               <a href={WA_LINK} target="_blank" rel="noopener noreferrer"
                 aria-label="Agendar consulta com Luciano Noceti via WhatsApp"
-                className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-bold text-white transition-all hover:scale-[1.02]"
-                style={{ background: '#7C2C3B', boxShadow: '0 2px 12px rgba(124,44,59,0.3)' }}>
+                className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-2.5 text-sm font-bold transition-all hover:opacity-90 hover:scale-[1.02]"
+                style={{ background: '#7C2C3B', color: 'white', boxShadow: '0 4px 20px rgba(124,44,59,0.45)' }}>
                 <MessageCircle className="w-4 h-4" />
-                Agendar consulta via WhatsApp
+                Agendar via WhatsApp
               </a>
               <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer"
                 aria-label="Instagram da Clínica Luciano Noceti"
-                className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-[#7C2C3B] border-2 border-[#7C2C3B]/30 hover:border-[#7C2C3B] hover:bg-[#FBF0F1] transition-all">
+                className="btn-ghost-white inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold"
+                style={{ color: 'rgba(255,255,255,0.75)', border: '1.5px solid rgba(255,255,255,0.2)' }}>
                 <Instagram className="w-4 h-4" />
                 Instagram
               </a>
               {LINKEDIN_URL && (
                 <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer"
                   aria-label="Perfil LinkedIn de Luciano Noceti e Vieira"
-                  className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-[#0A66C2] border-2 border-[#0A66C2]/30 hover:border-[#0A66C2] hover:bg-blue-50 transition-all">
+                  className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all"
+                  style={{ color: '#93C5FD', border: '1.5px solid rgba(147,197,253,0.3)' }}>
                   <Linkedin className="w-4 h-4" />
                   LinkedIn
                 </a>
@@ -153,156 +180,214 @@ export default function LucianoPage() {
           MANIFESTO (condicional)
       ══════════════════════════════════════════════ */}
       {MANIFESTO && (
-        <section className="py-12 px-4 sm:px-6 bg-white">
-          <div className="max-w-[700px] mx-auto text-center">
-            <span className="block font-serif text-[#7C2C3B] text-6xl leading-none mb-2 select-none">&ldquo;</span>
-            <p className="font-serif text-slate-700 text-xl sm:text-2xl leading-relaxed italic">
-              {MANIFESTO}
+        <section className="py-16 px-5 sm:px-8" style={{ background: 'white' }}>
+          <ScrollReveal className="max-w-2xl mx-auto text-center">
+            <div className="w-px h-10 mx-auto mb-6" style={{ background: 'linear-gradient(to bottom, transparent, #B8883A)' }} />
+            <p className="font-serif text-xl sm:text-2xl leading-relaxed italic" style={{ color: '#2D1A1E' }}>
+              &ldquo;{MANIFESTO}&rdquo;
             </p>
-            <span className="block font-serif text-[#7C2C3B] text-6xl leading-none mt-2 select-none" style={{ transform: 'rotate(180deg)', display: 'inline-block' }}>&ldquo;</span>
+            <div className="w-px h-10 mx-auto mt-6" style={{ background: 'linear-gradient(to bottom, #B8883A, transparent)' }} />
+          </ScrollReveal>
+        </section>
+      )}
+
+      {/* ══════════════════════════════════════════════
+          STATS
+      ══════════════════════════════════════════════ */}
+      <section className="py-8 px-5 sm:px-8" style={{ background: '#FAF7F4' }}>
+        <ScrollReveal>
+          <div className="max-w-5xl mx-auto">
+            <div
+              className="rounded-2xl p-6"
+              style={{
+                background: 'linear-gradient(135deg, #1A0B0E 0%, #2D1A1E 100%)',
+                display: 'grid',
+                gridTemplateColumns: 'repeat(4, 1fr)',
+                gap: '1rem',
+              }}
+            >
+              {[
+                { v: '25+', l: 'anos de carreira' },
+                { v: 'UFSC', l: 'graduação' },
+                { v: '1999', l: 'em atividade desde' },
+                { v: '6', l: 'perfis atendidos' },
+              ].map(({ v, l }) => (
+                <div key={l} className="text-center px-2">
+                  <div className="font-serif font-bold text-2xl sm:text-3xl mb-1" style={{ color: '#E8B97A' }}>{v}</div>
+                  <div className="text-xs leading-tight" style={{ color: 'rgba(255,255,255,0.45)' }}>{l}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </ScrollReveal>
+      </section>
+
+      {/* ══════════════════════════════════════════════
+          ABORDAGEM TERAPÊUTICA
+      ══════════════════════════════════════════════ */}
+      {ABORDAGEM_EXPLICADA && (
+        <section className="py-14 px-5 sm:px-8" style={{ background: 'white' }}>
+          <div className="max-w-5xl mx-auto">
+            <ScrollReveal>
+              <div className="flex flex-col sm:flex-row gap-8 items-start">
+                <div className="sm:w-48 flex-shrink-0">
+                  <div className="w-8 h-px mb-3" style={{ background: '#B8883A' }} />
+                  <span className="text-[10px] font-bold tracking-[0.22em] uppercase block mb-2" style={{ color: '#B8883A' }}>
+                    Abordagem
+                  </span>
+                  <p className="font-serif font-bold text-lg leading-snug" style={{ color: '#2D1A1E' }}>{ABORDAGEM_NOME}</p>
+                </div>
+                <div className="flex-1 sm:pl-8 sm:border-l" style={{ borderColor: 'rgba(184,136,58,0.2)' }}>
+                  <p className="text-sm leading-relaxed" style={{ color: '#5a4044' }}>{ABORDAGEM_EXPLICADA}</p>
+                </div>
+              </div>
+            </ScrollReveal>
           </div>
         </section>
       )}
 
       {/* ══════════════════════════════════════════════
-          STATS + SOBRE (seção unificada)
+          FORMAÇÃO + ATENDIMENTO
       ══════════════════════════════════════════════ */}
-      <section className="py-8 px-4 sm:px-6 bg-white">
-        <div className="max-w-4xl mx-auto">
+      <section className="py-14 px-5 sm:px-8" style={{ background: '#FAF7F4' }}>
+        <div className="max-w-5xl mx-auto grid sm:grid-cols-2 gap-5">
 
-          {/* Stats strip */}
-          <div className="grid grid-cols-4 gap-3 mb-8 p-4 rounded-2xl"
-            style={{ background: '#7C2C3B' }}>
-            {[
-              { v: '25+', l: 'anos de carreira' },
-              { v: 'UFSC', l: 'graduação' },
-              { v: '1999', l: 'em atividade desde' },
-              { v: '6', l: 'perfis atendidos' },
-            ].map(({ v, l }) => (
-              <div key={l} className="text-center">
-                <div className="font-serif font-bold text-white text-xl sm:text-2xl">{v}</div>
-                <div className="text-white/55 text-[10px] mt-0.5 leading-tight">{l}</div>
-              </div>
-            ))}
-          </div>
-
-          {/* Formação + Atendimento lado a lado */}
-          <div className="grid sm:grid-cols-2 gap-6">
-
-            {/* Formação */}
-            <div className="bg-[#FBF0F1] rounded-2xl p-5 border border-[#7C2C3B]/10">
-              <p className="text-[10px] font-bold text-[#7C2C3B] uppercase tracking-widest mb-3">Formação</p>
-              <p className="text-sm text-slate-600 leading-relaxed">
+          <ScrollReveal delay={0} direction="left">
+            <div className="rounded-2xl p-6 h-full" style={{ background: 'white', border: '1px solid rgba(124,44,59,0.08)', boxShadow: '0 2px 16px rgba(26,11,14,0.05)' }}>
+              <span className="text-[10px] font-bold tracking-[0.22em] uppercase block mb-4" style={{ color: '#B8883A' }}>Formação</span>
+              <p className="text-sm leading-relaxed mb-4" style={{ color: '#5a4044' }}>
                 Graduação em Psicologia na UFSC desde 14/09/1999, com formação em Psicanálise pela escola Maiêutica
                 Florianópolis Instituição Psicanalítica. Com 25 anos de carreira, foi professor pela Escola Maiêutica,
                 Palestrante e Consultor de empresas.
               </p>
               {POS_GRADUACOES && POS_GRADUACOES.length > 0 && (
-                <ul className="mt-3 space-y-1 border-t border-[#7C2C3B]/10 pt-3">
+                <ul className="space-y-2 pt-4" style={{ borderTop: '1px solid rgba(124,44,59,0.08)' }}>
                   {POS_GRADUACOES.map((pg, i) => (
-                    <li key={i} className="text-xs text-slate-500 leading-snug">
-                      <span className="font-semibold text-slate-600">{pg.tipo}</span>
-                      {' '}em {pg.curso} —{' '}
-                      <span className="text-slate-400">{pg.instituicao} ({pg.ano})</span>
+                    <li key={i} className="text-xs leading-snug" style={{ color: '#7a5a5e' }}>
+                      <span className="font-semibold" style={{ color: '#2D1A1E' }}>{pg.tipo}</span>
+                      {' '}em {pg.curso}{' '}
+                      <span style={{ color: '#9a7a7e' }}>— {pg.instituicao} ({pg.ano})</span>
                     </li>
                   ))}
                 </ul>
               )}
             </div>
+          </ScrollReveal>
 
-            {/* Atendimento */}
-            <div className="bg-slate-50 rounded-2xl p-5 border border-neutral-100">
-              <p className="text-[10px] font-bold text-[#7C2C3B] uppercase tracking-widest mb-3">Atendimento</p>
-              <div className="space-y-3">
+          <ScrollReveal delay={80} direction="right">
+            <div className="rounded-2xl p-6 h-full" style={{ background: 'white', border: '1px solid rgba(124,44,59,0.08)', boxShadow: '0 2px 16px rgba(26,11,14,0.05)' }}>
+              <span className="text-[10px] font-bold tracking-[0.22em] uppercase block mb-4" style={{ color: '#B8883A' }}>Atendimento</span>
+              <div className="space-y-4">
                 <div className="flex gap-3 items-start">
-                  <div className="w-7 h-7 rounded-lg bg-[#F4E6E9] flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <MapPin className="w-3.5 h-3.5 text-[#7C2C3B]" />
+                  <div className="w-8 h-8 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: '#FAF7F4' }}>
+                    <MapPin className="w-3.5 h-3.5" style={{ color: '#7C2C3B' }} />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-slate-800">Presencial</p>
-                    <p className="text-xs text-slate-500 leading-relaxed">Rua Felipe Schmidt, 515 — Ed. Pórtico, Sala 204<br />Centro, Florianópolis — SC</p>
+                    <p className="text-sm font-semibold mb-0.5" style={{ color: '#2D1A1E' }}>Presencial</p>
+                    <p className="text-xs leading-relaxed" style={{ color: '#7a5a5e' }}>
+                      Rua Felipe Schmidt, 515 — Ed. Pórtico, Sala 204<br />
+                      Centro, Florianópolis — SC
+                    </p>
                   </div>
                 </div>
                 <div className="flex gap-3 items-start">
-                  <div className="w-7 h-7 rounded-lg bg-sky-50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-8 h-8 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: '#F0F7FF' }}>
                     <Monitor className="w-3.5 h-3.5 text-sky-600" />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-slate-800">Online</p>
-                    <p className="text-xs text-slate-500">Para todo o Brasil, via videochamada</p>
+                    <p className="text-sm font-semibold mb-0.5" style={{ color: '#2D1A1E' }}>Online</p>
+                    <p className="text-xs" style={{ color: '#7a5a5e' }}>Para todo o Brasil, via videochamada</p>
                   </div>
                 </div>
-                <div className="pt-1 border-t border-neutral-100">
-                  <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Público</p>
-                  <p className="text-xs text-slate-600">Crianças (10+), Adolescentes, Adultos, Idosos, Casais e Grupos</p>
+                <div className="pt-3" style={{ borderTop: '1px solid rgba(124,44,59,0.08)' }}>
+                  <p className="text-[10px] font-bold tracking-wider uppercase mb-1.5" style={{ color: '#B8883A' }}>Público</p>
+                  <p className="text-xs leading-relaxed" style={{ color: '#5a4044' }}>
+                    Crianças (a partir de 10 anos), Adolescentes, Adultos, Idosos, Casais e Grupos
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* ══════════════════════════════════════════════
-          ABORDAGEM (condicional)
+          ÁREAS DE ATUAÇÃO
       ══════════════════════════════════════════════ */}
-      {ABORDAGEM_EXPLICADA && (
-        <section className="py-8 px-4 sm:px-6 bg-white">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-[#FBF0F1] rounded-2xl p-6 border border-[#7C2C3B]/10">
-              <p className="text-[10px] font-bold text-[#7C2C3B] uppercase tracking-widest mb-2">
-                Abordagem terapêutica
-              </p>
-              <p className="font-serif font-bold text-slate-800 text-lg mb-3">{ABORDAGEM_NOME}</p>
-              <p className="text-sm text-slate-600 leading-relaxed">{ABORDAGEM_EXPLICADA}</p>
+      <section className="py-14 px-5 sm:px-8" style={{ background: '#1A0B0E' }}>
+        <div className="max-w-5xl mx-auto">
+          <ScrollReveal>
+            <div className="flex items-center gap-4 mb-10">
+              <div className="w-8 h-px" style={{ background: '#B8883A' }} />
+              <span className="text-[10px] font-bold tracking-[0.25em] uppercase" style={{ color: '#B8883A' }}>
+                Áreas de atuação
+              </span>
             </div>
-          </div>
-        </section>
-      )}
+          </ScrollReveal>
 
-      {/* ══════════════════════════════════════════════
-          ÁREAS DE ATUAÇÃO — tag cloud flat
-      ══════════════════════════════════════════════ */}
-      <section className="py-8 px-4 sm:px-6 bg-slate-50">
-        <div className="max-w-4xl mx-auto">
-          <p className="text-[10px] font-bold text-[#7C2C3B] uppercase tracking-widest mb-4 text-center">
-            Áreas de atuação
-          </p>
-          <div className="space-y-4">
-            {DEMANDAS.map(({ categoria, itens }) => (
-              <div key={categoria}>
-                <p className="text-[10px] font-bold text-[#7C2C3B] uppercase tracking-widest mb-2">{categoria}</p>
-                <div className="flex flex-wrap gap-1.5">
+          <div className="space-y-7">
+            {DEMANDAS.map(({ categoria, itens }, gi) => (
+              <ScrollReveal key={categoria} delay={gi * 60}>
+                <p className="text-[10px] font-bold tracking-[0.2em] uppercase mb-3" style={{ color: 'rgba(255,255,255,0.35)' }}>
+                  {categoria}
+                </p>
+                <div className="flex flex-wrap gap-2">
                   {itens.map((item) => (
                     <span key={item}
-                      className="inline-block rounded-full bg-white border border-[#7C2C3B]/12 text-neutral-600 text-xs px-3 py-1 font-medium shadow-sm">
+                      className="tag-pill inline-block rounded-full text-xs px-3.5 py-1.5 font-medium cursor-default"
+                      style={{
+                        background: 'rgba(255,255,255,0.06)',
+                        color: 'rgba(255,255,255,0.72)',
+                        border: '1px solid rgba(255,255,255,0.1)',
+                      }}>
                       {item}
                     </span>
                   ))}
                 </div>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
       </section>
 
       {/* ══════════════════════════════════════════════
-          PRIMEIRA SESSÃO (sempre renderiza)
+          PRIMEIRA SESSÃO — timeline
       ══════════════════════════════════════════════ */}
-      <section className="py-8 px-4 sm:px-6 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <p className="text-[10px] font-bold text-[#7C2C3B] uppercase tracking-widest mb-4 text-center">
-            Como é a primeira sessão
-          </p>
-          <div className="bg-slate-50 rounded-2xl p-6 border border-neutral-100 shadow-sm max-w-xl mx-auto">
-            <ol className="space-y-4">
+      <section className="py-14 px-5 sm:px-8" style={{ background: 'white' }}>
+        <div className="max-w-5xl mx-auto">
+          <ScrollReveal>
+            <div className="flex items-center gap-4 mb-10">
+              <div className="w-8 h-px" style={{ background: '#B8883A' }} />
+              <span className="text-[10px] font-bold tracking-[0.25em] uppercase" style={{ color: '#B8883A' }}>
+                Como é a primeira sessão
+              </span>
+            </div>
+          </ScrollReveal>
+
+          <div className="max-w-xl mx-auto sm:mx-0">
+            <ol className="relative pl-1">
+              <div
+                className="absolute left-5 top-5"
+                style={{
+                  width: '1px',
+                  bottom: '20px',
+                  background: 'linear-gradient(to bottom, #B8883A, rgba(124,44,59,0.15))',
+                }}
+              />
               {PRIMEIRA_SESSAO_PASSOS.map((passo, i) => (
-                <li key={i} className="flex gap-4 items-start">
-                  <span className="flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold text-white"
-                    style={{ background: '#7C2C3B' }}>
-                    {i + 1}
-                  </span>
-                  <p className="text-sm text-slate-600 leading-relaxed pt-0.5">{passo}</p>
-                </li>
+                <ScrollReveal key={i} delay={i * 120} direction="left">
+                  <li className="relative flex gap-5 pb-9 last:pb-0">
+                    <div
+                      className="relative z-10 flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold text-white"
+                      style={{ background: '#7C2C3B', boxShadow: '0 0 0 4px rgba(124,44,59,0.12)' }}
+                    >
+                      {i + 1}
+                    </div>
+                    <div className="pt-2.5 flex-1">
+                      <p className="text-sm leading-relaxed" style={{ color: '#5a4044' }}>{passo}</p>
+                    </div>
+                  </li>
+                </ScrollReveal>
               ))}
             </ol>
           </div>
@@ -310,63 +395,76 @@ export default function LucianoPage() {
       </section>
 
       {/* ══════════════════════════════════════════════
-          CONVÊNIOS + CTA (seção unificada)
+          CONVÊNIOS
       ══════════════════════════════════════════════ */}
-      <section className="py-8 px-4 sm:px-6 bg-slate-50">
-        <div className="max-w-4xl mx-auto">
-          <p className="text-[10px] font-bold text-[#7C2C3B] uppercase tracking-widest mb-3 text-center">
-            Convênios aceitos
-          </p>
-          <div className="flex flex-wrap justify-center gap-2 mb-8">
-            {CONVENIOS.map((c) => (
-              <span key={c}
-                className="inline-block rounded-full bg-white text-[#7C2C3B] text-xs px-3.5 py-1 font-medium border border-[#7C2C3B]/15">
-                {c}
-              </span>
-            ))}
-          </div>
-
-          {/* CTA inline */}
-          <div className="rounded-2xl p-6 text-center"
-            style={{ background: 'linear-gradient(135deg, #6B2235 0%, #7C2C3B 60%, #963347 100%)' }}>
-            <p className="font-serif font-bold text-white text-xl sm:text-2xl mb-1">Pronto para começar?</p>
-            <p className="text-white/70 text-sm mb-4">Entre em contato e agende sua primeira consulta.</p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <a href={WA_LINK} target="_blank" rel="noopener noreferrer"
-                aria-label="Agendar consulta com Luciano Noceti via WhatsApp"
-                className="inline-flex items-center justify-center gap-2 bg-white text-[#7C2C3B] font-bold rounded-full px-6 py-2.5 text-sm hover:bg-[#FEF8E6] transition-colors shadow-md">
-                <MessageCircle className="w-4 h-4" />
-                Agendar via WhatsApp
-              </a>
-              <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer"
-                aria-label="Instagram da Clínica Luciano Noceti"
-                className="inline-flex items-center justify-center gap-2 bg-white/10 text-white font-semibold rounded-full px-6 py-2.5 text-sm hover:bg-white/20 border border-white/20 transition-colors">
-                <Instagram className="w-4 h-4" />
-                Seguir no Instagram
-              </a>
+      <section className="py-10 px-5 sm:px-8" style={{ background: '#FAF7F4' }}>
+        <div className="max-w-5xl mx-auto">
+          <ScrollReveal>
+            <span className="text-[10px] font-bold tracking-[0.22em] uppercase block mb-5 text-center" style={{ color: '#B8883A' }}>
+              Convênios aceitos
+            </span>
+            <div className="flex flex-wrap justify-center gap-2">
+              {CONVENIOS.map((c) => (
+                <span key={c}
+                  className="inline-block rounded-full text-xs px-3.5 py-1.5 font-medium"
+                  style={{ background: 'white', color: '#5a4044', border: '1px solid rgba(124,44,59,0.12)' }}>
+                  {c}
+                </span>
+              ))}
             </div>
-          </div>
+          </ScrollReveal>
         </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════
+          CTA FINAL
+      ══════════════════════════════════════════════ */}
+      <section className="py-16 px-5 sm:px-8" style={{ background: '#1A0B0E' }}>
+        <ScrollReveal className="max-w-5xl mx-auto text-center">
+          <div className="w-px h-8 mx-auto mb-8" style={{ background: 'linear-gradient(to bottom, transparent, #B8883A)' }} />
+          <p className="font-serif font-bold text-white mb-2" style={{ fontSize: 'clamp(1.6rem, 4vw, 2.4rem)' }}>
+            Pronto para começar?
+          </p>
+          <p className="text-sm mb-8" style={{ color: 'rgba(255,255,255,0.45)' }}>
+            Entre em contato e agende sua primeira consulta com Luciano.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer"
+              aria-label="Agendar consulta com Luciano Noceti via WhatsApp"
+              className="inline-flex items-center justify-center gap-2 rounded-full px-7 py-3 text-sm font-bold transition-all hover:opacity-90 hover:scale-[1.02]"
+              style={{ background: '#7C2C3B', color: 'white', boxShadow: '0 4px 24px rgba(124,44,59,0.4)' }}>
+              <MessageCircle className="w-4 h-4" />
+              Agendar via WhatsApp
+            </a>
+            <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer"
+              aria-label="Instagram da Clínica Luciano Noceti"
+              className="btn-ghost-white inline-flex items-center justify-center gap-2 rounded-full px-7 py-3 text-sm font-semibold"
+              style={{ color: 'rgba(255,255,255,0.65)', border: '1.5px solid rgba(255,255,255,0.15)' }}>
+              <Instagram className="w-4 h-4" />
+              Seguir no Instagram
+            </a>
+          </div>
+          <div className="w-px h-8 mx-auto mt-8" style={{ background: 'linear-gradient(to bottom, #B8883A, transparent)' }} />
+        </ScrollReveal>
       </section>
 
       <DevNav currentPath="/luciano-noceti-e-vieira" />
 
       {/* ── Rodapé ── */}
-      <footer className="bg-neutral-900 py-5 px-4 text-center">
-        <p className="text-neutral-500 text-xs">
+      <footer style={{ background: '#0E0608' }} className="py-6 px-5 text-center">
+        <p className="text-xs mb-1" style={{ color: 'rgba(255,255,255,0.3)' }}>
           © {new Date().getFullYear()} Clínica Luciano Noceti · Rua Felipe Schmidt, 515, Centro — Florianópolis, SC ·{' '}
-          <Link href="/" className="text-neutral-400 hover:text-white transition-colors">
+          <Link href="/" className="hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.4)' }}>
             Ver todos os profissionais
           </Link>
         </p>
-        <p className="text-neutral-600 text-[10px] mt-1.5">
+        <p className="text-[10px]" style={{ color: 'rgba(255,255,255,0.2)' }}>
           Sigilo profissional garantido conforme o Código de Ética do Psicólogo (CFP).{' '}
-          <Link href="/politica-de-privacidade" className="underline hover:text-neutral-400 transition-colors">
+          <Link href="/politica-de-privacidade" className="underline hover:text-white transition-colors">
             Política de Privacidade
           </Link>
         </p>
       </footer>
-
     </div>
   )
 }
