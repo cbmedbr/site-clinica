@@ -27,10 +27,10 @@ async function main() {
 
   for (const card of CARDS) {
     const page = await browser.newPage()
-    await page.setViewport({ width: 1080, height: 1350, deviceScaleFactor: 1 })
+    await page.setViewport({ width: 1080, height: 1080, deviceScaleFactor: 1 })
     await page.goto(`${BASE_URL}/equipe/neuropsico-carrossel/${card.id}`, { waitUntil: 'networkidle0', timeout: 30000 })
     const out = path.join(OUT_DIR, `${card.name}.png`)
-    await page.screenshot({ path: out, clip: { x: 0, y: 0, width: 1080, height: 1350 } })
+    await page.screenshot({ path: out, clip: { x: 0, y: 0, width: 1080, height: 1080 } })
     await page.close()
     console.log(`  ✓  ${card.name}`)
   }

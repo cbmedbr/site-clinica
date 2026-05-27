@@ -4,7 +4,14 @@
       "Bash(npm run *)",
       "Bash(git add *)",
       "Bash(git commit *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\vienn\\\\clinica-noceti\\\\public\\\\equipe\" -Force)",
+      "Bash(Select-Object FullName, Name)",
+      "Bash(New-Item -ItemType Directory -Force -Path \"c:\\\\Users\\\\vienn\\\\clinica-noceti\\\\app\\\\equipe\\\\neuropsico-export\\\\[id]\")",
+      "Bash(npx tsc *)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\vienn\\clinica-noceti\\app\\equipe\\neuropsico-export"
     ]
   }
 }

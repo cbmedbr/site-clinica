@@ -9,6 +9,12 @@ export interface Prof {
   atendimento: string
   foto: string
   fazNeuropsico?: boolean
+  // campos opcionais para landing pages — null = seção não renderiza
+  linkedin_url?: string | null
+  manifesto?: string | null
+  abordagem_explicada?: string | null
+  pos_graduacoes?: Array<{ tipo: string; curso: string; instituicao: string; ano: string }> | null
+  stats?: Array<{ v: string; l: string }> | null
 }
 
 export function slugify(nome: string): string {
