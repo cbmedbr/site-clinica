@@ -13,20 +13,20 @@ const INSTAGRAM_URL = 'https://instagram.com/clinicalucianonoceti'
 const PRIMEIRA_SESSAO_PASSOS = [
   'Você entra em contato pelo WhatsApp ou formulário',
   'Agendamos um horário que funcione para você',
-  'Na primeira sessão, conversamos sobre o que te trouxe até aqui — sem julgamentos',
+  'Na primeira sessão, conversamos sobre o que te trouxe até aqui, sem julgamentos',
 ]
 
 /* ─── Abordagem auto-text ─── */
 const ABORDAGEM_MAP: Record<string, string> = {
-  'Psicanálise': 'A Psicanálise parte da escuta singular de cada sujeito para compreender o que está por trás dos sintomas — não como defeitos a corrigir, mas como mensagens do inconsciente que pedem decifração. O trabalho analítico abre espaço para que você fale livremente, sem julgamentos, e descubra os vínculos entre sua história, seus padrões e seus sofrimentos.',
-  'TCC': 'A Terapia Cognitivo-Comportamental (TCC) trabalha com a relação entre pensamentos, emoções e comportamentos — identificando padrões que geram sofrimento e construindo, de forma colaborativa, estratégias práticas e eficazes para mudá-los. Focada no presente, com técnicas claras e resultados mensuráveis.',
-  'Neuropsicologia': 'A Neuropsicologia investiga como o funcionamento cerebral se expressa nas capacidades cognitivas — atenção, memória, linguagem, planejamento e aprendizagem. Por meio de avaliações precisas e intervenções baseadas em evidências, orienta tratamentos e adaptações para uma vida mais funcional.',
-  'ABA': 'A Análise do Comportamento Aplicada (ABA) é uma abordagem científica que compreende o comportamento em sua relação com o ambiente. Desenvolve habilidades funcionais, sociais e comunicativas de forma estruturada e individualizada — sempre partindo das forças únicas de cada pessoa.',
-  'Gestalt': 'A Gestalt-Terapia convida para uma presença plena no aqui e agora — trabalhando com o que emerge no encontro terapêutico, nas sensações do corpo e nas emoções. Facilita o contato genuíno consigo mesmo, promovendo consciência, responsabilidade e integração.',
-  'Junguiana': 'A Psicologia Analítica (Junguiana) explora as camadas profundas da psique: arquétipos, complexos e símbolos. Por meio de sonhos, imagens e narrativas, o processo analítico favorece a individuação — o movimento de tornar-se quem você verdadeiramente é.',
-  'Fenomenologia': 'A abordagem fenomenológico-existencial parte da experiência vivida de cada pessoa, sem reduzi-la a diagnósticos ou categorias. O processo terapêutico é um convite à autenticidade — a viver de forma mais consciente, livre e alinhada com quem você quer ser.',
-  'Psicodrama': 'O Psicodrama traz a criatividade e a ação para dentro do espaço terapêutico. Por meio de dramatizações e cenas da vida, é possível reviver e ressignificar experiências de forma viva e transformadora — uma abordagem que fala ao corpo e à emoção.',
-  'Sistêmica Familiar': 'A Terapia Sistêmica Familiar compreende cada pessoa inserida em uma rede de relações — família, cultura, história. Os sintomas fazem parte de padrões relacionais que se repetem entre gerações; o trabalho terapêutico revela esses padrões e abre espaço para novas formas de se conectar.',
+  'Psicanálise': 'A Psicanálise parte da escuta singular de cada sujeito para compreender o que está por trás dos sintomas, não como defeitos a corrigir, mas como mensagens do inconsciente que pedem decifração. O trabalho analítico abre espaço para que você fale livremente, sem julgamentos, e descubra os vínculos entre sua história, seus padrões e seus sofrimentos.',
+  'TCC': 'A Terapia Cognitivo-Comportamental (TCC) trabalha com a relação entre pensamentos, emoções e comportamentos: identifica padrões que geram sofrimento e constrói, de forma colaborativa, estratégias práticas e eficazes para mudá-los. Focada no presente, com técnicas claras e resultados mensuráveis.',
+  'Neuropsicologia': 'A Neuropsicologia investiga como o funcionamento cerebral se expressa nas capacidades cognitivas: atenção, memória, linguagem, planejamento e aprendizagem. Por meio de avaliações precisas e intervenções baseadas em evidências, orienta tratamentos e adaptações para uma vida mais funcional.',
+  'ABA': 'A Análise do Comportamento Aplicada (ABA) é uma abordagem científica que compreende o comportamento em sua relação com o ambiente. Desenvolve habilidades funcionais, sociais e comunicativas de forma estruturada e individualizada, partindo sempre das forças únicas de cada pessoa.',
+  'Gestalt': 'A Gestalt-Terapia convida para uma presença plena no aqui e agora, trabalhando com o que emerge no encontro terapêutico, nas sensações do corpo e nas emoções. Facilita o contato genuíno consigo mesmo, promovendo consciência, responsabilidade e integração.',
+  'Junguiana': 'A Psicologia Analítica (Junguiana) explora as camadas profundas da psique: arquétipos, complexos e símbolos. Por meio de sonhos, imagens e narrativas, o processo analítico favorece a individuação, o movimento de tornar-se quem você verdadeiramente é.',
+  'Fenomenologia': 'A abordagem fenomenológico-existencial parte da experiência vivida de cada pessoa, sem reduzi-la a diagnósticos ou categorias. O processo terapêutico é um convite à autenticidade: viver de forma mais consciente, livre e alinhada com quem você quer ser.',
+  'Psicodrama': 'O Psicodrama traz a criatividade e a ação para dentro do espaço terapêutico. Por meio de dramatizações e cenas da vida, é possível reviver e ressignificar experiências de forma viva e transformadora, uma abordagem que fala ao corpo e à emoção.',
+  'Sistêmica Familiar': 'A Terapia Sistêmica Familiar compreende cada pessoa inserida em uma rede de relações: família, cultura, história. Os sintomas fazem parte de padrões relacionais que se repetem entre gerações; o trabalho terapêutico revela esses padrões e abre espaço para novas formas de se conectar.',
 }
 
 function getAbordagemTexto(filtros: string[], abordagem_explicada?: string | null): string | null {
@@ -88,7 +88,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   const prof = profissionais.find(p => slugify(p.nome) === params.slug)
   if (!prof) return { title: 'Profissional não encontrado' }
   return {
-    title: `${prof.nome} | ${prof.metodo} — ${prof.registro}`,
+    title: `${prof.nome} | ${prof.metodo}, ${prof.registro}`,
     description: `${prof.metodo}. ${prof.publico}`,
     keywords: `${prof.nome}, ${prof.metodo}, psicólogo Florianópolis, ${prof.registro}`,
     openGraph: {
@@ -333,7 +333,7 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
                     <li key={i} className="text-xs leading-snug" style={{ color: '#7a5a5e' }}>
                       <span className="font-semibold" style={{ color: '#2D1A1E' }}>{pg.tipo}</span>
                       {' '}em {pg.curso}{' '}
-                      <span style={{ color: '#9a7a7e' }}>— {pg.instituicao} ({pg.ano})</span>
+                      <span style={{ color: '#9a7a7e' }}>, {pg.instituicao} ({pg.ano})</span>
                     </li>
                   ))}
                 </ul>
@@ -354,8 +354,8 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
                     <div>
                       <p className="text-sm font-semibold mb-0.5" style={{ color: '#2D1A1E' }}>Presencial</p>
                       <p className="text-xs leading-relaxed" style={{ color: '#7a5a5e' }}>
-                        Rua Felipe Schmidt, 515 — Ed. Pórtico, Sala 204<br />
-                        Centro, Florianópolis — SC
+                        Rua Felipe Schmidt, 515, Ed. Pórtico, Sala 204<br />
+                        Centro, Florianópolis, SC
                       </p>
                     </div>
                   </div>
@@ -532,7 +532,7 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
       {/* ── Rodapé ── */}
       <footer style={{ background: '#0E0608' }} className="py-6 px-5 text-center">
         <p className="text-xs mb-1" style={{ color: 'rgba(255,255,255,0.3)' }}>
-          © {new Date().getFullYear()} Clínica Luciano Noceti · Rua Felipe Schmidt, 515, Centro — Florianópolis, SC ·{' '}
+          © {new Date().getFullYear()} Clínica Luciano Noceti · Rua Felipe Schmidt, 515, Centro, Florianópolis, SC ·{' '}
           <Link href="/" className="hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.4)' }}>
             Ver todos os profissionais
           </Link>

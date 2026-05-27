@@ -7,7 +7,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 import { WhatsAppIcon, InstagramIcon, LinkedInIcon } from '@/components/SocialIcons'
 
 export const metadata: Metadata = {
-  title: 'Luciano Noceti e Vieira | Psicanalista em Florianópolis — CRP 12/02627',
+  title: 'Luciano Noceti e Vieira | Psicanalista em Florianópolis, CRP 12/02627',
   description:
     'Psicólogo e psicanalista com 25 anos de experiência em Florianópolis. Atendimento presencial e online. Psicanálise Freudo-Lacaniana. Agende sua consulta.',
   keywords: 'Luciano Noceti, psicanalista Florianópolis, psicanálise, CRP 12/02627',
@@ -33,12 +33,12 @@ const POS_GRADUACOES: Array<{ tipo: string; curso: string; instituicao: string; 
 
 const ABORDAGEM_NOME = 'Psicanálise Freudo-Lacaniana'
 const ABORDAGEM_EXPLICADA: string | null =
-  'A Psicanálise Freudo-Lacaniana parte da escuta singular de cada sujeito para compreender o que está por trás dos sintomas — não como defeitos a corrigir, mas como mensagens do inconsciente que pedem decifração. Com Jacques Lacan, a psicanálise se renova: a linguagem ocupa o centro, e o trabalho clínico revela como nossa história, nossas palavras e nossos vínculos moldam quem somos. O espaço analítico permite falar livremente, sem julgamentos, e descobrir novas possibilidades de ser e de se relacionar.'
+  'A Psicanálise Freudo-Lacaniana parte da escuta singular de cada sujeito para compreender o que está por trás dos sintomas, não como defeitos a corrigir, mas como mensagens do inconsciente que pedem decifração. Com Jacques Lacan, a psicanálise se renova: a linguagem ocupa o centro, e o trabalho clínico revela como nossa história, nossas palavras e nossos vínculos moldam quem somos. O espaço analítico permite falar livremente, sem julgamentos, e descobrir novas possibilidades de ser e de se relacionar.'
 
 const PRIMEIRA_SESSAO_PASSOS = [
   'Você entra em contato pelo WhatsApp ou formulário',
   'Agendamos um horário que funcione para você',
-  'Na primeira sessão, conversamos sobre o que te trouxe até aqui — sem julgamentos',
+  'Na primeira sessão, conversamos sobre o que te trouxe até aqui, sem julgamentos',
 ]
 
 const DEMANDAS = [
@@ -275,7 +275,7 @@ export default function LucianoPage() {
                     <li key={i} className="text-xs leading-snug" style={{ color: '#7a5a5e' }}>
                       <span className="font-semibold" style={{ color: '#2D1A1E' }}>{pg.tipo}</span>
                       {' '}em {pg.curso}{' '}
-                      <span style={{ color: '#9a7a7e' }}>— {pg.instituicao} ({pg.ano})</span>
+                      <span style={{ color: '#9a7a7e' }}>, {pg.instituicao} ({pg.ano})</span>
                     </li>
                   ))}
                 </ul>
@@ -294,8 +294,8 @@ export default function LucianoPage() {
                   <div>
                     <p className="text-sm font-semibold mb-0.5" style={{ color: '#2D1A1E' }}>Presencial</p>
                     <p className="text-xs leading-relaxed" style={{ color: '#7a5a5e' }}>
-                      Rua Felipe Schmidt, 515 — Ed. Pórtico, Sala 204<br />
-                      Centro, Florianópolis — SC
+                      Rua Felipe Schmidt, 515, Ed. Pórtico, Sala 204<br />
+                      Centro, Florianópolis, SC
                     </p>
                   </div>
                 </div>
@@ -462,7 +462,7 @@ export default function LucianoPage() {
       {/* ── Rodapé ── */}
       <footer style={{ background: '#0E0608' }} className="py-6 px-5 text-center">
         <p className="text-xs mb-1" style={{ color: 'rgba(255,255,255,0.3)' }}>
-          © {new Date().getFullYear()} Clínica Luciano Noceti · Rua Felipe Schmidt, 515, Centro — Florianópolis, SC ·{' '}
+          © {new Date().getFullYear()} Clínica Luciano Noceti · Rua Felipe Schmidt, 515, Centro, Florianópolis, SC ·{' '}
           <Link href="/" className="hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.4)' }}>
             Ver todos os profissionais
           </Link>
