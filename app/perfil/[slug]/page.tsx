@@ -2,10 +2,11 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { MessageCircle, MapPin, Monitor, ArrowLeft, Instagram, Linkedin } from 'lucide-react'
+import { MapPin, Monitor, ArrowLeft } from 'lucide-react'
 import { profissionais, slugify } from '@/lib/profissionais'
 import DevNav from '@/components/DevNav'
 import ScrollReveal from '@/components/ScrollReveal'
+import { WhatsAppIcon, InstagramIcon, LinkedInIcon } from '@/components/SocialIcons'
 
 const INSTAGRAM_URL = 'https://instagram.com/clinicalucianonoceti'
 
@@ -217,24 +218,32 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
                 aria-label={`Agendar consulta com ${prof.nome} via WhatsApp`}
                 className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-2.5 text-sm font-bold transition-all hover:opacity-90 hover:scale-[1.02]"
                 style={{ background: '#7C2C3B', color: 'white', boxShadow: '0 4px 20px rgba(124,44,59,0.45)' }}>
-                <MessageCircle className="w-4 h-4" />
+                <WhatsAppIcon className="w-4 h-4" />
                 Agendar via WhatsApp
               </a>
               <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer"
                 aria-label="Instagram da Clínica Luciano Noceti"
                 className="btn-ghost-white inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold"
                 style={{ color: 'rgba(255,255,255,0.75)', border: '1.5px solid rgba(255,255,255,0.2)' }}>
-                <Instagram className="w-4 h-4" />
+                <InstagramIcon className="w-4 h-4" style={{ color: '#E4405F' }} />
                 Instagram
               </a>
-              {prof.linkedin_url && (
+              {prof.linkedin_url ? (
                 <a href={prof.linkedin_url} target="_blank" rel="noopener noreferrer"
                   aria-label={`Perfil LinkedIn de ${prof.nome}`}
-                  className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all"
-                  style={{ color: '#93C5FD', border: '1.5px solid rgba(147,197,253,0.3)' }}>
-                  <Linkedin className="w-4 h-4" />
+                  className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all hover:opacity-90"
+                  style={{ color: '#60A5FA', border: '1.5px solid rgba(10,102,194,0.45)' }}>
+                  <LinkedInIcon className="w-4 h-4" style={{ color: '#0A66C2' }} />
                   LinkedIn
                 </a>
+              ) : (
+                <span
+                  className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold cursor-not-allowed"
+                  style={{ color: 'rgba(255,255,255,0.2)', border: '1.5px solid rgba(255,255,255,0.08)' }}
+                  title="LinkedIn não informado">
+                  <LinkedInIcon className="w-4 h-4" />
+                  LinkedIn
+                </span>
               )}
             </div>
           </div>
@@ -503,14 +512,14 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
               aria-label={`Agendar consulta com ${prof.nome} via WhatsApp`}
               className="inline-flex items-center justify-center gap-2 rounded-full px-7 py-3 text-sm font-bold transition-all hover:opacity-90 hover:scale-[1.02]"
               style={{ background: '#7C2C3B', color: 'white', boxShadow: '0 4px 24px rgba(124,44,59,0.4)' }}>
-              <MessageCircle className="w-4 h-4" />
+              <WhatsAppIcon className="w-4 h-4" />
               Agendar via WhatsApp
             </a>
             <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer"
               aria-label="Instagram da Clínica Luciano Noceti"
               className="btn-ghost-white inline-flex items-center justify-center gap-2 rounded-full px-7 py-3 text-sm font-semibold"
               style={{ color: 'rgba(255,255,255,0.65)', border: '1.5px solid rgba(255,255,255,0.15)' }}>
-              <Instagram className="w-4 h-4" />
+              <InstagramIcon className="w-4 h-4" style={{ color: '#E4405F' }} />
               Seguir no Instagram
             </a>
           </div>
