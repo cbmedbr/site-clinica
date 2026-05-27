@@ -3,15 +3,16 @@
 import { useState, useEffect } from 'react'
 import { Menu, X, MessageCircle } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const navLinks = [
-  { label: 'Início',       href: '#inicio'           },
-  { label: 'Equipe',       href: '#equipe'           },
-  { label: 'Abordagens',   href: '#abordagens'       },
-  { label: 'Testes Neuro', href: '#neuropsicologia', novo: true },
-  { label: 'Convênios',    href: '#convenios'        },
-  { label: 'Sobre',        href: '#sobre'            },
-  { label: 'Contato',      href: '#contato'          },
+  { label: 'Início',       href: '#inicio'                        },
+  { label: 'Equipe',       href: '#equipe'                        },
+  { label: 'Abordagens',   href: '#abordagens'                    },
+  { label: 'Testes Neuro', href: '/avaliacao-neuropsicologica', novo: true },
+  { label: 'Convênios',    href: '#convenios'                     },
+  { label: 'Sobre',        href: '#sobre'                         },
+  { label: 'Contato',      href: '#contato'                       },
 ]
 
 const WA_LINK = 'https://wa.me/5548998056893'
@@ -69,23 +70,40 @@ export default function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-0.5">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={(e) => { e.preventDefault(); handleNav(link.href) }}
-              className="relative px-3 py-2 text-sm font-medium text-neutral-600 hover:text-[#7C2C3B]
-                         rounded-lg hover:bg-[#FBF0F1] transition-all duration-200"
-            >
-              {link.label}
-              {link.novo && (
-                <span className="absolute -top-1.5 -right-1 bg-[#7C2C3B] text-white
-                                 text-[9px] font-bold leading-none px-1.5 py-0.5 rounded-full">
-                  Novo
-                </span>
-              )}
-            </a>
-          ))}
+          {navLinks.map((link) =>
+            link.href.startsWith('/') ? (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="relative px-3 py-2 text-sm font-medium text-neutral-600 hover:text-[#7C2C3B]
+                           rounded-lg hover:bg-[#FBF0F1] transition-all duration-200"
+              >
+                {link.label}
+                {link.novo && (
+                  <span className="absolute -top-1.5 -right-1 bg-[#7C2C3B] text-white
+                                   text-[9px] font-bold leading-none px-1.5 py-0.5 rounded-full">
+                    Novo
+                  </span>
+                )}
+              </Link>
+            ) : (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={(e) => { e.preventDefault(); handleNav(link.href) }}
+                className="relative px-3 py-2 text-sm font-medium text-neutral-600 hover:text-[#7C2C3B]
+                           rounded-lg hover:bg-[#FBF0F1] transition-all duration-200"
+              >
+                {link.label}
+                {link.novo && (
+                  <span className="absolute -top-1.5 -right-1 bg-[#7C2C3B] text-white
+                                   text-[9px] font-bold leading-none px-1.5 py-0.5 rounded-full">
+                    Novo
+                  </span>
+                )}
+              </a>
+            )
+          )}
         </nav>
 
         {/* CTA + Mobile toggle */}
@@ -119,23 +137,41 @@ export default function Header() {
         }`}
       >
         <nav className="bg-white border-t border-neutral-100 px-4 pt-2 pb-24 flex flex-col gap-1">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={(e) => { e.preventDefault(); handleNav(link.href) }}
-              className="relative px-4 py-3 text-sm font-medium text-neutral-700 hover:text-[#7C2C3B]
-                         hover:bg-[#FBF0F1] rounded-xl transition-all duration-200 flex items-center gap-2"
-            >
-              {link.label}
-              {link.novo && (
-                <span className="bg-[#7C2C3B] text-white text-[9px] font-bold
-                                 leading-none px-1.5 py-0.5 rounded-full">
-                  Novo
-                </span>
-              )}
-            </a>
-          ))}
+          {navLinks.map((link) =>
+            link.href.startsWith('/') ? (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                className="relative px-4 py-3 text-sm font-medium text-neutral-700 hover:text-[#7C2C3B]
+                           hover:bg-[#FBF0F1] rounded-xl transition-all duration-200 flex items-center gap-2"
+              >
+                {link.label}
+                {link.novo && (
+                  <span className="bg-[#7C2C3B] text-white text-[9px] font-bold
+                                   leading-none px-1.5 py-0.5 rounded-full">
+                    Novo
+                  </span>
+                )}
+              </Link>
+            ) : (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={(e) => { e.preventDefault(); handleNav(link.href) }}
+                className="relative px-4 py-3 text-sm font-medium text-neutral-700 hover:text-[#7C2C3B]
+                           hover:bg-[#FBF0F1] rounded-xl transition-all duration-200 flex items-center gap-2"
+              >
+                {link.label}
+                {link.novo && (
+                  <span className="bg-[#7C2C3B] text-white text-[9px] font-bold
+                                   leading-none px-1.5 py-0.5 rounded-full">
+                    Novo
+                  </span>
+                )}
+              </a>
+            )
+          )}
           <a
             href={WA_LINK}
             target="_blank"
