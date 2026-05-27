@@ -1229,7 +1229,7 @@ export default function AvaliacaoNeuropsicologicaPage() {
         </p>
       </footer>
 
-      <WhatsAppFab />
+      <WhatsAppFab href={WA_NEURO_LINK} />
     </div>
   )
 }

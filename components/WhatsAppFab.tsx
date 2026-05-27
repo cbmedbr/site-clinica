@@ -3,9 +3,9 @@
 import { useState, useEffect } from 'react'
 import { MessageCircle, X } from 'lucide-react'
 
-const WA_LINK = 'https://wa.me/5548998056893?text=Olá! Gostaria de agendar uma consulta.'
+const WA_DEFAULT = 'https://wa.me/5548998056893?text=Olá! Gostaria de agendar uma consulta.'
 
-export default function WhatsAppFab() {
+export default function WhatsAppFab({ href = WA_DEFAULT }: { href?: string }) {
   const [visible, setVisible]   = useState(false)
   const [tooltip, setTooltip]   = useState(true)
 
@@ -51,7 +51,7 @@ export default function WhatsAppFab() {
 
       {/* Main FAB button */}
       <a
-        href={WA_LINK}
+        href={href}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Agendar pelo WhatsApp"
