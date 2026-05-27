@@ -7,6 +7,7 @@ import {
   BookOpen, MessageSquare, Lightbulb, Award, Heart,
   Star, MapPin, Medal, MessageCircle,
 } from 'lucide-react'
+import HeroNeuralBackground from '@/components/HeroNeuralBackground'
 import ScrollReveal from '@/components/ScrollReveal'
 import WhatsAppFab from '@/components/WhatsAppFab'
 import DevNav from '@/components/DevNav'
@@ -340,15 +341,7 @@ export default function AvaliacaoNeuropsicologicaPage() {
           HERO
       ══════════════════════════════════════════════ */}
       <section className="relative overflow-hidden" style={{ minHeight: '380px', background: '#1A0B0E' }}>
-        <Image
-          src="/heuro-neuro.png"
-          alt=""
-          fill
-          className="object-contain"
-          style={{ objectPosition: 'right center' }}
-          priority
-          sizes="100vw"
-        />
+        <HeroNeuralBackground />
         <div
           className="absolute inset-0"
           style={{
@@ -357,7 +350,7 @@ export default function AvaliacaoNeuropsicologicaPage() {
           }}
         />
 
-        <div className="relative max-w-5xl mx-auto px-5 sm:px-8 py-8 md:py-12 flex flex-col items-start">
+        <div className="relative z-10 max-w-5xl mx-auto px-5 sm:px-8 py-8 md:py-12 flex flex-col items-start">
           {/* Badge */}
           <span
             className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold mb-5"
