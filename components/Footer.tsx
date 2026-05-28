@@ -182,14 +182,16 @@ export default function Footer() {
                 Ver no Google Maps
               </a>
 
-              {/* Mini map placeholder */}
-              <div className="w-full h-28 rounded-xl bg-neutral-700 flex items-center justify-center mt-2 border border-neutral-600">
-                <div className="text-center">
-                  <MapPin className="w-6 h-6 text-neutral-400 mx-auto mb-1" />
-                  <p className="text-neutral-500 text-xs">Mapa interativo</p>
-                  <p className="text-neutral-600 text-[10px]">Incorpore o Google Maps aqui</p>
-                </div>
-              </div>
+              {/* Google Maps embed */}
+              <iframe
+                src="https://maps.google.com/maps?q=Rua+Felipe+Schmidt,+515,+Centro,+Florianópolis,+SC,+88010-001&output=embed"
+                title="Localização da Clínica Luciano Noceti"
+                width="100%"
+                height="112"
+                loading="lazy"
+                className="rounded-xl mt-2"
+                style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg)' }}
+              />
             </div>
           </div>
 
