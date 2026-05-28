@@ -50,7 +50,7 @@ const depoimentos = [
   },
   {
     texto:
-      'Catarina Geoffroi e Rosângela Mezari são ótimas profissionais, super atenciosas, pacientes, e tivemos muita evolução nas terapias com a duplinha de gêmeos!! Encerramos o ciclo para um dos meninos com a tia Rosângela, e seguimos firmes e fortes ainda com a Tia Catarina!!',
+      'Catarina Geoffroy e Rosângela Mezari são ótimas profissionais, super atenciosas, pacientes, e tivemos muita evolução nas terapias com a duplinha de gêmeos!! Encerramos o ciclo para um dos meninos com a tia Rosângela, e seguimos firmes e fortes ainda com a Tia Catarina!!',
     autor: 'F. S.',
     descricao: 'Avaliação Google',
     iniciais: 'FS',
@@ -90,7 +90,7 @@ export default function Depoimentos() {
           {/* Nota agregada */}
           <div className="mt-6 inline-flex items-center gap-3 bg-neutral-50 rounded-full px-5 py-2.5 border border-neutral-100">
             <Stars nota={notaGoogle} />
-            <span className="text-neutral-700 font-semibold text-sm">{notaGoogle.toFixed(1)}</span>
+            <span className="text-neutral-700 font-semibold text-sm">{notaGoogle.toFixed(1).replace('.', ',')}</span>
             <span className="text-neutral-400 text-sm">·</span>
             <span className="text-neutral-500 text-sm">{totalAvaliacoes} avaliações no Google</span>
           </div>

@@ -24,7 +24,8 @@ const ABORDAGEM_MAP: Record<string, string> = {
   'ABA': 'A Análise do Comportamento Aplicada (ABA) é uma abordagem científica que compreende o comportamento em sua relação com o ambiente. Desenvolve habilidades funcionais, sociais e comunicativas de forma estruturada e individualizada, partindo sempre das forças únicas de cada pessoa.',
   'Gestalt': 'A Gestalt-Terapia convida para uma presença plena no aqui e agora, trabalhando com o que emerge no encontro terapêutico, nas sensações do corpo e nas emoções. Facilita o contato genuíno consigo mesmo, promovendo consciência, responsabilidade e integração.',
   'Junguiana': 'A Psicologia Analítica (Junguiana) explora as camadas profundas da psique: arquétipos, complexos e símbolos. Por meio de sonhos, imagens e narrativas, o processo analítico favorece a individuação, o movimento de tornar-se quem você verdadeiramente é.',
-  'Fenomenologia': 'A abordagem fenomenológico-existencial parte da experiência vivida de cada pessoa, sem reduzi-la a diagnósticos ou categorias. O processo terapêutico é um convite à autenticidade: viver de forma mais consciente, livre e alinhada com quem você quer ser.',
+  'Existencialismo': 'A Psicologia Existencialista parte das grandes questões da existência humana: liberdade, responsabilidade, sentido e finitude. Inspirada na filosofia de Sartre, o processo terapêutico convida cada pessoa a se reconhecer como autora de sua própria vida, construindo significado diante das escolhas e dos desafios cotidianos.',
+  'Transpessoal': 'A Psicologia Transpessoal amplia o olhar terapêutico para além do ego, integrando dimensões espirituais, estados de consciência e o potencial humano em sua totalidade. O processo acolhe experiências de sentido profundo, transformação e autoconhecimento que transcendem as narrativas cotidianas.',
   'Psicodrama': 'O Psicodrama traz a criatividade e a ação para dentro do espaço terapêutico. Por meio de dramatizações e cenas da vida, é possível reviver e ressignificar experiências de forma viva e transformadora, uma abordagem que fala ao corpo e à emoção.',
   'Sistêmica Familiar': 'A Terapia Sistêmica Familiar compreende cada pessoa inserida em uma rede de relações: família, cultura, história. Os sintomas fazem parte de padrões relacionais que se repetem entre gerações; o trabalho terapêutico revela esses padrões e abre espaço para novas formas de se conectar.',
 }
@@ -228,7 +229,7 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
                 <InstagramIcon className="w-4 h-4" style={{ color: '#E4405F' }} />
                 Instagram
               </a>
-              {prof.linkedin_url ? (
+              {prof.linkedin_url && (
                 <a href={prof.linkedin_url} target="_blank" rel="noopener noreferrer"
                   aria-label={`Perfil LinkedIn de ${prof.nome}`}
                   className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all hover:opacity-90"
@@ -236,14 +237,6 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
                   <LinkedInIcon className="w-4 h-4" style={{ color: '#0A66C2' }} />
                   LinkedIn
                 </a>
-              ) : (
-                <span
-                  className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold cursor-not-allowed"
-                  style={{ color: 'rgba(255,255,255,0.2)', border: '1.5px solid rgba(255,255,255,0.08)' }}
-                  title="LinkedIn não informado">
-                  <LinkedInIcon className="w-4 h-4" />
-                  LinkedIn
-                </span>
               )}
             </div>
           </div>
