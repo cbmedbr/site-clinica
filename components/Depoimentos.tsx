@@ -50,7 +50,7 @@ const depoimentos = [
   },
   {
     texto:
-      'Catarina Geoffroi e Rosângela Mezari são ótimas profissionais, super atenciosas, pacientes, e tivemos muita evolução nas terapias com a duplinha de gêmeos!! Encerramos o ciclo para um dos meninos com a tia Rosângela, e seguimos firmes e fortes ainda com a Tia Catarina!!',
+      'Catarina Geoffroy e Rosângela Mezari são ótimas profissionais, super atenciosas, pacientes, e tivemos muita evolução nas terapias com a duplinha de gêmeos!! Encerramos o ciclo para um dos meninos com a tia Rosângela, e seguimos firmes e fortes ainda com a Tia Catarina!!',
     autor: 'F. S.',
     descricao: 'Avaliação Google',
     iniciais: 'FS',
