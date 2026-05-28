@@ -229,7 +229,7 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
                 <InstagramIcon className="w-4 h-4" style={{ color: '#E4405F' }} />
                 Instagram
               </a>
-              {prof.linkedin_url ? (
+              {prof.linkedin_url && (
                 <a href={prof.linkedin_url} target="_blank" rel="noopener noreferrer"
                   aria-label={`Perfil LinkedIn de ${prof.nome}`}
                   className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all hover:opacity-90"
@@ -237,14 +237,6 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
                   <LinkedInIcon className="w-4 h-4" style={{ color: '#0A66C2' }} />
                   LinkedIn
                 </a>
-              ) : (
-                <span
-                  className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold cursor-not-allowed"
-                  style={{ color: 'rgba(255,255,255,0.2)', border: '1.5px solid rgba(255,255,255,0.08)' }}
-                  title="LinkedIn não informado">
-                  <LinkedInIcon className="w-4 h-4" />
-                  LinkedIn
-                </span>
               )}
             </div>
           </div>
