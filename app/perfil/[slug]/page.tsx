@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { MapPin, Monitor, ArrowLeft } from 'lucide-react'
 import { profissionais, slugify } from '@/lib/profissionais'
+import { gerarProfissionalLD } from '@/lib/jsonld'
 import DevNav from '@/components/DevNav'
 import ScrollReveal from '@/components/ScrollReveal'
 import { WhatsAppIcon, InstagramIcon, LinkedInIcon } from '@/components/SocialIcons'
@@ -117,8 +118,14 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
       `Olá, venho do site e tenho interesse em realizar um agendamento com o profissional ${prof.nome}. Poderia me auxiliar?`
     )
 
+  const jsonLd = gerarProfissionalLD(prof, params.slug)
+
   return (
     <div className="min-h-screen font-sans" style={{ background: '#FAF7F4', color: '#2D1A1E' }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <style>{`
         html { scrollbar-color: #7C2C3B #FAF7F4; scrollbar-width: thin; }
         ::-webkit-scrollbar { width: 6px; }

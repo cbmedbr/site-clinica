@@ -5,6 +5,7 @@ import { MapPin, Monitor, ArrowLeft } from 'lucide-react'
 import DevNav from '@/components/DevNav'
 import ScrollReveal from '@/components/ScrollReveal'
 import { WhatsAppIcon, InstagramIcon, LinkedInIcon } from '@/components/SocialIcons'
+import { gerarProfissionalLD } from '@/lib/jsonld'
 
 export const metadata: Metadata = {
   title: 'Luciano Noceti e Vieira | Psicanalista em Florianópolis, CRP 12/02627',
@@ -55,9 +56,23 @@ const CONVENIOS = [
   'GEAP', 'CELOS', 'Elosaúde', 'ABEPOM', 'CASACARESC', 'Sim Saúde', 'Fusex', 'Particular',
 ]
 
+const lucianoLD = gerarProfissionalLD(
+  {
+    nome: 'Luciano Noceti e Vieira', registro: 'CRP 12/02627',
+    metodo: 'Psicanálise Freudo-Lacaniana',
+    filtros: ['Psicanálise'], formacao: '', publico: '', demandas: '',
+    atendimento: '', foto: '/equipe/luciano_psico.avif',
+  },
+  'luciano-noceti-e-vieira',
+)
+
 export default function LucianoPage() {
   return (
     <div className="min-h-screen font-sans" style={{ background: '#FAF7F4', color: '#2D1A1E' }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(lucianoLD) }}
+      />
       <style>{`
         html { scrollbar-color: #7C2C3B #FAF7F4; scrollbar-width: thin; }
         ::-webkit-scrollbar { width: 6px; }
