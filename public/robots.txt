@@ -2,3 +2,4 @@ User-agent: *
 Disallow: /equipe/card-export/
 Disallow: /equipe/neuropsico-export/
 Disallow: /equipe/neuropsico-carrossel/
+Sitemap: https://www.lucianonoceti.com.br/sitemap.xml
