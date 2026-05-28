@@ -188,7 +188,7 @@ export const profissionais: Prof[] = [
     nome: 'Débora Laryssa Thibes Santos',
     registro: 'CRP 12/12212',
     metodo: 'Transpessoal',
-    filtros: ['Fenomenologia'],
+    filtros: ['Transpessoal'],
     formacao: 'Graduação em Psicologia pela Universidade do Oeste de Santa Catarina (UNOESC). Pós-graduação em Tanatologia pela Unyleya. Pós-graduação em Psicologia Clínica pela Universidade do Oeste de Santa Catarina (UNOESC). Pós-graduação em Psicologia Transpessoal pelo Instituto Zen.',
     publico: 'Adolescentes (a partir de 13 anos), Adultos e Casais. Atendimento exclusivamente na modalidade On-line.',
     demandas: 'Acompanhamento em Processos de Luto: Suporte especializado para lidar com a perda de entes queridos e "lutos simbólicos", como términos de relacionamento, mudanças de cidade e transições de carreira. Cuidado em Saúde Mental: Acolhimento em momentos de ansiedade profunda, esgotamento emocional (Burnout), estados de tristeza e oscilações de humor, focando no resgate do equilíbrio integral. Travessias de Vida e Crises Existenciais: Auxílio na busca por sentido e propósito em momentos de mudança, como a preparação para a aposentadoria e crises de identidade. Fortalecimento após Traumas: Atendimento sensível para superação de violências (emocionais ou físicas) e vivências traumáticas, visando a reconstrução da segurança interna. Conflitos e Vínculos: Mediação de dificuldades em relacionamentos amorosos e familiares, promovendo comunicações mais conscientes e saudáveis. Saúde Mental Materna: Suporte emocional durante o puerpério e os desafios de ajustamento à maternidade. Avaliações Específicas: Realização de avaliação psicológica para cirurgia bariátrica e procedimentos de esterilização.',
