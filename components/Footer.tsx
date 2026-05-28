@@ -165,9 +165,9 @@ export default function Footer() {
                 <MapPin className="w-4 h-4 text-[#FCECBF] flex-shrink-0 mt-0.5" />
                 <div className="text-sm text-neutral-300 leading-relaxed">
                   <p>Rua Felipe Schmidt, 515</p>
-                  <p>Edifício Pórtico — 2º andar</p>
+                  <p>Edifício Pórtico - 2º andar</p>
                   <p>Salas 201, 202, 203, 204, 205, 206, 210 e 212</p>
-                  <p>Centro — Florianópolis — SC</p>
+                  <p>Centro - Florianópolis - SC</p>
                   <p className="text-neutral-500">CEP 88010-001</p>
                 </div>
               </div>

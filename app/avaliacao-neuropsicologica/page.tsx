@@ -1192,7 +1192,7 @@ export default function AvaliacaoNeuropsicologicaPage() {
               (48) 99190-8715
             </p>
             <p className="text-xs" style={{ color: 'rgba(255,255,255,0.3)' }}>
-              Rua Felipe Schmidt, 515 · Edifício Pórtico · Sala 204 · Centro · Florianópolis/SC
+              Rua Felipe Schmidt, 515 · Edifício Pórtico · 2º andar · Sala 204 · Centro · Florianópolis/SC
             </p>
           </div>
 
