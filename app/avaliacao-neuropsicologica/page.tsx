@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 }
 
 const WA_NEURO_LINK =
-  'https://wa.me/554891908715?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20Avalia%C3%A7%C3%A3o%20Neuropsicol%C3%B3gica'
+  'https://wa.me/5548991908715?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20Avalia%C3%A7%C3%A3o%20Neuropsicol%C3%B3gica'
 
 const paragrafosOQueE = [
   'A avaliação neuropsicológica é um processo clínico que investiga, em profundidade, como funcionam diferentes áreas da mente. Examinamos inteligência, atenção em suas modalidades sustentada, seletiva e alternada, memória imediata, operacional e de longo prazo, e funções executivas como planejamento, controle inibitório e flexibilidade cognitiva.',
