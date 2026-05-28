@@ -364,7 +364,7 @@ export const profissionais: Prof[] = [
     nome: 'Monica Scultori',
     registro: 'CRP 12/19265',
     metodo: 'Existencialista Sartreana',
-    filtros: ['Fenomenologia'],
+    filtros: ['Existencialismo'],
     formacao: 'Psicóloga com formação na abordagem Existencialista Sartreana; Perita Judicial no Tribunal de Justiça de Santa Catarina (Vara da Familia); Pós-graduação: Tanatologia (Psicologia da Morte e do Morrer);Especialização: Suicidologia, Desastres Aéreos, Desastres Naturais, Diversidade Sexual.',
     publico: 'Atende Adolescentes a partir de 16 anos, Adultos, Idosos. Atendimento Presencial e On-line.',
     demandas: 'Especializada em oferecer suporte a pessoas em momentos de perda, luto (luto social, luto simbólico, luto parental, luto conjugal, luto por suicídio, luto por morte súbita, luto por morte violenta, luto por separação ou divórcio, luto por perda da saúde, luto pela perda do pet, luto por perda funcional, luto migratório, luto institucional). Síndrome do Ninho Vazio, Mães Atípicas, Mães de Anjos e Mães Neurodivergentes, Ansiedade, Depressão, Medo, Fobia Social. Dependência Emocional, Crises Existenciais, Traumas, Estresse, Estresse Pós-Traumático, Depêndencia Química, Alcoolismo, Violência Doméstica, Violências Sexuais, Distúrbios Alimentares (anorexia, bulimia), Transtorno de Imagem, Transtorno de Humor, Bipolar, Bordeline, Abandono de Incapaz, Dificuldades na Dinâmica Conjugal e Afetiva ( Sofrimento no vínculo amoroso, Feridas emocionais na relação, Dores no campo afetivo, Vivências de frustração relacional,  Divórcio/Separação), Bornout, Bulling, Pais em Processo de Filiação Adotiva,Aaspectos relacionados à Identidade de Gênero e à Orientação Sexual,  Desafios no Reconhecimento e Afirmação da Identidade.',
