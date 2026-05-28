@@ -204,6 +204,8 @@ export default function Footer() {
             </p>
             <p className="text-center">
               CRP 12/02627 · Responsável Técnico: Luciano Noceti e Vieira
+              <span className="mx-2 opacity-40">·</span>
+              CRP 12/0565-PJ · Pessoa Jurídica
             </p>
           </div>
         </div>

@@ -8,7 +8,7 @@ import Sobre       from '@/components/Sobre'
 import AvaliacaoNeuropsico from '@/components/AvaliacaoNeuropsico'
 import Abordagens  from '@/components/Abordagens'
 import CorpoClinico from '@/components/CorpoClinico'
-import Depoimentos from '@/components/Depoimentos'
+import AvaliacoesGoogle from '@/components/AvaliacoesGoogle'
 import Convenios   from '@/components/Convenios'
 import Footer      from '@/components/Footer'
 import WhatsAppFab from '@/components/WhatsAppFab'
@@ -43,7 +43,7 @@ export default function Home() {
         <AvaliacaoNeuropsico />
         <Convenios />
         <Sobre />
-        <Depoimentos />
+        <AvaliacoesGoogle />
       </main>
       <Footer />
       <WhatsAppFab />
