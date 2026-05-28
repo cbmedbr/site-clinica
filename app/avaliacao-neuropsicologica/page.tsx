@@ -7,6 +7,7 @@ import {
   BookOpen, MessageSquare, Lightbulb, Award, Heart,
   Star, MapPin, Medal, MessageCircle,
 } from 'lucide-react'
+import { profissionais, slugify } from '@/lib/profissionais'
 import HeroNeuralBackground from '@/components/HeroNeuralBackground'
 import ScrollReveal from '@/components/ScrollReveal'
 import WhatsAppFab from '@/components/WhatsAppFab'
@@ -222,24 +223,9 @@ const instrumentos = [
   },
 ]
 
-const especialistas = [
-  {
-    nome: 'Anna de Lima Estanislau',
-    registro: 'CRP 12/13484',
-    metodo: 'Terapia Cognitivo-Comportamental (TCC) e Neuropsicologia',
-    formacaoDestaque: 'Pós-graduação em Neuropsicologia pela UNIASSELVI (2024)',
-    foto: '/equipe/annaestanislau_psico.avif',
-    slug: 'anna-de-lima-estanislau',
-  },
-  {
-    nome: 'Catarina Geoffroy',
-    registro: 'CRP 12/21876',
-    metodo: 'Terapia Cognitivo-Comportamental (TCC), Neuropsicologia e ABA',
-    formacaoDestaque: 'Pós-graduação em Neuropsicologia pelo IPOG',
-    foto: '/equipe/catarina_neuro.jpeg',
-    slug: 'catarina-geoffroy',
-  },
-]
+const especialistas = profissionais
+  .filter(p => p.fazNeuropsico)
+  .map(p => ({ ...p, slug: slugify(p.nome) }))
 
 // Substituir pelos depoimentos reais de pacientes antes de publicar
 const depoimentos = [
@@ -981,7 +967,7 @@ export default function AvaliacaoNeuropsicologicaPage() {
                       style={{ color: '#7C2C3B' }}
                     />
                     <p className="text-xs" style={{ color: '#5a4044' }}>
-                      {esp.formacaoDestaque}
+                      {esp.formacaoNeuro}
                     </p>
                   </div>
 

@@ -15,6 +15,7 @@ export interface Prof {
   abordagem_explicada?: string | null
   pos_graduacoes?: Array<{ tipo: string; curso: string; instituicao: string; ano: string }> | null
   stats?: Array<{ v: string; l: string }> | null
+  formacaoNeuro?: string | null
 }
 
 export function slugify(nome: string): string {
@@ -94,6 +95,7 @@ export const profissionais: Prof[] = [
     atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, CELOS, Elosaúde, ABEPOM, CASACARESC, SC Saúde, Sim Saúde, GEAP, FUSEX, Petrobras, Saúde Caixa e Particular.',
     foto: '/equipe/annaestanislau_psico.avif',
     fazNeuropsico: true,
+    formacaoNeuro: 'Pós-graduação em Neuropsicologia pela UNIASSELVI (2024)',
   },
   {
     nome: 'Beatriz Zoccoler Beu dos Santos',
@@ -172,6 +174,7 @@ export const profissionais: Prof[] = [
     atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, CELOS, Elosaúde, ABEPOM, CASACARESC, SC Saúde, Sim Saúde, GEAP, FUSEX, Petrobras, Saúde Caixa e Particular.',
     foto: '/equipe/catarina_neuro.jpeg',
     fazNeuropsico: true,
+    formacaoNeuro: 'Pós-graduação em Neuropsicologia pelo IPOG',
   },
   {
     nome: 'Clara Schmidt da Cruz',
