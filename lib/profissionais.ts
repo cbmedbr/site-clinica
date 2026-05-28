@@ -86,9 +86,9 @@ export const profissionais: Prof[] = [
   {
     nome: 'Anna de Lima Estanislau',
     registro: 'CRP 12/13484',
-    metodo: 'Terapia Cognitivo Comportamental (TCC)',
-    filtros: ['TCC'],
-    formacao: 'Bacharel em Psicologia - Faculdade Cesusc - Florianópolis - SC. Especialização em Terapia Cognitivo-Comportamental - Pós Graduação Grupo Cognitivo - Florianópolis - SC. Curso de Equoterapia - ANDE Brasil - Associação Nacional de Equoterapia - Brasília - DF. Curso de Equitadora - ANDE Brasil - Associação Nacional de Equoterapia - Brasília - DF. Pós-graduação em Neuropsicologia pelo Centro Universitário Leonardo da Vinci.',
+    metodo: 'Terapia Cognitivo Comportamental (TCC) e Neuropsicologia',
+    filtros: ['TCC', 'Neuropsicologia'],
+    formacao: 'Bacharel em Psicologia - Faculdade Cesusc - Florianópolis - SC. Especialização em Terapia Cognitivo-Comportamental - Pós Graduação Grupo Cognitivo - Florianópolis - SC. Curso de Equoterapia - ANDE Brasil - Associação Nacional de Equoterapia - Brasília - DF. Curso de Equitadora - ANDE Brasil - Associação Nacional de Equoterapia - Brasília - DF. Pós-graduação em Neuropsicologia pela UNIASSELVI (2024).',
     publico: 'Atende Adultos e Idosos. Atendimento On-line e Presencial.',
     demandas: 'Ansiedade, Compulsões, Depressão, Dor emocional, Estresse, Estresse Pós Traumático, Fobia Social, Fobias Medos, Fobias Morte, Luto, Obesidade, Sexualidade e Identidade de Gênero, Síndrome do Pânico, Suicídio, TOC (Transtorno Obsessivo Compulsivo), TDAH (Transtorno do déficit de atenção com hiperatividade), Transtorno Bipolar, Transtorno de Humor, Transtornos Alimentares (Bulimia, Anorexia, etc), Transtornos do Sono, Pânico, Episódios depressivos, sexualidades, Pessoas vítimas de traumas e preconceitos, Dependência química, Preocupações, Pensamentos recorrentes de perigo ou morte, Pensamentos de autocrítica, Sentimento de culpa, Crenças de incapacidade, entre outros.',
     atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, CELOS, Elosaúde, ABEPOM, CASACARESC, SC Saúde, Sim Saúde, GEAP, FUSEX, Petrobras, Saúde Caixa e Particular.',
