@@ -1,22 +1,34 @@
-export interface Prof {
-  nome: string
-  registro: string
-  metodo: string
-  filtros: string[]
-  formacao: string
-  publico: string
-  demandas: string
-  atendimento: string
-  foto: string
-  fazNeuropsico?: boolean
+import { z } from 'zod'
+
+const FILTROS_VALIDOS = [
+  'ABA', 'Existencialismo', 'Gestalt', 'Junguiana', 'Neuropsicologia',
+  'Psicanálise', 'Psicodrama', 'Sistêmica Familiar', 'TCC', 'Transpessoal',
+] as const
+
+export const ProfSchema = z.object({
+  nome:               z.string().min(3),
+  registro:           z.string().regex(/^CRP \d{2}\/\d+$/, 'Formato inválido — esperado "CRP XX/XXXXX"'),
+  metodo:             z.string().min(3),
+  filtros:            z.array(z.enum(FILTROS_VALIDOS)).min(1),
+  formacao:           z.string().min(10),
+  publico:            z.string().min(5),
+  demandas:           z.string().min(10),
+  atendimento:        z.string().min(5),
+  foto:               z.string().regex(/^\/equipe\/.+\.(avif|jpeg|jpg|png)$/, 'Caminho inválido'),
+  fazNeuropsico:      z.boolean().optional(),
   // campos opcionais para landing pages — null = seção não renderiza
-  linkedin_url?: string | null
-  manifesto?: string | null
-  abordagem_explicada?: string | null
-  pos_graduacoes?: Array<{ tipo: string; curso: string; instituicao: string; ano: string }> | null
-  stats?: Array<{ v: string; l: string }> | null
-  formacaoNeuro?: string | null
-}
+  linkedin_url:       z.string().url().nullable().optional(),
+  manifesto:          z.string().nullable().optional(),
+  abordagem_explicada:z.string().nullable().optional(),
+  pos_graduacoes:     z.array(z.object({
+                        tipo: z.string(), curso: z.string(),
+                        instituicao: z.string(), ano: z.string(),
+                      })).nullable().optional(),
+  stats:              z.array(z.object({ v: z.string(), l: z.string() })).nullable().optional(),
+  formacaoNeuro:      z.string().nullable().optional(),
+})
+
+export type Prof = z.infer<typeof ProfSchema>
 
 export function slugify(nome: string): string {
   return nome
@@ -518,3 +530,21 @@ export const profissionais: Prof[] = [
     foto: '/equipe/wicleff_psico.avif',
   },
 ]
+
+// Valida todos os registros em build-time.
+// Se algum estiver malformado, o build falha com mensagem clara indicando
+// qual profissional e qual campo está incorreto.
+try {
+  ProfSchema.array().parse(profissionais)
+} catch (err) {
+  if (err instanceof z.ZodError) {
+    const detalhes = err.issues.map(e => {
+      const idx = Number(e.path[0])
+      const campo = e.path.slice(1).join('.')
+      const nome = profissionais[idx]?.nome ?? `índice ${idx}`
+      return `  [${nome}] campo "${campo}": ${e.message}`
+    }).join('\n')
+    throw new Error(`❌ profissionais.ts: dados inválidos detectados no build:\n${detalhes}`)
+  }
+  throw err
+}

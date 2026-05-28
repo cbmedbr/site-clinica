@@ -8,6 +8,7 @@ import {
   Star, MapPin, Medal, MessageCircle,
 } from 'lucide-react'
 import { profissionais, slugify } from '@/lib/profissionais'
+import { gerarFaqLD } from '@/lib/jsonld'
 import HeroNeuralBackground from '@/components/HeroNeuralBackground'
 import ScrollReveal from '@/components/ScrollReveal'
 import WhatsAppFab from '@/components/WhatsAppFab'
@@ -293,8 +294,14 @@ const faqItems = [
 ]
 
 export default function AvaliacaoNeuropsicologicaPage() {
+  const faqLD = gerarFaqLD(faqItems)
+
   return (
     <div className="min-h-screen font-sans" style={{ background: '#FAF7F4', color: '#2D1A1E' }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLD) }}
+      />
       <style>{`
         html { scrollbar-color: #7C2C3B #FAF7F4; scrollbar-width: thin; }
         ::-webkit-scrollbar { width: 6px; }

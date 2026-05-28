@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, Playfair_Display } from 'next/font/google'
+import { clinicaLD } from '@/lib/jsonld'
 import './globals.css'
 
 const inter = Inter({
@@ -43,6 +44,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${inter.variable} ${playfair.variable}`}>
       <body className="bg-neutral-50 antialiased font-sans text-neutral-800">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(clinicaLD) }}
+        />
         {children}
       </body>
     </html>

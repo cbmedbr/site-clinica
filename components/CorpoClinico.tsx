@@ -231,7 +231,7 @@ export default function CorpoClinico() {
   const visíveis = useMemo(() => {
     return profissionais.filter(p => {
       const filtroInterno = FILTRO_MAP[filtro] ?? filtro
-      const okFiltro = filtro === 'Todos' || p.filtros.includes(filtroInterno)
+      const okFiltro = filtro === 'Todos' || (p.filtros as readonly string[]).includes(filtroInterno)
       const okBusca = busca === '' ||
         p.nome.toLowerCase().includes(busca.toLowerCase()) ||
         p.metodo.toLowerCase().includes(busca.toLowerCase()) ||
@@ -292,7 +292,7 @@ export default function CorpoClinico() {
               {f}
               {f !== 'Todos' && (
                 <span className={`ml-1.5 text-[10px] ${filtro === f ? 'opacity-70' : 'opacity-50'}`}>
-                  ({profissionais.filter(p => p.filtros.includes(FILTRO_MAP[f] ?? f)).length})
+                  ({profissionais.filter(p => (p.filtros as readonly string[]).includes(FILTRO_MAP[f] ?? f)).length})
                 </span>
               )}
             </button>
