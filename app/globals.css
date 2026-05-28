@@ -118,3 +118,39 @@ body {
 
 /* ─── Divider wave ─── */
 .wave-divider svg { display: block; }
+
+/* ─── Hero full-bleed gradient ─── */
+/* Desktop ≥1024: gradiente suave, folhas visíveis à direita */
+.hero-gradient {
+  background: linear-gradient(
+    to right,
+    rgba(124,44,59,1.0)  0%,
+    rgba(124,44,59,1.0)  40%,
+    rgba(124,44,59,0.85) 55%,
+    rgba(124,44,59,0.4)  72%,
+    transparent 90%
+  );
+}
+/* Tablet 768-1023: cobertura maior para manter legibilidade */
+@media (max-width: 1023px) {
+  .hero-gradient {
+    background: linear-gradient(
+      to right,
+      rgba(124,44,59,0.95) 0%,
+      rgba(124,44,59,0.85) 45%,
+      rgba(124,44,59,0.40) 70%,
+      rgba(124,44,59,0.15) 100%
+    );
+  }
+}
+/* Mobile <768: praticamente opaco, folha como textura */
+@media (max-width: 767px) {
+  .hero-gradient {
+    background: linear-gradient(
+      to bottom,
+      rgba(124,44,59,0.93) 0%,
+      rgba(124,44,59,0.90) 60%,
+      rgba(124,44,59,0.88) 100%
+    );
+  }
+}
