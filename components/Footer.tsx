@@ -51,6 +51,7 @@ export default function Footer() {
                     src="/logo/clinica.jpeg"
                     alt="Clínica Luciano Noceti"
                     fill
+                    sizes="56px"
                     className="object-cover scale-[1.35]"
                   />
                 </div>

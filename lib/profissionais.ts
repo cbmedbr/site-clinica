@@ -71,7 +71,7 @@ export const profissionais: Prof[] = [
     publico: 'Atendo adultos e idosos (a partir dos 18 anos). Atendimento On-line.',
     demandas: 'Dependência química (álcool e outras substâncias), ansiedade, depressão, transtorno obsessivo-compulsivo (TOC), conflitos emocionais e relacionais, momentos de crise e angústia.',
     atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, CELOS, ABEPOM, CASACARESC, Sim Saúde, FUSEX, Petrobras, Saúde Caixa e Particular.',
-    foto: '/equipe/andreluiz_psico.jpeg',
+    foto: '/equipe/andreluiz_psico.avif',
   },
   {
     nome: 'André Pagani',
@@ -82,7 +82,7 @@ export const profissionais: Prof[] = [
     publico: 'Atende a partir de 3 anos de idade. Atendimento On-line e Presencial.',
     demandas: 'Depressão, ansiedade, TOC, autismo, desenvolvimento cognitivo, autodesenvolvimento, autoconhecimento, bipolaridade e borderline.',
     atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), FUSEX, CELOS, Elosaúde, Saudesc, CASACARESC, ABEPOM, Sim Saúde, GEAP, SC Saúde e Particular.',
-    foto: '/equipe/andre_psico.jpeg',
+    foto: '/equipe/andre_psico.avif',
   },
   {
     nome: 'Anna de Lima Estanislau',
@@ -139,7 +139,7 @@ export const profissionais: Prof[] = [
     publico: 'Atende Adolescentes a partir dos 13 anos, Adultos e Idosos. Atendimento Presencial.',
     demandas: 'Ansiedade, Depressão, Síndrome do Pânico, Burnout, TOC, Fobias, Luto, TDAH, Transtornos de Personalidade, Trauma, Estresse, Transtorno Bipolar, Dificuldades nos Relacionamentos, Baixa Autoestima, Crises Existenciais, Dificuldades no Trabalho, Conflitos Familiares, Insônia e Distúrbios do Sono, Dor Emocional, Impulsividade, Dificuldade de Concentração, Medos e Inseguranças, Bloqueios Emocionais, Dificuldades na Comunicação, Procrastinação, Perfeccionismo, Solidão, Sensação de Vazio, Culpa e Vergonha, Dificuldades na Tomada de Decisão, Estresse Pós-Traumático, Dependência Emocional, Dificuldades com Limites, Conflitos de Identidade, Irritabilidade, Crises de Choro, Pensamentos Negativos Recorrentes, Fobia Social, Dificuldades na Vida Amorosa, Transições e Mudanças de Vida.',
     atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), FUSEX, CELOS, Elosaúde, Saudesc, CASACARESC, ABEPOM, Sim Saúde, GEAP e Particular.',
-    foto: '/equipe/bruno_psico.jpeg',
+    foto: '/equipe/bruno_psico.avif',
   },
   {
     nome: 'Carolina Rutz de Souza',
@@ -172,7 +172,7 @@ export const profissionais: Prof[] = [
     publico: 'Atendimento à Crianças a partir de 04 (quatro) anos, Adolescentes e Adultos. Atendimento Presencial e On-line a partir de 15 anos.',
     demandas: 'Avaliação neuropsicológica, transtornos de neurodesenvolvimento, dificuldades de aprendizagem, transtornos de ansiedade, transtornos depressivos, transtornos de humor, transtorno de personalidade, transtornos alimentares, luto, estresse, pânico, desenvolvimento de habilidades sociais, estresse pós traumático, gênero e sexualidade, conflitos familiares e de relacionamento, orientação parental.',
     atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, CELOS, Elosaúde, ABEPOM, CASACARESC, SC Saúde, Sim Saúde, GEAP, FUSEX, Petrobras, Saúde Caixa e Particular.',
-    foto: '/equipe/catarina_neuro.jpeg',
+    foto: '/equipe/catarina_neuro.avif',
     fazNeuropsico: true,
     formacaoNeuro: 'Pós-graduação em Neuropsicologia pelo IPOG',
   },
@@ -284,7 +284,7 @@ export const profissionais: Prof[] = [
     publico: 'Atende adolescentes a partir dos 15 anos, Adulto, Idoso. Atendimento Presencial.',
     demandas: 'Atende demandas relacionadas à ansiedade, depressão, inseguranças, medos, sobrecarga emocional, estresse e burnout, dificuldades de sono, procrastinação, solidão, traumas, luto e perdas, automutilação e ideação suicida, imagem corporal, relação com a alimentação e com o corpo, sexualidade, identidade de gênero, vivências LGBTQIA+, preconceito, violência, conflitos familiares, relações amorosas e interpessoais, relações abusivas, separação e reorganização familiar, dificuldades emocionais, comportamentais, sociais e de aprendizagem na adolescência, bullying, transições de vida, mudanças pessoais e profissionais, envelhecimento e adaptação cultural.',
     atendimento: 'Unimed, SC Saúde e Particular.',
-    foto: '/equipe/isabella_psico.jpeg',
+    foto: '/equipe/isabella_psico.avif',
   },
   {
     nome: 'Julia Guidi Leite',
@@ -328,7 +328,7 @@ export const profissionais: Prof[] = [
     publico: 'Atende Adolescentes a partir dos 16 anos, Adultos e Idosos. Atendimento On-line e Presencial. Opção de atendimento em inglês e espanhol.',
     demandas: 'Ansiedade, depressão, pânico, fobia, inibições, dependências, autolesão e ideação, síndromes, transtornos, entre outras faces da saúde mental. Questões de gênero e raça e situações de violência. Sofrimento psíquico derivado de demandas gerais referente ao comportamento, ao social, ao relacional e à aprendizagem e trabalho. Processos de luto e perda, sobrecarga e esgotamento, mudanças corporais, transições de vida, expressão de si, traumas e experiências afins que causam angústia generalizada e outras demandas que possam surgir a partir do vínculo terapêutico.',
     atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, CELOS, Elosaúde, ABEPOM, CASACARESC, Sim Saúde, GEAP, FUSEX, Petrobras, Saúde Caixa e Particular.',
-    foto: '/equipe/Kevin_psico.jpeg',
+    foto: '/equipe/Kevin_psico.avif',
   },
   {
     nome: 'Luciana Elisa Cunha',
@@ -394,7 +394,7 @@ export const profissionais: Prof[] = [
     publico: 'Atende adolescentes a partir de 15 anos, adultos e idosos. Atendimento Presencial e On-line.',
     demandas: 'Transtornos de ansiedade, angústia, depressão, dificuldades nos relacionamentos, conflitos familiares, autoestima, insegurança, ciúmes, dependência emocional, separações e términos de relacionamento, luto e perdas, estresse, sensação de vazio, insatisfação com a vida, autoconhecimento, amadurecimento emocional, repetição de padrões nos vínculos e dificuldades na construção e manutenção de relações. Abuso sexual, vítimas de traumas e preconceitos, transtornos alimentares (anorexia, bulimia, TARE) e transtornos de imagem.',
     atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, CELOS, Elosaúde, ABEPOM, CASACARESC, SC Saúde, Sim Saúde, GEAP, FUSEX, Petrobras, Saúde Caixa e Particular.',
-    foto: '/equipe/nicolas_psico.jpeg',
+    foto: '/equipe/nicolas_psico.avif',
   },
   {
     nome: 'Patricia N. de A. Nogueira',
@@ -416,7 +416,7 @@ export const profissionais: Prof[] = [
     publico: 'Atende Crianças a partir de 03 anos, Adolescente, Adulto e Idoso. Atendimento On-line e Presencial.',
     demandas: 'Ansiedade; comunicação e expressão; compulsões; dependência química; depressão e estados depressivos; dor emocional; estresse e estresse pós-traumático; fobias (incluindo fobia social); ideação suicida; luto e perdas; medos; questões relacionadas à sexualidade e gênero; síndrome do pânico; transições de vida; transtorno bipolar; transtorno obsessivo-compulsivo (TOC); transtornos alimentares (como bulimia e anorexia); transtornos de humor; transtornos do sono; vivências traumáticas; violências (incluindo violência sexual) e situações de preconceito. E outras questões que possam emergir na singularidade de cada sujeito.',
     atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, CELOS, Elosaúde, ABEPOM, CASACARESC, SC Saúde, Sim Saúde, GEAP, FUSEX, Petrobras, Saúde Caixa e Particular.',
-    foto: '/equipe/rafaela_psico.jpeg',
+    foto: '/equipe/rafaela_psico.avif',
   },
   {
     nome: 'Rosangela Mezari',
@@ -460,7 +460,7 @@ export const profissionais: Prof[] = [
     publico: 'Atendimento infantil a partir de 1 ano, adolescentes, adultos e idosos. Pessoas com Transtorno do Espectro Autista (TEA) em qualquer faixa etária. Atendimento Online e Presencial.',
     demandas: 'Transtorno do Espectro Autista (TEA), Método ABA, TDAH, diagnóstico tardio em adultos, demandas comportamentais infantis, depressão e ansiedade, orientação parental, psicoeducação infantil, conflitos escolares, organização de rotina, mães em exaustão, questões de gênero e identidade sexual, acompanhamento da população LGBTQIA+ (autoaceitação, processo de transição, preconceito familiar/social), envelhecimento, encerramento de ciclos e relacionamentos abusivos.',
     atendimento: 'Unimed, Cartão Acesso + Fácil, FUSEX, CELOS, Elosaúde, Saudesc, CASACARESC, ABEPOM, Sim Saúde, GEAP, SC Saúde e Particular.',
-    foto: '/equipe/tapu_psico.jpeg',
+    foto: '/equipe/tapu_psico.avif',
   },
   {
     nome: 'Thalita Dias Lima Leal Graebin',
@@ -504,7 +504,7 @@ export const profissionais: Prof[] = [
     publico: 'Atende crianças acima de 07 anos, adolescentes, adultos, idosos e casais. Atendimento Presencial.',
     demandas: 'Ansiedade, estresse e dificuldades emocionais; sintomas depressivos e desmotivação; dificuldades comportamentais e regulação emocional; baixa autoestima e insegurança; dificuldades de atenção, concentração, impulsividade e organização; dificuldades nos relacionamentos interpessoais e conjugais; conflitos familiares, divórcio e reestruturação familiar; orientação parental; desenvolvimento de habilidades sociais; vivências de luto e dor emocional; autoconhecimento e identidade; transtornos do sono; crises de pânico e fobias; sintomas psicossomáticos; preparação para aposentadoria; experiências traumáticas; padrões de pensamento disfuncionais e crenças limitantes.',
     atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), FUSEX, CELOS, Elosaúde, Saudesc, CASACARESC, ABEPOM, Sim Saúde, GEAP, SC Saúde e Particular.',
-    foto: '/equipe/vanessa_psico.jpeg',
+    foto: '/equipe/vanessa_psico.avif',
   },
   {
     nome: 'Wicleff Luiz Rufino',

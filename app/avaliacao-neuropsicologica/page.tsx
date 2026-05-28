@@ -1066,7 +1066,7 @@ export default function AvaliacaoNeuropsicologicaPage() {
                 O que nossos pacientes dizem
               </h2>
               <div className="flex items-center gap-3 sm:ml-auto flex-shrink-0">
-                <div className="flex gap-0.5">
+                <div className="flex gap-0.5" aria-hidden="true">
                   {[...Array(5)].map((_, i) => (
                     <Star
                       key={i}
@@ -1097,7 +1097,7 @@ export default function AvaliacaoNeuropsicologicaPage() {
                     border: '1px solid rgba(124,44,59,0.07)',
                   }}
                 >
-                  <div className="flex gap-0.5 mb-3">
+                  <div className="flex gap-0.5 mb-3" aria-hidden="true">
                     {[...Array(5)].map((_, j) => (
                       <Star
                         key={j}
