@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { MessageCircle, Users, Quote } from 'lucide-react'
+import { profissionais } from '@/lib/profissionais'
 
 const WA_LINK = 'https://wa.me/5548998056893'
 
@@ -80,7 +81,7 @@ export default function Hero() {
               {[
                 { number: '+20.000', label: 'Pacientes atendidos' },
                 { number: '+9',      label: 'anos de experiência' },
-                { number: '43',      label: 'Profissionais' },
+                { number: String(profissionais.length), label: 'Profissionais' },
               ].map((stat) => (
                 <div key={stat.label} className="text-center sm:text-left">
                   <p className="font-serif font-bold text-2xl text-[#7C2C3B]">{stat.number}</p>
