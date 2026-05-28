@@ -328,17 +328,6 @@ export const profissionais: Prof[] = [
     foto: '/equipe/Kevin_psico.jpeg',
   },
   {
-    nome: 'Larissa Fontana',
-    registro: 'CRP 12/14611',
-    metodo: 'Terapia Cognitivo Comportamental (TCC)',
-    filtros: ['TCC'],
-    formacao: 'Formada em Psicologia pela Universidade do Oeste de Santa Catarina. Especialização em Terapia Cognitivo Comportamental, sendo ela uma referência nos transtornos de ansiedade, fobias e depressão. Formação em terapia sexual (transtornos sexuais) pela Cessex. Pós-graduação em sexologia pela POSFG de Porto Alegre.',
-    publico: 'Atende Adolescentes a partir de 14 anos, Adultos, Idosos, Casais. Atendimento On-line e Presencial.',
-    demandas: 'Sendo ela uma referência nos transtornos de ansiedade, fobias e depressão. Terapia sexual a fim de tratar os transtornos sexuais e/ou aprimorar seu conhecimento na sexualidade e proporcionar maior bem estar. Terapia de casal, a fim de aprimorar a comunicação efetiva de ambos e na resolução de problemas e na identificação de pensamentos disfuncionais no intuito de maior satisfação no relacionamento. Avaliação para esterilização/anticoncepção (laqueadura), Avaliação para esterilização/anticoncepção (vasectomia).',
-    atendimento: 'Particular.',
-    foto: '/equipe/larissa_psico.avif',
-  },
-  {
     nome: 'Luciana Elisa Cunha',
     registro: 'CRP 12/03557',
     metodo: 'Psicologia Familiar Sistêmica, Psicologia Junguiana, Arteterapia e ABA',
