@@ -90,7 +90,7 @@ export default function Depoimentos() {
           {/* Nota agregada */}
           <div className="mt-6 inline-flex items-center gap-3 bg-neutral-50 rounded-full px-5 py-2.5 border border-neutral-100">
             <Stars nota={notaGoogle} />
-            <span className="text-neutral-700 font-semibold text-sm">{notaGoogle.toFixed(1)}</span>
+            <span className="text-neutral-700 font-semibold text-sm">{notaGoogle.toFixed(1).replace('.', ',')}</span>
             <span className="text-neutral-400 text-sm">·</span>
             <span className="text-neutral-500 text-sm">{totalAvaliacoes} avaliações no Google</span>
           </div>
