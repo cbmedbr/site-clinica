@@ -13,7 +13,7 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="/principal-hero.avif"
+          src="/principal-hero2.avif"
           alt="Folhagem tropical em luz editorial"
           fill
           priority
