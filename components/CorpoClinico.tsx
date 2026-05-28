@@ -84,7 +84,7 @@ function Modal({ p, onClose }: { p: Prof; onClose: () => void }) {
             </button>
             <div>
               <h3 className="font-serif font-bold text-[#7C2C3B] text-base leading-tight">{p.nome}</h3>
-              <p className="text-[#7C2C3B] text-xs font-semibold mt-0.5 opacity-80">{p.registro}</p>
+              <p className="text-[#7C2C3B] text-xs font-semibold mt-0.5 opacity-80">Psicólogo(a) · {p.registro}</p>
               <p className="text-neutral-600 text-xs mt-1 font-medium">{p.metodo}</p>
               <div className="mt-1.5">
                 <SelosModalidade publico={p.publico} />
@@ -203,7 +203,7 @@ function Card({ p, onOpen }: { p: Prof; onOpen: () => void }) {
         className="w-20 h-20 rounded-full border-4 border-[#F4E6E9]" />
       <div className="w-full space-y-0.5">
         <h3 className="font-serif font-bold text-[#7C2C3B] text-sm leading-tight line-clamp-2">{p.nome}</h3>
-        <p className="text-[11px] font-semibold text-[#7C2C3B] opacity-60">{p.registro}</p>
+        <p className="text-[11px] font-semibold text-[#7C2C3B] opacity-60">Psicólogo(a) · {p.registro}</p>
         <p className="text-[11px] text-neutral-500 leading-snug line-clamp-2">{p.metodo}</p>
         <SelosModalidade publico={p.publico} />
       </div>
