@@ -76,29 +76,19 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* Consultas disponíveis badge */}
-          <div className="flex items-center gap-2 pt-1">
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse flex-shrink-0" />
-            <p className="text-[#FCECBF]/90 text-sm font-medium">
-              Consultas disponíveis
+          {/* Lacan quote */}
+          <blockquote className="max-w-lg pt-2">
+            <span className="text-[#FCECBF]/50 font-serif text-3xl leading-none select-none" aria-hidden>&ldquo;</span>
+            <p className="text-[#FCECBF]/75 italic text-sm sm:text-base leading-relaxed -mt-2">
+              O amor é o passo mais importante da cultura; foi através dele que
+              o ser humano passou a ser menos egoísta.
             </p>
-          </div>
+            <footer className="mt-2 text-[#FCECBF]/55 text-xs font-medium tracking-wide">
+              — Lacan
+            </footer>
+          </blockquote>
 
         </div>
-      </div>
-
-      {/* Lacan quote — anchored to hero footer */}
-      <div className="relative z-10 pb-10 px-4 sm:px-8 lg:px-16 max-w-7xl mx-auto w-full">
-        <blockquote className="max-w-lg">
-          <span className="text-[#FCECBF]/50 font-serif text-3xl leading-none select-none" aria-hidden>&ldquo;</span>
-          <p className="text-[#FCECBF]/75 italic text-sm sm:text-base leading-relaxed -mt-2">
-            O amor é o passo mais importante da cultura; foi através dele que
-            o ser humano passou a ser menos egoísta.
-          </p>
-          <footer className="mt-2 text-[#FCECBF]/55 text-xs font-medium tracking-wide">
-            — Lacan
-          </footer>
-        </blockquote>
       </div>
     </section>
   )
