@@ -19,7 +19,8 @@ export default function Hero() {
           priority
           quality={85}
           sizes="100vw"
-          className="object-cover object-right"
+          className="object-cover"
+          style={{ objectPosition: '80% center' }}
         />
       </div>
 
