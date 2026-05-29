@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter, Playfair_Display } from 'next/font/google'
+import Script from 'next/script'
 import { clinicaLD } from '@/lib/jsonld'
+import WhatsAppConversionTracker from '@/components/WhatsAppConversionTracker'
 import './globals.css'
 
 const inter = Inter({
@@ -48,6 +50,19 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(clinicaLD) }}
         />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18196512841"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18196512841');
+          `}
+        </Script>
+        <WhatsAppConversionTracker />
         {children}
       </body>
     </html>
