@@ -13,14 +13,14 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="/principal-hero2.avif"
-          alt="Folhagem tropical em luz editorial"
+          src="/principal-hero4.avif"
+          alt="Silhueta em campo aberto ao pôr do sol"
           fill
           priority
           quality={85}
           sizes="100vw"
           className="object-cover"
-          style={{ objectPosition: '80% center' }}
+          style={{ objectPosition: 'center' }}
         />
       </div>
 
@@ -68,8 +68,9 @@ export default function Hero() {
               className="inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5
                          bg-[#FCECBF] text-[#7C2C3B] font-semibold text-base
                          transition-all duration-300 ease-in-out
-                         hover:bg-white hover:scale-[1.02] active:scale-[0.98]
-                         shadow-lg"
+                         hover:bg-[#FFF5D6] hover:scale-[1.02] active:scale-[0.98]
+                         shadow-[0_4px_20px_rgba(252,236,191,0.40)]"
+                        /* VARIAÇÃO B: bg-[#A84055] text-[#FCECBF] border border-[#FCECBF]/60 hover:bg-[#8F3347] shadow-lg */
             >
               <MessageCircle className="w-5 h-5 flex-shrink-0" />
               Agendamento Rápido
