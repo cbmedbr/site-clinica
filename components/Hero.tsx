@@ -13,14 +13,14 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="/principal-hero2.avif"
-          alt="Folhagem tropical em luz editorial"
+          src="/principal-hero4.avif"
+          alt="Silhueta em campo aberto ao pôr do sol"
           fill
           priority
           quality={85}
           sizes="100vw"
           className="object-cover"
-          style={{ objectPosition: '80% center' }}
+          style={{ objectPosition: 'center' }}
         />
       </div>
 
@@ -66,9 +66,9 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5
-                         bg-[#FCECBF] text-[#7C2C3B] font-semibold text-base
+                         bg-[#7C2C3B] text-[#FCECBF] font-semibold text-base
                          transition-all duration-300 ease-in-out
-                         hover:bg-white hover:scale-[1.02] active:scale-[0.98]
+                         hover:bg-[#963347] hover:scale-[1.02] active:scale-[0.98]
                          shadow-lg"
             >
               <MessageCircle className="w-5 h-5 flex-shrink-0" />
