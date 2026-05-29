@@ -66,10 +66,11 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5
-                         bg-[#7C2C3B] text-[#FCECBF] font-semibold text-base
+                         bg-[#FCECBF] text-[#7C2C3B] font-semibold text-base
                          transition-all duration-300 ease-in-out
-                         hover:bg-[#963347] hover:scale-[1.02] active:scale-[0.98]
-                         shadow-lg"
+                         hover:bg-[#FFF5D6] hover:scale-[1.02] active:scale-[0.98]
+                         shadow-[0_4px_20px_rgba(252,236,191,0.40)]"
+                        /* VARIAÇÃO B: bg-[#A84055] text-[#FCECBF] border border-[#FCECBF]/60 hover:bg-[#8F3347] shadow-lg */
             >
               <MessageCircle className="w-5 h-5 flex-shrink-0" />
               Agendamento Rápido
