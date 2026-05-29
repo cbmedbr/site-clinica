@@ -120,37 +120,36 @@ body {
 .wave-divider svg { display: block; }
 
 /* ─── Hero full-bleed gradient ─── */
-/* Desktop ≥1024: gradiente suave, folhas visíveis à direita */
+/* Desktop ≥1024: véu creme/quente à esquerda para contraste do texto bordô */
 .hero-gradient {
   background: linear-gradient(
     to right,
-    rgba(124,44,59,1.0)  0%,
-    rgba(124,44,59,1.0)  40%,
-    rgba(124,44,59,0.85) 55%,
-    rgba(124,44,59,0.4)  72%,
-    transparent 90%
+    rgba(255,250,245,0.88) 0%,
+    rgba(255,250,245,0.70) 35%,
+    rgba(255,250,245,0.30) 55%,
+    transparent 75%
   );
 }
-/* Tablet 768-1023: cobertura maior para manter legibilidade */
+/* Tablet 768-1023: cobertura maior */
 @media (max-width: 1023px) {
   .hero-gradient {
     background: linear-gradient(
       to right,
-      rgba(124,44,59,0.95) 0%,
-      rgba(124,44,59,0.85) 45%,
-      rgba(124,44,59,0.40) 70%,
-      rgba(124,44,59,0.15) 100%
+      rgba(255,250,245,0.92) 0%,
+      rgba(255,250,245,0.80) 45%,
+      rgba(255,250,245,0.35) 70%,
+      transparent 90%
     );
   }
 }
-/* Mobile <768: praticamente opaco, folha como textura */
+/* Mobile <768: véu quase opaco para texto bordô legível */
 @media (max-width: 767px) {
   .hero-gradient {
     background: linear-gradient(
       to bottom,
-      rgba(124,44,59,0.93) 0%,
-      rgba(124,44,59,0.90) 60%,
-      rgba(124,44,59,0.88) 100%
+      rgba(255,250,245,0.93) 0%,
+      rgba(255,250,245,0.90) 60%,
+      rgba(255,250,245,0.85) 100%
     );
   }
 }
