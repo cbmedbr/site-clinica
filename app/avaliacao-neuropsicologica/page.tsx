@@ -5,7 +5,7 @@ import {
   ArrowLeft, Check, ChevronDown,
   ClipboardList, Brain, Eye, FileText,
   BookOpen, MessageSquare, Lightbulb, Award, Heart,
-  Star, MapPin, Medal, MessageCircle,
+  Star, MapPin, Medal, MessageCircle, ExternalLink,
 } from 'lucide-react'
 import { profissionais, slugify } from '@/lib/profissionais'
 import { gerarFaqLD } from '@/lib/jsonld'
@@ -228,27 +228,7 @@ const especialistas = profissionais
   .filter(p => p.fazNeuropsico)
   .map(p => ({ ...p, slug: slugify(p.nome) }))
 
-// Substituir pelos depoimentos reais de pacientes antes de publicar
-const depoimentos = [
-  {
-    texto:
-      'A avaliação foi um divisor de águas. Finalmente entendi por que meu filho tinha tantas dificuldades na escola. O laudo nos deu clareza e direção para o tratamento.',
-    nome: 'Mãe de paciente',
-    contexto: 'Avaliação de TDAH · Florianópolis',
-  },
-  {
-    texto:
-      'Profissionalismo e acolhimento em todo o processo. Recebi um laudo detalhado e a devolutiva foi muito bem explicada. Recomendo a qualquer pessoa com dúvidas cognitivas.',
-    nome: 'Paciente adulto',
-    contexto: 'Avaliação de memória · Florianópolis',
-  },
-  {
-    texto:
-      'Após anos de incerteza sobre meu diagnóstico, a avaliação neuropsicológica finalmente trouxe respostas. A equipe é extremamente competente e atenciosa.',
-    nome: 'Paciente da Clínica',
-    contexto: 'Investigação de TEA adulto · Florianópolis',
-  },
-]
+const GOOGLE_REVIEWS_LINK = 'https://maps.app.goo.gl/mhVodvAMZFhw5gqT8'
 
 const faqItems = [
   {
@@ -1054,10 +1034,10 @@ export default function AvaliacaoNeuropsicologicaPage() {
       </section>
 
       {/* ══════════════════════════════════════════════
-          PROVA SOCIAL
+          AVALIAÇÕES GOOGLE
       ══════════════════════════════════════════════ */}
       <section className="py-16 px-5 sm:px-8" style={{ background: '#FAF7F4' }}>
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-5xl mx-auto text-center">
           <ScrollReveal>
             <span
               className="text-[10px] font-bold tracking-[0.25em] uppercase block mb-3"
@@ -1065,77 +1045,68 @@ export default function AvaliacaoNeuropsicologicaPage() {
             >
               AVALIAÇÕES
             </span>
-            <div className="flex flex-col sm:flex-row sm:items-end gap-4 mb-10">
-              <h2
-                className="font-serif font-bold"
-                style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.2rem)', color: '#2D1A1E' }}
-              >
-                O que nossos pacientes dizem
-              </h2>
-              <div className="flex items-center gap-3 sm:ml-auto flex-shrink-0">
-                <div className="flex gap-0.5" aria-hidden="true">
+            <h2
+              className="font-serif font-bold mb-8"
+              style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.2rem)', color: '#2D1A1E' }}
+            >
+              O que dizem sobre nós
+            </h2>
+
+            <div
+              className="inline-flex flex-col sm:flex-row items-center gap-4 rounded-2xl px-8 py-6 mb-8"
+              style={{ background: 'white', border: '1px solid rgba(124,44,59,0.08)' }}
+            >
+              <div className="flex flex-col items-center gap-1">
+                <div className="flex gap-1" aria-hidden="true">
                   {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-4 h-4 fill-current"
-                      style={{ color: '#F59E0B' }}
-                    />
+                    <Star key={i} className="w-6 h-6 fill-current" style={{ color: '#F59E0B' }} />
                   ))}
                 </div>
-                <div>
-                  <span className="font-bold text-sm" style={{ color: '#2D1A1E' }}>
+                <span className="sr-only">Avaliação 4,6 de 5 estrelas no Google</span>
+                <div className="flex items-baseline gap-2 mt-1">
+                  <span
+                    className="font-serif font-bold"
+                    style={{ fontSize: '2.5rem', color: '#2D1A1E', lineHeight: 1 }}
+                    aria-hidden="true"
+                  >
                     4,6
                   </span>
-                  <span className="text-xs ml-1" style={{ color: '#9a7a7e' }}>
-                    +200 avaliações no Google
-                  </span>
+                  <span className="text-sm font-medium" style={{ color: '#9a7a7e' }}>de 5</span>
                 </div>
               </div>
+
+              <div className="hidden sm:block w-px h-14" style={{ background: 'rgba(124,44,59,0.12)' }} />
+
+              <div className="text-center sm:text-left">
+                <p className="font-semibold text-base" style={{ color: '#2D1A1E' }}>
+                  +200 avaliações verificadas
+                </p>
+                <p className="text-sm" style={{ color: '#9a7a7e' }}>no Google</p>
+              </div>
             </div>
-          </ScrollReveal>
 
-          <div className="grid sm:grid-cols-3 gap-4 mb-6">
-            {depoimentos.map(({ texto, nome, contexto }, i) => (
-              <ScrollReveal key={i} delay={i * 70}>
-                <div
-                  className="rounded-2xl p-5 h-full"
-                  style={{
-                    background: 'white',
-                    border: '1px solid rgba(124,44,59,0.07)',
-                  }}
-                >
-                  <div className="flex gap-0.5 mb-3" aria-hidden="true">
-                    {[...Array(5)].map((_, j) => (
-                      <Star
-                        key={j}
-                        className="w-3 h-3 fill-current"
-                        style={{ color: '#F59E0B' }}
-                      />
-                    ))}
-                  </div>
-                  <p
-                    className="text-sm leading-relaxed mb-4 italic"
-                    style={{ color: '#5a4044' }}
-                  >
-                    &ldquo;{texto}&rdquo;
-                  </p>
-                  <div>
-                    <p className="text-xs font-semibold" style={{ color: '#2D1A1E' }}>
-                      {nome}
-                    </p>
-                    <p className="text-[10px]" style={{ color: '#9a7a7e' }}>
-                      {contexto}
-                    </p>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
+            <div className="flex flex-col items-center gap-4">
+              <a
+                href={GOOGLE_REVIEWS_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-sm font-bold
+                           transition-all hover:opacity-90 hover:scale-[1.02]"
+                style={{
+                  background: '#7C2C3B',
+                  color: 'white',
+                  boxShadow: '0 4px 20px rgba(124,44,59,0.3)',
+                }}
+              >
+                Ver avaliações no Google
+                <ExternalLink className="w-4 h-4" />
+              </a>
 
-          <ScrollReveal>
-            <p className="text-center text-[10px]" style={{ color: '#b09a9e' }}>
-              Depoimentos de pacientes reais. Nomes omitidos conforme o sigilo profissional (CFP).
-            </p>
+              <p className="text-xs max-w-md" style={{ color: '#b09a9e' }}>
+                Em respeito ao Código de Ética do Psicólogo (CFP), não exibimos
+                depoimentos individuais de pacientes.
+              </p>
+            </div>
           </ScrollReveal>
         </div>
       </section>
