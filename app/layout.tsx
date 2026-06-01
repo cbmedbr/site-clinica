@@ -54,12 +54,26 @@ export default function RootLayout({
           src="https://www.googletagmanager.com/gtag/js?id=AW-18196512841"
           strategy="afterInteractive"
         />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-J97Q595F5V"
+          strategy="afterInteractive"
+        />
         <Script id="gtag-init" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'AW-18196512841');
+            gtag('config', 'G-J97Q595F5V');
+          `}
+        </Script>
+        <Script id="clarity-init" strategy="afterInteractive">
+          {`
+            (function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "wyugg3btpx");
           `}
         </Script>
         <WhatsAppConversionTracker />
