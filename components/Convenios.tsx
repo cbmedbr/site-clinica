@@ -1,4 +1,7 @@
-import { Building2, MessageCircle, CheckCircle2 } from 'lucide-react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { Building2, Camera, CheckCircle2, MessageCircle } from 'lucide-react'
+import { SALAS } from '@/lib/consultorios'
 
 const WA_LINK = 'https://wa.me/5548998056893'
 
@@ -30,6 +33,9 @@ const locacaoItems = [
 ]
 
 export default function Convenios() {
+  const previews = SALAS.filter((s) => s.destaque && s.fotos.length > 0).slice(0, 3)
+  const outrosSalas = SALAS.filter((s) => s.fotos.length > 0).length - previews.length
+
   return (
     <section id="convenios" className="section-padding bg-white">
       <div className="container-max">
@@ -105,15 +111,21 @@ export default function Convenios() {
                 acolhedor e com toda a infraestrutura necessária para você focar no
                 que importa: seus pacientes.
               </p>
-              <a
-                href={WA_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-whatsapp inline-flex"
-              >
-                <MessageCircle className="w-4 h-4" />
-                Solicitar informações
-              </a>
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href={WA_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-whatsapp inline-flex"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  Solicitar informações
+                </a>
+                <Link href="/consultorios" className="btn-outline inline-flex items-center gap-2">
+                  <Camera className="w-4 h-4" />
+                  Ver consultórios
+                </Link>
+              </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -125,6 +137,49 @@ export default function Convenios() {
               ))}
             </div>
           </div>
+
+          {/* Preview de fotos — só renderiza quando há salas com destaque */}
+          {previews.length > 0 && (
+            <div className="mt-8 pt-8 border-t border-neutral-100">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="h-px flex-1 bg-neutral-100" />
+                <span className="text-neutral-400 text-xs font-medium tracking-wide uppercase px-1">
+                  Conheça nossos espaços
+                </span>
+                <div className="h-px flex-1 bg-neutral-100" />
+              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                {previews.map((sala) => (
+                  <Link
+                    key={sala.id}
+                    href="/consultorios"
+                    className="group relative aspect-video rounded-xl overflow-hidden bg-neutral-100 block"
+                  >
+                    <Image
+                      src={sala.fotos[0].src}
+                      alt={sala.fotos[0].alt}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 640px) 50vw, 25vw"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/35 transition-colors duration-300" />
+                    <div className="absolute bottom-0 left-0 right-0 p-2 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                      <span className="text-white text-xs font-medium">{sala.nome}</span>
+                    </div>
+                  </Link>
+                ))}
+                {outrosSalas > 0 && (
+                  <Link
+                    href="/consultorios"
+                    className="relative aspect-video rounded-xl overflow-hidden bg-[#7C2C3B] flex flex-col items-center justify-center gap-1 hover:bg-[#963347] transition-colors"
+                  >
+                    <span className="text-[#FCECBF] font-bold text-2xl">+{outrosSalas}</span>
+                    <span className="text-[#FCECBF]/70 text-xs font-medium">espaços</span>
+                  </Link>
+                )}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </section>

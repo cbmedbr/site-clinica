@@ -10,6 +10,7 @@ const navLinks = [
   { label: 'Equipe',       href: '#equipe'                        },
   { label: 'Abordagens',   href: '#abordagens'                    },
   { label: 'Testes Neuro', href: '/avaliacao-neuropsicologica', novo: true },
+  { label: 'Nossas Salas', href: '/consultorios'                  },
   { label: 'Convênios',    href: '#convenios'                     },
   { label: 'Sobre',        href: '#sobre'                         },
   { label: 'Contato',      href: '#contato'                       },
