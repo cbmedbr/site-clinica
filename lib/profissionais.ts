@@ -1,7 +1,7 @@
 import { z } from 'zod'
 
 const FILTROS_VALIDOS = [
-  'ABA', 'Existencialismo', 'Gestalt', 'Junguiana', 'Neuropsicologia',
+  'ABA', 'AC', 'Existencialismo', 'Gestalt', 'Junguiana', 'Neuropsicologia',
   'Psicanálise', 'Psicodrama', 'Sistêmica Familiar', 'TCC', 'Transpessoal',
 ] as const
 
@@ -466,8 +466,8 @@ export const profissionais: Prof[] = [
   {
     nome: 'Tapu Ian',
     registro: 'CRP 12/30969',
-    metodo: 'Análise do Comportamento Aplicada (ABA)',
-    filtros: ['ABA'],
+    metodo: 'Análise do Comportamento Aplicada (ABA) e Análise do Comportamento Clínico (AC)',
+    filtros: ['ABA', 'AC'],
     formacao: 'Psicólogo formado pela Universidade Paulista (2023). Cursos complementares em Psicologia da Educação e Psicologia Organizacional pelo Núcleo de Tecnologia para Educação da UEMA, e em Análise do Comportamento Aplicada ao Espectro Autista (ABA) e Estratégias Naturalistas pelo Instituto Singular. Cursando especialização em Análise do Comportamento Aplicada à Psicoterapia Analítico-Comportamental pela PUCPR.',
     publico: 'Atendimento infantil a partir de 1 ano, adolescentes, adultos e idosos. Pessoas com Transtorno do Espectro Autista (TEA) em qualquer faixa etária. Atendimento Online e Presencial.',
     demandas: 'Transtorno do Espectro Autista (TEA), Método ABA, TDAH, diagnóstico tardio em adultos, demandas comportamentais infantis, depressão e ansiedade, orientação parental, psicoeducação infantil, conflitos escolares, organização de rotina, mães em exaustão, questões de gênero e identidade sexual, acompanhamento da população LGBTQIA+ (autoaceitação, processo de transição, preconceito familiar/social), envelhecimento, encerramento de ciclos e relacionamentos abusivos.',
