@@ -206,6 +206,14 @@ function Card({ p, onOpen }: { p: Prof; onOpen: () => void }) {
         <p className="text-[11px] font-semibold text-[#7C2C3B] opacity-60">Psicólogo(a) · {p.registro}</p>
         <p className="text-[11px] text-neutral-500 leading-snug line-clamp-2">{p.metodo}</p>
         <SelosModalidade publico={p.publico} />
+        {(p.filtros as readonly string[]).includes('AC') && (
+          <span
+            title="Análise do Comportamento Clínico"
+            className="inline-flex items-center rounded-full text-[10px] px-2 py-0.5
+                       font-semibold bg-teal-50 text-teal-700 border border-teal-200">
+            AC
+          </span>
+        )}
       </div>
       <span className="inline-flex items-center gap-0.5 text-[11px] font-semibold text-[#7C2C3B] mt-auto">
         Ver perfil completo <ChevronRight className="w-3 h-3" />
