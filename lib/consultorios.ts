@@ -24,7 +24,7 @@ export interface GrupoSala {
 export const GRUPOS: GrupoSala[] = [
   { id: 'sala-201', nome: 'Sala 201', ordem: 1 },
   { id: 'sala-202', nome: 'Sala 202', ordem: 2 },
-  { id: 'sala-204', nome: 'Sala 204', ordem: 3 },
+  { id: 'sala-203', nome: 'Sala 203', ordem: 3 },
   { id: 'sala-205', nome: 'Sala 205', ordem: 4 },
   { id: 'sala-212', nome: 'Sala 212', ordem: 5 },
 ]
@@ -43,6 +43,17 @@ export const SALAS: Sala[] = [
     ],
   },
   {
+    id: 'sala-205-c3',
+    nome: 'Consultório 3',
+    categoria: 'consultorio',
+    descricao: 'Consultório individual na Sala 205.',
+    grupo: 'sala-205',
+    fotos: [
+      { src: '/consultorios/sala-205/consultorio-1/IMG_20260531_130108167_HDR.jpg.avif', alt: 'Sala 205 — Consultório 3' },
+      { src: '/consultorios/sala-205/consultorio-1/foto-panoramica.avif', alt: 'Sala 205 — Consultório 3 (panorâmica)' },
+    ],
+  },
+  {
     id: 'sala-205-c1',
     nome: 'Consultório 1',
     categoria: 'consultorio',
@@ -50,8 +61,9 @@ export const SALAS: Sala[] = [
     grupo: 'sala-205',
     destaque: true,
     fotos: [
-      { src: '/consultorios/sala-205/consultorio-1/IMG_20260531_130108167_HDR.jpg.avif', alt: 'Sala 205 — Consultório 1' },
-      { src: '/consultorios/sala-205/consultorio-1/foto-panoramica.avif', alt: 'Sala 205 — Consultório 1 (panorâmica)' },
+      { src: '/consultorios/sala-205/consultorio-2/IMG_20260531_125416279_HDR.jpg.avif', alt: 'Sala 205 — Consultório 1' },
+      { src: '/consultorios/sala-205/consultorio-2/IMG_20260531_125443584.jpg.avif', alt: 'Sala 205 — Consultório 1' },
+      { src: '/consultorios/sala-205/consultorio-2/IMG_20260531_125802536_HDR.jpg.avif', alt: 'Sala 205 — Consultório 1' },
     ],
   },
   {
@@ -61,20 +73,8 @@ export const SALAS: Sala[] = [
     descricao: 'Consultório individual na Sala 205.',
     grupo: 'sala-205',
     fotos: [
-      { src: '/consultorios/sala-205/consultorio-2/IMG_20260531_125416279_HDR.jpg.avif', alt: 'Sala 205 — Consultório 2' },
-      { src: '/consultorios/sala-205/consultorio-2/IMG_20260531_125443584.jpg.avif', alt: 'Sala 205 — Consultório 2' },
-      { src: '/consultorios/sala-205/consultorio-2/IMG_20260531_125802536_HDR.jpg.avif', alt: 'Sala 205 — Consultório 2' },
-    ],
-  },
-  {
-    id: 'sala-205-c3',
-    nome: 'Consultório 3',
-    categoria: 'consultorio',
-    descricao: 'Consultório individual na Sala 205.',
-    grupo: 'sala-205',
-    fotos: [
-      { src: '/consultorios/sala-205/consultorio-3/IMG_20260531_125935107.jpg.avif', alt: 'Sala 205 — Consultório 3' },
-      { src: '/consultorios/sala-205/consultorio-3/IMG_20260531_125954033.jpg.avif', alt: 'Sala 205 — Consultório 3' },
+      { src: '/consultorios/sala-205/consultorio-3/IMG_20260531_125935107.jpg.avif', alt: 'Sala 205 — Consultório 2' },
+      { src: '/consultorios/sala-205/consultorio-3/IMG_20260531_125954033.jpg.avif', alt: 'Sala 205 — Consultório 2' },
     ],
   },
 
@@ -98,9 +98,9 @@ export const SALAS: Sala[] = [
     grupo: 'sala-201',
     destaque: true,
     fotos: [
-      { src: '/consultorios/sala-201/consultorio-1/foto1.avif', alt: 'Sala 201 — Consultório 1' },
-      { src: '/consultorios/sala-201/consultorio-1/foto2.avif', alt: 'Sala 201 — Consultório 1' },
-      { src: '/consultorios/sala-201/consultorio-1/foto3.avif', alt: 'Sala 201 — Consultório 1' },
+      { src: '/consultorios/sala-201/consultorio-2/foto4.avif', alt: 'Sala 201 — Consultório 1' },
+      { src: '/consultorios/sala-201/consultorio-2/foto7.avif', alt: 'Sala 201 — Consultório 1' },
+      { src: '/consultorios/sala-201/consultorio-2/consultorio1-201.avif', alt: 'Sala 201 — Consultório 1' },
     ],
   },
   {
@@ -110,10 +110,9 @@ export const SALAS: Sala[] = [
     descricao: 'Consultório individual na Sala 201.',
     grupo: 'sala-201',
     fotos: [
-      { src: '/consultorios/sala-201/consultorio-2/foto4.avif', alt: 'Sala 201 — Consultório 2' },
-      { src: '/consultorios/sala-201/consultorio-2/foto5.avif', alt: 'Sala 201 — Consultório 2' },
-      { src: '/consultorios/sala-201/consultorio-2/foto6.avif', alt: 'Sala 201 — Consultório 2' },
-      { src: '/consultorios/sala-201/consultorio-2/foto7.avif', alt: 'Sala 201 — Consultório 2' },
+      { src: '/consultorios/sala-201/consultorio-1/foto1.avif', alt: 'Sala 201 — Consultório 2' },
+      { src: '/consultorios/sala-201/consultorio-1/foto2.avif', alt: 'Sala 201 — Consultório 2' },
+      { src: '/consultorios/sala-201/consultorio-1/foto3.avif', alt: 'Sala 201 — Consultório 2' },
     ],
   },
 
@@ -179,18 +178,18 @@ export const SALAS: Sala[] = [
     ],
   },
 
-  // ── Sala 204 ──────────────────────────────────────────────────────────────
+  // ── Sala 203 ──────────────────────────────────────────────────────────────
   {
-    id: 'sala-204-c1',
+    id: 'sala-203-c1',
     nome: 'Consultório 1',
     categoria: 'consultorio',
-    descricao: 'Consultório individual na Sala 204.',
-    grupo: 'sala-204',
+    descricao: 'Consultório individual na Sala 203.',
+    grupo: 'sala-203',
     destaque: true,
     fotos: [
-      { src: '/consultorios/sala-204/consultorio-1/IMG_20260531_130803403_HDR.jpg.avif', alt: 'Sala 204 — Consultório 1' },
-      { src: '/consultorios/sala-204/consultorio-1/IMG_20260531_130850166.jpg.avif', alt: 'Sala 204 — Consultório 1' },
-      { src: '/consultorios/sala-204/consultorio-1/IMG_20260531_130912781.jpg.avif', alt: 'Sala 204 — Consultório 1' },
+      { src: '/consultorios/sala-203/consultorio-1/IMG_20260531_130803403_HDR.jpg.avif', alt: 'Sala 203 — Consultório 1' },
+      { src: '/consultorios/sala-203/consultorio-1/IMG_20260531_130850166.jpg.avif', alt: 'Sala 203 — Consultório 1' },
+      { src: '/consultorios/sala-203/consultorio-1/IMG_20260531_130912781.jpg.avif', alt: 'Sala 203 — Consultório 1' },
     ],
   },
 
