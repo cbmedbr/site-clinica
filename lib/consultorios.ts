@@ -52,9 +52,9 @@ export const SALAS: Sala[] = [
     grupo: 'sala-201',
     destaque: true,
     fotos: [
+      { src: '/consultorios/sala-201/consultorio-1/consultorio1-201-3.avif', alt: 'Sala 201 — Consultório 1' },
       { src: '/consultorios/sala-201/consultorio-1/consultorio-1-201.avif', alt: 'Sala 201 — Consultório 1' },
       { src: '/consultorios/sala-201/consultorio-1/consultorio1-201-2.avif', alt: 'Sala 201 — Consultório 1' },
-      { src: '/consultorios/sala-201/consultorio-1/consultorio1-201-3.avif', alt: 'Sala 201 — Consultório 1' },
     ],
   },
   {
@@ -88,7 +88,6 @@ export const SALAS: Sala[] = [
     categoria: 'consultorio',
     descricao: 'Consultório individual na Sala 202.',
     grupo: 'sala-202',
-    destaque: true,
     fotos: [
       { src: '/consultorios/sala-202/consultorio-1/202-consultorio1.avif', alt: 'Sala 202 — Consultório 1' },
       { src: '/consultorios/sala-202/consultorio-1/202-consultorio1-2.avif', alt: 'Sala 202 — Consultório 1' },
@@ -101,11 +100,12 @@ export const SALAS: Sala[] = [
     categoria: 'consultorio',
     descricao: 'Consultório individual na Sala 202.',
     grupo: 'sala-202',
+    destaque: true,
     fotos: [
+      { src: '/consultorios/sala-202/consultorio-2/202-consultorio2-4.avif', alt: 'Sala 202 — Consultório 2' },
       { src: '/consultorios/sala-202/consultorio-2/202-consultorio2.avif', alt: 'Sala 202 — Consultório 2' },
       { src: '/consultorios/sala-202/consultorio-2/202-consultorio2-2.avif', alt: 'Sala 202 — Consultório 2' },
       { src: '/consultorios/sala-202/consultorio-2/202-consultorio2-3.avif', alt: 'Sala 202 — Consultório 2' },
-      { src: '/consultorios/sala-202/consultorio-2/202-consultorio2-4.avif', alt: 'Sala 202 — Consultório 2' },
     ],
   },
   {
@@ -147,7 +147,6 @@ export const SALAS: Sala[] = [
     categoria: 'consultorio',
     descricao: 'Consultório individual na Sala 203.',
     grupo: 'sala-203',
-    destaque: true,
     fotos: [],
   },
   {
@@ -156,9 +155,10 @@ export const SALAS: Sala[] = [
     categoria: 'consultorio',
     descricao: 'Consultório individual na Sala 203.',
     grupo: 'sala-203',
+    destaque: true,
     fotos: [
-      { src: '/consultorios/sala-203/consultorio-2/203-consultorio2.avif', alt: 'Sala 203 — Consultório 2' },
       { src: '/consultorios/sala-203/consultorio-2/203-consultorio2-2.avif', alt: 'Sala 203 — Consultório 2' },
+      { src: '/consultorios/sala-203/consultorio-2/203-consultorio2.avif', alt: 'Sala 203 — Consultório 2' },
       { src: '/consultorios/sala-203/consultorio-2/203-consultorio2-3.avif', alt: 'Sala 203 — Consultório 2' },
     ],
   },
@@ -170,7 +170,6 @@ export const SALAS: Sala[] = [
     categoria: 'consultorio',
     descricao: 'Consultório individual na Sala 204.',
     grupo: 'sala-204',
-    destaque: true,
     fotos: [
       { src: '/consultorios/sala-204/consultorio-1/consultorio-1-204.avif', alt: 'Sala 204 — Consultório 1' },
     ],
@@ -181,6 +180,7 @@ export const SALAS: Sala[] = [
     categoria: 'consultorio',
     descricao: 'Sala de avaliação neuropsicológica na Sala 204.',
     grupo: 'sala-204',
+    destaque: true,
     fotos: [
       { src: '/consultorios/sala-204/sala-teste/204-teste.avif', alt: 'Sala 204 — Avaliação Neuropsicológica' },
       { src: '/consultorios/sala-204/sala-teste/204-teste-2.avif', alt: 'Sala 204 — Avaliação Neuropsicológica' },

@@ -14,6 +14,8 @@ const isPanoramica = (src: string) => src.includes('panoramica')
 
 function getCapaGrupo(grupoId: string): FotoSala | null {
   const espacos = SALAS.filter(s => s.grupo === grupoId)
+  const destaque = espacos.find(s => s.destaque && s.fotos.length > 0)
+  if (destaque) return destaque.fotos[0]
   const recepcao = espacos.find(s => s.categoria === 'recepcao' && s.fotos.length > 0)
   if (recepcao) return recepcao.fotos[0]
   return espacos.find(s => s.fotos.length > 0)?.fotos[0] ?? null
