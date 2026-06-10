@@ -88,8 +88,8 @@ export const profissionais: Prof[] = [
   {
     nome: 'André Pagani',
     registro: 'CRP 12/20097',
-    metodo: 'Neuropsicologia, Análise do Comportamento (ABA) e Terapia Cognitivo-Comportamental (TCC)',
-    filtros: ['Neuropsicologia', 'ABA', 'TCC'],
+    metodo: 'Neuropsicologia e Análise do Comportamento (ABA)',
+    filtros: ['Neuropsicologia', 'ABA'],
     formacao: 'Graduação em Psicologia pelo CESUSC. Pós-graduação em Análise do Comportamento Aplicada (ABA) pela ESCON. Pós-graduação em Neuropsicologia pela Faculdade Metropolitana.',
     publico: 'Atende a partir de 3 anos de idade. Atendimento On-line e Presencial.',
     demandas: 'Depressão, ansiedade, TOC, autismo, desenvolvimento cognitivo, autodesenvolvimento, autoconhecimento, bipolaridade e borderline.',
