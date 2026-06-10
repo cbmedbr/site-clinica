@@ -166,7 +166,7 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
         {/* gradient overlay — dark left, transparent right */}
         <div
           className="absolute inset-0"
-          style={{ background: 'linear-gradient(110deg, rgba(26,11,14,0.96) 0%, rgba(26,11,14,0.88) 45%, rgba(26,11,14,0.5) 75%, rgba(26,11,14,0.2) 100%)' }}
+          style={{ background: 'linear-gradient(110deg, rgba(26,11,14,0.81) 0%, rgba(26,11,14,0.73) 45%, rgba(26,11,14,0.35) 75%, rgba(26,11,14,0.05) 100%)' }}
         />
 
         <div className="relative max-w-5xl mx-auto px-5 sm:px-8 py-14 flex flex-col sm:flex-row items-center gap-10">
