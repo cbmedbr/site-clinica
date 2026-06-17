@@ -91,7 +91,7 @@ export default function Convenios() {
         </div>
 
         {/* ── Locação de Consultórios ── */}
-        <div className="bg-white rounded-3xl p-8 lg:p-12 border border-neutral-100/80"
+        <div id="trabalhe-conosco" className="scroll-mt-24 bg-white rounded-3xl p-8 lg:p-12 border border-neutral-100/80"
           style={{ boxShadow: '0 2px 16px rgba(0,0,0,0.06), 0 8px 40px rgba(0,0,0,0.04)' }}>
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div className="space-y-5">
@@ -102,7 +102,7 @@ export default function Convenios() {
                 </span>
               </div>
               <h3 className="heading-serif text-2xl sm:text-3xl text-neutral-800">
-                Locação de Consultórios
+                Faça parte da nossa equipe
               </h3>
               <p className="text-body text-base leading-8">
                 Você é psicólogo(a), psicoterapeuta ou profissional da saúde mental e

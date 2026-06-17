@@ -12,6 +12,7 @@ const navLinks = [
   { label: 'Testes Neuro', href: '/avaliacao-neuropsicologica', novo: true },
   { label: 'Nossas Salas', href: '/consultorios'                  },
   { label: 'Convênios',    href: '#convenios'                     },
+  { label: 'Trabalhe conosco', href: '#trabalhe-conosco'         },
   { label: 'Sobre',        href: '#sobre'                         },
   { label: 'Contato',      href: '#contato'                       },
 ]
@@ -48,7 +49,7 @@ export default function Header() {
         <a
           href="#inicio"
           onClick={(e) => { e.preventDefault(); handleNav('#inicio') }}
-          className="flex items-center gap-3"
+          className="flex items-center gap-3 flex-shrink-0"
         >
           <div className="relative w-10 h-10 md:w-12 md:h-12 overflow-hidden rounded-xl flex-shrink-0">
             <Image
@@ -60,7 +61,7 @@ export default function Header() {
             />
           </div>
           <div className="block">
-            <p className="font-serif font-bold text-[#7C2C3B] text-sm leading-tight">
+            <p className="font-serif font-bold text-[#7C2C3B] text-sm leading-tight whitespace-nowrap">
               Clínica Luciano Noceti
             </p>
             <p className="text-[#7C2C3B] text-[10px] font-medium tracking-widest uppercase leading-tight opacity-70">
@@ -70,14 +71,14 @@ export default function Header() {
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-0.5">
+        <nav className="hidden xl:flex items-center gap-0.5">
           {navLinks.map((link) =>
             link.href.startsWith('/') ? (
               <Link
                 key={link.href}
                 href={link.href}
-                className="relative px-3 py-2 text-sm font-medium text-neutral-600 hover:text-[#7C2C3B]
-                           rounded-lg hover:bg-[#FBF0F1] transition-all duration-200"
+                className="relative px-2.5 py-2 text-sm font-medium text-neutral-600 hover:text-[#7C2C3B]
+                           rounded-lg hover:bg-[#FBF0F1] transition-all duration-200 whitespace-nowrap"
               >
                 {link.label}
                 {link.novo && (
@@ -92,8 +93,8 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={(e) => { e.preventDefault(); handleNav(link.href) }}
-                className="relative px-3 py-2 text-sm font-medium text-neutral-600 hover:text-[#7C2C3B]
-                           rounded-lg hover:bg-[#FBF0F1] transition-all duration-200"
+                className="relative px-2.5 py-2 text-sm font-medium text-neutral-600 hover:text-[#7C2C3B]
+                           rounded-lg hover:bg-[#FBF0F1] transition-all duration-200 whitespace-nowrap"
               >
                 {link.label}
                 {link.novo && (
@@ -108,7 +109,7 @@ export default function Header() {
         </nav>
 
         {/* CTA + Mobile toggle */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 flex-shrink-0 sm:-mr-2 lg:-mr-4">
           {/* Mobile: só ícone redondo | Desktop: botão completo */}
           <a
             href={WA_LINK}
@@ -118,11 +119,11 @@ export default function Header() {
             aria-label="Agendar pelo WhatsApp"
           >
             <MessageCircle className="w-5 h-5 flex-shrink-0" />
-            <span className="hidden sm:inline text-sm">Agendamento Rápido</span>
+            <span className="hidden sm:inline text-sm">Agendamento</span>
           </a>
 
           <button
-            className="lg:hidden p-2 rounded-lg hover:bg-neutral-100 transition-colors"
+            className="xl:hidden p-2 rounded-lg hover:bg-neutral-100 transition-colors"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Abrir menu"
           >
@@ -133,7 +134,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden overflow-hidden transition-all duration-300 ${
+        className={`xl:hidden overflow-hidden transition-all duration-300 ${
           menuOpen ? 'max-h-[32rem] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
