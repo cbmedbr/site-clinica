@@ -309,10 +309,10 @@ export default function ConsultoriosClient() {
           {/* CTA */}
           <div className="mt-16 bg-[#1A0B0E] rounded-3xl p-10 text-center">
             <h2 className="font-serif font-bold text-2xl sm:text-3xl text-[#FCECBF] mb-3">
-              Interessado em locar um consultório?
+              Faça parte da nossa equipe!
             </h2>
             <p className="text-white/60 text-sm mb-7 max-w-md mx-auto leading-relaxed">
-              Entre em contato para conhecer os planos de locação e verificar disponibilidade.
+              Consultórios com a estrutura completa para o atendimento.
             </p>
             <a
               href={WA_LINK} target="_blank" rel="noopener noreferrer"
