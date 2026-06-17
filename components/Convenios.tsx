@@ -102,7 +102,7 @@ export default function Convenios() {
                 </span>
               </div>
               <h3 className="heading-serif text-2xl sm:text-3xl text-neutral-800">
-                Faça parte da nossa equipe
+                Faça parte da nossa equipe!
               </h3>
               <p className="text-body text-base leading-8">
                 Você é psicólogo(a), psicoterapeuta ou profissional da saúde mental e
