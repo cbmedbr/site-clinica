@@ -67,6 +67,7 @@ export const profissionais: Prof[] = [
   {
     nome: 'Ana Karoline Martins',
     registro: 'CRP 12/20210',
+    ocultarDaEquipe: true,
     metodo: 'Terapia Cognitiva e Comportamental (TCC) e Neuropsicologia',
     filtros: ['TCC', 'Neuropsicologia'],
     formacao: 'Graduação em Psicologia pela Faculdade Estácio de Sá. Pós-Graduação em Neuropsicologia pela Faculdade Metropolitana do Estado de São Paulo. Cursou prevenção ao suicídio (UFSC/AFSP) e desenvolvimento psicomotor. Imersão em ABA. Pós em TCC na FAMEESP. Pós-Graduação em Terapia Cognitivo-Comportamental na UMESP.',
