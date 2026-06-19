@@ -16,6 +16,7 @@ export const ProfSchema = z.object({
   atendimento:        z.string().min(5),
   foto:               z.string().regex(/^\/equipe\/.+\.(avif|jpeg|jpg|png)$/, 'Caminho inválido'),
   fazNeuropsico:      z.boolean().optional(),
+  ocultarDaEquipe:    z.boolean().optional(),
   // campos opcionais para landing pages — null = seção não renderiza
   linkedin_url:       z.string().url().nullable().optional(),
   manifesto:          z.string().nullable().optional(),
@@ -99,6 +100,7 @@ export const profissionais: Prof[] = [
   {
     nome: 'Anna de Lima Estanislau',
     registro: 'CRP 12/13484',
+    ocultarDaEquipe: true,
     metodo: 'Terapia Cognitivo Comportamental (TCC) e Neuropsicologia',
     filtros: ['TCC', 'Neuropsicologia'],
     formacao: 'Bacharel em Psicologia - Faculdade Cesusc - Florianópolis - SC. Especialização em Terapia Cognitivo-Comportamental - Pós Graduação Grupo Cognitivo - Florianópolis - SC. Curso de Equoterapia - ANDE Brasil - Associação Nacional de Equoterapia - Brasília - DF. Curso de Equitadora - ANDE Brasil - Associação Nacional de Equoterapia - Brasília - DF. Pós-graduação em Neuropsicologia pela UNIASSELVI (2024).',

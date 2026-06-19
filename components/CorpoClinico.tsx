@@ -3,7 +3,9 @@
 import { useState, useEffect, useCallback, useMemo } from 'react'
 import Image from 'next/image'
 import { X, MessageCircle, ChevronRight, ChevronDown, Monitor, MapPin, Search } from 'lucide-react'
-import { type Prof, profissionais } from '@/lib/profissionais'
+import { type Prof, profissionais as todosProfissionais } from '@/lib/profissionais'
+
+const profissionais = todosProfissionais.filter(p => !p.ocultarDaEquipe)
 
 const WA_BASE = 'https://wa.me/5548998056893'
 function waLink(nome: string) {
