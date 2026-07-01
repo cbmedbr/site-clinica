@@ -258,6 +258,17 @@ export const profissionais: Prof[] = [
     foto: '/equipe/flora_psico.avif',
   },
   {
+    nome: 'Gabriela Cristina Kegler de Lima',
+    registro: 'CRP 12/30669',
+    metodo: 'Gestalt-Terapia',
+    filtros: ['Gestalt'],
+    formacao: 'Graduação em Psicologia pela Universidade do Vale do Itajaí (UNIVALI). Especialização em Gestalt-Terapia pelo Comunidade Gestáltica.',
+    publico: 'Atende Adolescentes a partir dos 16 anos, Adultos e Idosos. Atendimento On-line e Presencial.',
+    demandas: 'Acolho jovens e adultos em processos relacionados à ansiedade, autoestima, autoconhecimento, tristeza, insegurança, medos, sobrecarga emocional, estresse, burnout, procrastinação, solidão, traumas, luto e perdas. Também acompanho questões ligadas à identidade de gênero, vivências LGBTQIA+, preconceito, violência, conflitos familiares, relações amorosas e interpessoais. Além disso, atendo pessoas em momentos de transições de vida, mudanças pessoais e profissionais, crises existenciais e envelhecimento.',
+    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, CELOS, Elosaúde, ABEPOM, CASACARESC, Sim Saúde, GEAP, FUSEX, Petrobras, Saúde Caixa e Particular.',
+    foto: '/equipe/gabrielacristina_psico.avif',
+  },
+  {
     nome: 'Gabriela Rodrigues Rossi',
     registro: 'CRP 12/11519',
     metodo: 'Psicanálise',
