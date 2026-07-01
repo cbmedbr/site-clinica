@@ -153,7 +153,7 @@ export const profissionais: Prof[] = [
     formacao: 'Graduação em Psicologia pela Faculdade de Desenvolvimento do RS (Fadergs) desde 2021. Com formação complementar em Filosofia, Teologia e Sociologia, o que enriquece a compreensão do ser humano em sua totalidade.',
     publico: 'Atende Adolescentes a partir dos 13 anos, Adultos e Idosos. Atendimento Presencial.',
     demandas: 'Ansiedade, Depressão, Síndrome do Pânico, Burnout, TOC, Fobias, Luto, TDAH, Transtornos de Personalidade, Trauma, Estresse, Transtorno Bipolar, Dificuldades nos Relacionamentos, Baixa Autoestima, Crises Existenciais, Dificuldades no Trabalho, Conflitos Familiares, Insônia e Distúrbios do Sono, Dor Emocional, Impulsividade, Dificuldade de Concentração, Medos e Inseguranças, Bloqueios Emocionais, Dificuldades na Comunicação, Procrastinação, Perfeccionismo, Solidão, Sensação de Vazio, Culpa e Vergonha, Dificuldades na Tomada de Decisão, Estresse Pós-Traumático, Dependência Emocional, Dificuldades com Limites, Conflitos de Identidade, Irritabilidade, Crises de Choro, Pensamentos Negativos Recorrentes, Fobia Social, Dificuldades na Vida Amorosa, Transições e Mudanças de Vida.',
-    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), FUSEX, CELOS, Elosaúde, Saudesc, CASACARESC, ABEPOM, Sim Saúde, GEAP e Particular.',
+    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), FUSEX, CELOS, Elosaúde, Saudesc, CASACARESC, ABEPOM, SC Saúde, Sim Saúde, GEAP e Particular.',
     foto: '/equipe/bruno_psico.avif',
   },
   {
