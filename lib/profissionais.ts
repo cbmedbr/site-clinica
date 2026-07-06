@@ -379,6 +379,17 @@ export const profissionais: Prof[] = [
     foto: '/equipe/mara_psico.avif',
   },
   {
+    nome: 'Maria Eduarda Guarise Katcipis',
+    registro: 'CRP 12/28736',
+    metodo: 'Psicanálise de Orientação Lacaniana',
+    filtros: ['Psicanálise'],
+    formacao: 'Graduação em Psicologia pela Unicesusc.',
+    publico: 'Atende Crianças a partir de 8 anos, Adolescentes, Adultos e Idosos. Atendimento On-line e Presencial.',
+    demandas: 'Sofrimento psíquico; ansiedade; conflitos afetivos, familiares e interpessoais; processos de luto e elaboração de perdas; crises e momentos de mudança ao longo da vida; dificuldades na expressão dos afetos e na comunicação; questões relacionadas à identidade, gênero e sexualidade; vivências de violência, discriminação e seus efeitos subjetivos; depressão; Burnout; experiências traumáticas e estresse pós-traumático; medos, fobias e crises de pânico; comportamentos compulsivos, incluindo Transtorno Obsessivo-Compulsivo (TOC); transtornos do humor, incluindo Transtorno Afetivo Bipolar; alterações do sono; transtornos alimentares; dependência química e alcoolismo; ideação suicida; demandas emocionais e comportamentais na infância e adolescência, entre outros.',
+    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), FUSEX, CELOS, Elosaúde, Saudesc, CASACARESC, ABEPOM, Sim Saúde, GEAP, SC Saúde e Particular.',
+    foto: '/equipe/mariaeduarda_psico.avif',
+  },
+  {
     nome: 'Mariza Marília Tibolla',
     registro: 'CRP 12/16906',
     metodo: 'Psicanalítica',
