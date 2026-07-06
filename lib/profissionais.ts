@@ -401,6 +401,17 @@ export const profissionais: Prof[] = [
     foto: '/equipe/mariza_psico.avif',
   },
   {
+    nome: 'Michele Rodrigues Ferreira',
+    registro: 'CRP 12/30238',
+    metodo: 'Terapia Cognitivo-Comportamental (TCC)',
+    filtros: ['TCC'],
+    formacao: 'Graduação em Psicologia pela Faculdade Anhanguera. Pós-Graduação em Terapia Cognitivo-Comportamental pela Faculdade Unyleya.',
+    publico: 'Atende Crianças a partir de 7 anos, Adolescentes, Adultos e Idosos. Atendimento Presencial.',
+    demandas: 'Ansiedade, Depressão, Estresse e sobrecarga emocional, Burnout (esgotamento profissional), Oscilações de humor, Autoestima e insegurança, Autoconhecimento e desenvolvimento pessoal, Luto, Separações e divórcio, Perdas afetivas e mudanças importantes de vida, Transtornos do sono, Dificuldades nos relacionamentos afetivos, Dependência emocional, Solidão e isolamento social, Experiências traumáticas, Promoção do bem-estar e da qualidade de vida.',
+    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), FUSEX, CELOS, Elosaúde, Saudesc, CASACARESC, ABEPOM, Sim Saúde, GEAP, SC Saúde e Particular.',
+    foto: '/equipe/michele_psico.avif',
+  },
+  {
     nome: 'Monica Scultori',
     registro: 'CRP 12/19265',
     metodo: 'Existencialista Sartreana',
