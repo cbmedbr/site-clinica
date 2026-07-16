@@ -54,8 +54,31 @@ function norm(s: string) {
   return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
 }
 
+// Divide em vírgula/ponto-e-vírgula, mas nunca dentro de parênteses —
+// evita fatiar listas como "(anorexia, bulimia)" em tags quebradas.
+function splitDemandas(s: string): string[] {
+  const partes: string[] = []
+  let atual = ''
+  let profundidade = 0
+  for (const ch of s) {
+    if (ch === '(') profundidade++
+    if (ch === ')') profundidade = Math.max(0, profundidade - 1)
+    if ((ch === ',' || ch === ';') && profundidade === 0) {
+      partes.push(atual)
+      atual = ''
+    } else {
+      atual += ch
+    }
+  }
+  if (atual) partes.push(atual)
+  return partes
+}
+
 function categorizarDemandas(demandas: string) {
-  const tags = demandas.replace(/\.$/, '').split(/[,;]/).map(s => s.trim()).filter(s => s.length > 2)
+  const tags = splitDemandas(demandas.replace(/\.$/, ''))
+    .map(s => s.trim())
+    .map(s => s.charAt(0).toUpperCase() + s.slice(1))
+    .filter(s => s.length > 2)
   const grupos: Record<string, string[]> = {}
   const semCategoria: string[] = []
 
