@@ -507,6 +507,24 @@ export const profissionais: Prof[] = [
     demandas: 'Especializada em oferecer suporte a pessoas em momentos de perda, luto (luto social, luto simbólico, luto parental, luto conjugal, luto por suicídio, luto por morte súbita, luto por morte violenta, luto por separação ou divórcio, luto por perda da saúde, luto pela perda do pet, luto por perda funcional, luto migratório, luto institucional). Síndrome do Ninho Vazio, Mães Atípicas, Mães de Anjos e Mães Neurodivergentes, Ansiedade, Depressão, Medo, Fobia Social. Dependência Emocional, Crises Existenciais, Traumas, Estresse, Estresse Pós-Traumático, Depêndencia Química, Alcoolismo, Violência Doméstica, Violências Sexuais, Distúrbios Alimentares (anorexia, bulimia), Transtorno de Imagem, Transtorno de Humor, Bipolar, Bordeline, Abandono de Incapaz, Dificuldades na Dinâmica Conjugal e Afetiva ( Sofrimento no vínculo amoroso, Feridas emocionais na relação, Dores no campo afetivo, Vivências de frustração relacional,  Divórcio/Separação), Bornout, Bulling, Pais em Processo de Filiação Adotiva,Aaspectos relacionados à Identidade de Gênero e à Orientação Sexual,  Desafios no Reconhecimento e Afirmação da Identidade.',
     atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, CELOS, Elosaúde, ABEPOM, CASACARESC, SC Saúde, Sim Saúde, GEAP, FUSEX, Petrobras, Saúde Caixa e Particular.',
     foto: '/equipe/monica_psico.avif',
+    manifesto: 'Atendo adolescentes e adultos. Cada pessoa carrega uma história única, que merece ser acolhida com respeito, escuta sensível e ausência de julgamentos. Meu compromisso é oferecer um espaço seguro para que o paciente compreenda seus sentimentos, reconheça seus recursos internos e encontre novos caminhos para lidar com seus desafios.',
+    abordagem_explicada: 'Na primeira sessão, ofereço um espaço de acolhimento para que você possa falar sobre o que o trouxe até aqui, no seu tempo e da forma como se sentir confortável. É um momento de escuta, compreensão da sua demanda e construção conjunta dos primeiros passos do processo terapêutico.',
+    pos_graduacoes: [
+      {
+        tipo: 'Pós-graduação',
+        curso: 'Tanatologia',
+        instituicao: 'Unyleya',
+        ano: '2019',
+      },
+      {
+        tipo: 'Pós-graduação',
+        curso: 'Existencialismo Sartreano',
+        instituicao: 'Unyleya',
+        ano: '2019',
+      },
+    ],
+    linkedin_url: 'https://www.linkedin.com/in/monica-scultori-17352515a',
+    instagram_url: 'https://www.instagram.com/psicologa_monica_scultori',
   },
   {
     nome: 'Morgana Jacques Scherer',
