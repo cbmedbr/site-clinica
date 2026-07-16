@@ -63,6 +63,28 @@ export const profissionais: Prof[] = [
     demandas: 'Ansiedade, depressão, bipolaridade, TDAH (Transtorno de Déficit de Atenção e Hiperatividade), processos de lutos e perdas, fobias, esquizofrenia, paranóia, questões de gênero e identidade sexual, preparação para aposentadoria, conflitos e/ou questões conjugais e amorosas (individual), pais em adoção, demandas comportamentais da infância e adolescência; transtornos alimentares, sono, comportamento, socialização e aprendizagem; borderline, Burnout, violências contra a mulher, crianças e adolescentes (e de gênero), dependência química e alcoolismo.',
     atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, CELOS, Elosaúde, ABEPOM, CASACARESC, SC Saúde, Sim Saúde, GEAP, FUSEX, Petrobras, Saúde Caixa e Particular.',
     foto: '/equipe/amanda_psico.avif',
+    manifesto: 'Atendo pacientes de plano de saúde e particulares, que estejam ou não transferenciados com a psicanálise.',
+    abordagem_explicada: 'A primeira sessão é uma experiência muito singular, sendo sustentada pelo método psicanalítico. Há, no geral, um convite à falar daquilo que toca a cada um.',
+    pos_graduacoes: [
+      {
+        tipo: 'Curso de formação continuada',
+        curso: 'Psicanálise de Orientação Lacaniana',
+        instituicao: 'Instituto Clínico de Psicanálise de Orientação Lacaniana (ICPOL) e Escola Brasileira de Psicanálise (EBP)',
+        ano: '2024 - atual',
+      },
+      {
+        tipo: 'Núcleo de pesquisa',
+        curso: 'Psicanálise com Crianças e Adolescentes - PANDORGA',
+        instituicao: 'Instituto Clínico de Psicanálise de Orientação Lacaniana (ICPOL) e Escola Brasileira de Psicanálise (EBP)',
+        ano: '2026 - atual',
+      },
+      {
+        tipo: 'Formação continuada',
+        curso: 'Jornadas, congressos, cartéis, análise pessoal e supervisão',
+        instituicao: 'Instituto Clínico de Psicanálise de Orientação Lacaniana (ICPOL) e Escola Brasileira de Psicanálise (EBP)',
+        ano: 'Contínuo',
+      },
+    ],
   },
   {
     nome: 'Ana Karoline Martins',
