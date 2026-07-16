@@ -19,6 +19,7 @@ export const ProfSchema = z.object({
   ocultarDaEquipe:    z.boolean().optional(),
   // campos opcionais para landing pages — null = seção não renderiza
   linkedin_url:       z.string().url().nullable().optional(),
+  instagram_url:      z.string().url().nullable().optional(),
   manifesto:          z.string().nullable().optional(),
   abordagem_explicada:z.string().nullable().optional(),
   pos_graduacoes:     z.array(z.object({
@@ -144,6 +145,24 @@ export const profissionais: Prof[] = [
     demandas: 'Transtornos de Ansiedade, Depressão, Transtornos de Personalidade, Transtornos de Humor, Bipolaridade, Borderline, Narcisismo, Fobias, Traumas, TDAH, Autismo, Compulsões, Estresse, Estresse pós traumático (TEPT), Burnout, Fobia Social, Morte e Luto, Obesidade, Sexualidade e Identidade de Gênero (LGBTQIAPN+), Síndrome do Pânico, Suicídio, TOC (Transtorno Obsessivo Compulsivo), Transtornos do Sono, Pânico, Violências sexuais sofridas, Pessoas vítimas de traumas e preconceitos, Dependência química e alcoolismo, Conflitos e/ou questões conjugais e amorosas (individual), Casais, Transtornos alimentares (anorexia, bulimia, seleção alimentar e afins), Transtornos de imagem, Suicídio, Violências (contra a mulher, crianças, adolescentes e de gênero), Questões relacionadas ao divórcio/separação, Famílias, Desenvolvimento de habilidades sociais, Depressão pós-parto, Puerpério, Baby blues, Orientação Parental, Bullying.',
     atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, CELOS, Elosaúde, ABEPOM, CASACARESC, SC Saúde, Sim Saúde, GEAP, FUSEX, Petrobras, Saúde Caixa e Particular.',
     foto: '/equipe/beatriz_psico.avif',
+    manifesto: 'Acredito que a terapia é um espaço de autoconhecimento, acolhimento e transformação. Atendo pessoas que desejam compreender melhor seus pensamentos, emoções e comportamentos para construir uma vida mais leve e alinhada com seus valores. Utilizando a Terapia Cognitivo-Comportamental, ajudo você a desenvolver estratégias práticas para enfrentar desafios, fortalecer sua autonomia e criar mudanças significativas no seu dia a dia.',
+    abordagem_explicada: 'Gosto de pensar na primeira sessão como o primeiro episódio de uma série: é o momento em que você me apresenta o personagem principal da história, que é você. Por meio de uma conversa acolhedora e conduzida de forma estruturada, vou conhecer seu mundo, compreender o que o trouxe até a terapia e identificar como posso ajudá-lo ao longo desse processo.',
+    pos_graduacoes: [
+      {
+        tipo: 'Especialização',
+        curso: 'Saúde da Família e da Comunidade',
+        instituicao: 'ESP-SC',
+        ano: '2023',
+      },
+      {
+        tipo: 'Formação',
+        curso: 'Aplicadora ABA',
+        instituicao: 'Regina Bergamo',
+        ano: '2025',
+      },
+    ],
+    linkedin_url: 'https://www.linkedin.com/in/beatriz-zoccoler-81735a274/',
+    instagram_url: 'https://www.instagram.com/psi.bzoccoler/',
   },
   {
     nome: 'Bibiana Mari Dutra Vieira',

@@ -230,8 +230,8 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
                 <WhatsAppIcon className="w-4 h-4" />
                 Agendar via WhatsApp
               </a>
-              <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer"
-                aria-label="Instagram da Clínica Luciano Noceti"
+              <a href={prof.instagram_url ?? INSTAGRAM_URL} target="_blank" rel="noopener noreferrer"
+                aria-label={prof.instagram_url ? `Instagram profissional de ${prof.nome}` : 'Instagram da Clínica Luciano Noceti'}
                 className="btn-ghost-white inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold"
                 style={{ color: 'rgba(255,255,255,0.75)', border: '1.5px solid rgba(255,255,255,0.2)' }}>
                 <InstagramIcon className="w-4 h-4" style={{ color: '#E4405F' }} />
