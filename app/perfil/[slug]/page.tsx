@@ -357,7 +357,11 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
                     <li key={i} className="text-xs leading-snug" style={{ color: '#7a5a5e' }}>
                       <span className="font-semibold" style={{ color: '#2D1A1E' }}>{pg.tipo}</span>
                       {' '}em {pg.curso}{' '}
-                      <span style={{ color: '#9a7a7e' }}>, {pg.instituicao} ({pg.ano})</span>
+                      {(pg.instituicao || pg.ano) && (
+                        <span style={{ color: '#9a7a7e' }}>
+                          {pg.instituicao ? `, ${pg.instituicao}` : ''}{pg.ano ? ` (${pg.ano})` : ''}
+                        </span>
+                      )}
                     </li>
                   ))}
                 </ul>

@@ -24,7 +24,7 @@ export const ProfSchema = z.object({
   abordagem_explicada:z.string().nullable().optional(),
   pos_graduacoes:     z.array(z.object({
                         tipo: z.string(), curso: z.string(),
-                        instituicao: z.string(), ano: z.string(),
+                        instituicao: z.string().optional(), ano: z.string().optional(),
                       })).nullable().optional(),
   stats:              z.array(z.object({ v: z.string(), l: z.string() })).nullable().optional(),
   formacaoNeuro:      z.string().nullable().optional(),
@@ -687,6 +687,39 @@ export const profissionais: Prof[] = [
     demandas: 'Ansiedade, estresse e dificuldades emocionais; sintomas depressivos e desmotivação; dificuldades comportamentais e regulação emocional; baixa autoestima e insegurança; dificuldades de atenção, concentração, impulsividade e organização; dificuldades nos relacionamentos interpessoais e conjugais; conflitos familiares, divórcio e reestruturação familiar; orientação parental; desenvolvimento de habilidades sociais; vivências de luto e dor emocional; autoconhecimento e identidade; transtornos do sono; crises de pânico e fobias; sintomas psicossomáticos; preparação para aposentadoria; experiências traumáticas; padrões de pensamento disfuncionais e crenças limitantes.',
     atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), FUSEX, CELOS, Elosaúde, Saudesc, CASACARESC, ABEPOM, Sim Saúde, GEAP, SC Saúde e Particular.',
     foto: '/equipe/vanessa_psico.avif',
+    manifesto: 'Acredito que cada pessoa possui recursos e potencialidades que podem ser fortalecidos quando encontra um espaço seguro para falar, refletir e ser acolhida. Escolhi a Psicologia porque acredito na importância do autoconhecimento e da saúde emocional como caminhos para uma vida mais equilibrada e significativa. Busco oferecer uma escuta ética, acolhedora e respeitosa, auxiliando pessoas a compreenderem suas vivências, desenvolverem estratégias de enfrentamento e construírem relações mais saudáveis consigo mesmas e com os outros.',
+    abordagem_explicada: 'Na primeira sessão, conversamos sobre o que motivou sua busca por atendimento, suas necessidades e expectativas, sempre em um ambiente acolhedor e sem julgamentos. É um momento para nos conhecermos, compreender sua história e iniciarmos juntos a construção de um plano de cuidado adequado às suas demandas.',
+    pos_graduacoes: [
+      {
+        tipo: 'Pós-Graduação',
+        curso: 'Psicologia Clínica com Ênfase em Terapia Cognitivo-Comportamental',
+        instituicao: 'Universidade Pitágoras Unopar Anhanguera',
+      },
+      {
+        tipo: 'Pós-Graduação',
+        curso: 'Saúde Mental, Psicopatologia e Atenção Psicossocial',
+        instituicao: 'Universidade Pitágoras Unopar Anhanguera',
+      },
+      {
+        tipo: 'Graduação',
+        curso: 'Bacharelado em Psicologia',
+        instituicao: 'Faculdade Anhanguera de São José - SC',
+      },
+      {
+        tipo: 'Curso de Formação Complementar',
+        curso: 'Manejo dos Sintomas Ansiosos',
+      },
+      {
+        tipo: 'Curso de Formação Complementar',
+        curso: 'Aprimoramento de Habilidades Socioemocionais e Interpessoais',
+      },
+      {
+        tipo: 'Curso de Formação Complementar',
+        curso: 'Desenvolvimento Pessoal e Profissional',
+      },
+    ],
+    linkedin_url: 'https://www.linkedin.com/in/vanessa-oliveira-69082a313',
+    instagram_url: 'https://www.instagram.com/psico_vanessaoliveira',
   },
   {
     nome: 'Wicleff Luiz Rufino',
