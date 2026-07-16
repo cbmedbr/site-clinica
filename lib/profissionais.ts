@@ -651,6 +651,9 @@ export const profissionais: Prof[] = [
     demandas: 'Transtornos de ansiedade, depressão, crise de Pânico, TOC, Fobias, comportamento alimentar, autoestima, relacionamento.',
     atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, CELOS, ABEPOM, CASACARESC, Sim Saúde, FUSEX, Petrobras, Saúde Caixa e Particular.',
     foto: '/equipe/thalita_psico.avif',
+    manifesto: 'Sou psicóloga e atendo adultos que, muitas vezes, estão funcionando bem por fora, mas sentem que estão repetindo padrões emocionais, comportamentais e relacionais que já não fazem sentido para a vida que desejam construir. Acredito que a psicoterapia é um espaço de autoconhecimento, consciência e transformação. Um processo que ajuda a compreender não apenas os sintomas ou dificuldades atuais, mas também a forma como nossas experiências, relações e histórias moldaram quem somos e como nos posicionamos diante da vida. Meu trabalho une acolhimento, escuta qualificada e direcionamento. Busco ajudar cada pessoa a compreender seus padrões, fortalecer sua autonomia emocional e desenvolver recursos para construir uma vida mais alinhada aos seus valores, desejos e objetivos. Acredito em processos que promovam clareza, consciência e mudança consistente.',
+    abordagem_explicada: 'A primeira sessão é um momento para nos conhecermos e entendermos o que motivou a busca pela terapia. Além de ouvir sua história e suas demandas, procuro identificar padrões emocionais e comportamentais que possam estar contribuindo para os desafios atuais. Sempre que possível, já ofereço devolutivas, reflexões e direcionamentos iniciais, para que você saia desse primeiro encontro não apenas acolhido, mas também com uma compreensão mais clara sobre o que está acontecendo e sobre os caminhos que podemos construir juntos.',
+    instagram_url: 'https://www.instagram.com/thalitagrebin',
   },
   {
     nome: 'Thayse Silveira da Rosa',
