@@ -569,6 +569,22 @@ export const profissionais: Prof[] = [
     demandas: 'Autoconhecimento, autoestima e bem-estar emocional. Desenvolvimento de habilidades pessoais e ressignificação de projetos de vida. Orientação profissional e de carreira (incluindo primeira escolha, transição e reposicionamento no mercado). Elaboração de currículo e preparação para o mercado de trabalho. Questões emocionais relacionadas a traumas e experiências adversas, como "negligência, rejeição e instabilidade familiar". Dificuldades nos relacionamentos, dependência emocional e padrões disfuncionais. Ansiedade. Transtornos do humor (depressão e distimia). Distúrbios do sono. Transtornos alimentares. Transtornos de personalidade. Avaliação psicológica para procedimentos cirúrgicos, como bariátrica, vasectomia e processo transexualizador.',
     atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, CELOS, ABEPOM, CASACARESC, Sim Saúde, FUSEX, Petrobras, Saúde Caixa e Particular.',
     foto: '/equipe/patricia_psico.avif',
+    manifesto: 'Minha escolha pela Psicologia nasceu da minha própria busca por autoconhecimento. Descobri, na prática, como compreender nossa história, nossos conflitos e nossas emoções pode abrir espaço para uma vida mais consciente e autêntica. Depois de mais de 12 anos atuando no ambiente corporativo, percebi que muitas pessoas enfrentavam dificuldades para reconhecer seus talentos, compreender suas emoções e fazer escolhas alinhadas com quem realmente são. Essa vivência reforçou meu propósito de oferecer um espaço onde cada pessoa possa desenvolver autoconhecimento, construir novos recursos emocionais e viver de forma mais autêntica. Hoje, acolho adolescentes, adultos e idosos que desejam compreender seus padrões de comportamento, ressignificar experiências, fortalecer sua identidade e construir novas formas de se relacionar consigo mesmos e com os outros. Acredito que a psicoterapia é um espaço de escuta, reflexão e acolhimento, onde cada pessoa pode desenvolver recursos emocionais para enfrentar os desafios da vida de maneira mais consciente, respeitando sua própria história e singularidade.',
+    abordagem_explicada: 'Antes do nosso primeiro encontro, envio um breve questionário para conhecer melhor sua história e tornar a sessão mais proveitosa. Quando o atendimento é online, também encaminho todas as orientações necessárias para que você se sinta tranquilo e preparado. Na primeira sessão, conversamos sobre o que motivou sua busca pela terapia, esclareço como funciona o processo terapêutico e iniciamos a construção de um espaço de confiança, acolhimento e escuta, sempre respeitando o seu tempo e a sua singularidade.',
+    pos_graduacoes: [
+      {
+        tipo: 'Graduação',
+        curso: 'Psicologia',
+        instituicao: 'Universidade de Uberaba (UNIUBE)',
+        ano: '2013',
+      },
+      {
+        tipo: 'Capacitação',
+        curso: 'Orientação Profissional e de Carreira',
+        instituicao: 'Faculdade Anhanguera',
+        ano: '2025',
+      },
+    ],
   },
   {
     nome: 'Rafaela Vestri',
