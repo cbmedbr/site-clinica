@@ -141,7 +141,7 @@ export const profissionais: Prof[] = [
     metodo: 'Terapia Cognitivo Comportamental (TCC) e ABA',
     filtros: ['TCC', 'ABA'],
     formacao: 'Graduada em Psicologia na FISMA desde 2021, com foco na abordagem cognitivo comportamental. Especialista em Saúde da Família e da Comunidade através da Residência Multiprofissional da Escola de Saúde Pública de Santa Catarina.',
-    publico: 'Atendo crianças a partir de 2 anos, adolescentes, adultos, famílias e casais. Atendimento Presencial.',
+    publico: 'Atendo crianças a partir de 2 anos, adolescentes, adultos e famílias. Atendimento Presencial.',
     demandas: 'Transtornos de Ansiedade, Depressão, Transtornos de Personalidade, Transtornos de Humor, Bipolaridade, Borderline, Narcisismo, Fobias, Traumas, TDAH, Autismo, Compulsões, Estresse, Estresse pós traumático (TEPT), Burnout, Fobia Social, Morte e Luto, Obesidade, Sexualidade e Identidade de Gênero (LGBTQIAPN+), Síndrome do Pânico, Suicídio, TOC (Transtorno Obsessivo Compulsivo), Transtornos do Sono, Pânico, Violências sexuais sofridas, Pessoas vítimas de traumas e preconceitos, Dependência química e alcoolismo, Conflitos e/ou questões conjugais e amorosas (individual), Casais, Transtornos alimentares (anorexia, bulimia, seleção alimentar e afins), Transtornos de imagem, Suicídio, Violências (contra a mulher, crianças, adolescentes e de gênero), Questões relacionadas ao divórcio/separação, Famílias, Desenvolvimento de habilidades sociais, Depressão pós-parto, Puerpério, Baby blues, Orientação Parental, Bullying.',
     atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, CELOS, Elosaúde, ABEPOM, CASACARESC, SC Saúde, Sim Saúde, GEAP, FUSEX, Petrobras, Saúde Caixa e Particular.',
     foto: '/equipe/beatriz_psico.avif',
