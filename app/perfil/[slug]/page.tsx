@@ -342,6 +342,24 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
       )}
 
       {/* ══════════════════════════════════════════════
+          PUBLICAÇÕES (condicional)
+      ══════════════════════════════════════════════ */}
+      {prof.publicacoes && prof.publicacoes.length > 0 && (
+        <section className="py-14 px-5 sm:px-8" style={{ background: 'white' }}>
+          <div className="max-w-3xl mx-auto">
+            <span className="text-[10px] font-bold tracking-[0.22em] uppercase block mb-4" style={{ color: '#B8883A' }}>Publicações</span>
+            <ol className="space-y-3">
+              {prof.publicacoes.map((pub, i) => (
+                <li key={i} className="text-sm leading-relaxed" style={{ color: '#5a4044' }}>
+                  <span className="font-semibold" style={{ color: '#2D1A1E' }}>{i + 1}.</span> {pub}
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+      )}
+
+      {/* ══════════════════════════════════════════════
           FORMAÇÃO + ATENDIMENTO
       ══════════════════════════════════════════════ */}
       <section className="py-14 px-5 sm:px-8" style={{ background: '#FAF7F4' }}>

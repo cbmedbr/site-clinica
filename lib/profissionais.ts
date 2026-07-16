@@ -28,6 +28,7 @@ export const ProfSchema = z.object({
                       })).nullable().optional(),
   stats:              z.array(z.object({ v: z.string(), l: z.string() })).nullable().optional(),
   formacaoNeuro:      z.string().nullable().optional(),
+  publicacoes:        z.array(z.string()).nullable().optional(),
 })
 
 export type Prof = z.infer<typeof ProfSchema>
@@ -461,8 +462,69 @@ export const profissionais: Prof[] = [
     foto: '/equipe/marialuci_psico.avif',
     fazNeuropsico: true,
     formacaoNeuro: 'Especialização em Neuropsicologia pela Faculdade Metropolitana-SP (2019)',
-    manifesto: 'Sou psicóloga clínica e neuropsicóloga, com formação em Gestalt-terapia, terapia de casal e família, além de atuar como consultora organizacional e professora de Psicologia. Minha trajetória integra conhecimentos da psicologia, neuropsicologia e educação, com foco na promoção da saúde mental e do desenvolvimento humano. Realizo psicoterapia e neuroavaliação (avaliação neuropsicológica), auxiliando na compreensão do funcionamento cognitivo e emocional, especialmente em casos de ansiedade, depressão, TDAH e dificuldades relacionadas ao desenvolvimento pessoal e relacional. Atendo adolescentes, adultos, casais e famílias, aliando escuta clínica, avaliação psicológica e estratégias práticas de transformação emocional e comportamental. Meu trabalho é guiado por uma abordagem humanizada, ética e baseada em evidências.',
+    manifesto: 'Você sente que suas emoções, relacionamentos ou até mesmo as mudanças hormonais têm afetado sua qualidade de vida? Como psicóloga, acredito que compreender sua trajetória é o passo essencial para transformá-la. Especialista em avaliação psicológica e com atuação baseada na Gestalt-Terapia, ajudo adolescentes, adultos e casais a compreenderem seus padrões emocionais, fortalecerem a autoestima e construírem relações mais saudáveis. Tenho atenção especial à saúde emocional da mulher e aos impactos que as questões hormonais podem exercer sobre seu bem-estar e seus vínculos. Meu propósito é oferecer um espaço seguro para que você encontre mais equilíbrio, autenticidade e qualidade de vida.',
     abordagem_explicada: 'A Gestalt-Terapia é um convite ao autoconhecimento e à transformação por meio da consciência do momento presente. Em um espaço acolhedor e sem julgamentos, você aprende a compreender suas emoções, pensamentos e relações, desenvolvendo maior autenticidade, equilíbrio e liberdade para fazer escolhas que estejam alinhadas com quem realmente é.',
+    pos_graduacoes: [
+      {
+        tipo: 'Especialização',
+        curso: 'Terapia de Casal',
+        instituicao: 'Instituto Caroline Vieira (ICV)',
+        ano: '2024-2025',
+      },
+      {
+        tipo: 'Especialização',
+        curso: 'Gestalt-Terapia',
+        instituicao: 'Instituto Fratelle',
+        ano: '2024',
+      },
+      {
+        tipo: 'Especialização',
+        curso: 'Neuropsicologia',
+        instituicao: 'Faculdade Metropolitana de São Paulo',
+        ano: '2020-2021',
+      },
+      {
+        tipo: 'Especialização',
+        curso: 'Capacitação Teste de Rastreio da Dislexia na Prática da Avaliação e Intervenção',
+        instituicao: 'Instituto Neuro Jessica Cavalcante (INJC)',
+        ano: '2019-2020',
+      },
+      {
+        tipo: 'Especialização',
+        curso: 'Psicopedagogia e Aprendizagem',
+        instituicao: 'Instituto Neuro Jessica Cavalcante (INJC)',
+        ano: '2018-2020',
+      },
+      {
+        tipo: 'Graduação',
+        curso: 'Bacharelado em Psicologia',
+        instituicao: 'Centro Universitário Christus (UNICHRISTUS)',
+        ano: '2018-2023',
+      },
+      {
+        tipo: 'Especialização (interrompida)',
+        curso: 'MBA em Administração de Recursos Humanos',
+        instituicao: 'Faculdade Ateneu (FATE)',
+        ano: '2008, interrompida em 2010',
+      },
+      {
+        tipo: 'Graduação',
+        curso: 'Pedagogia',
+        instituicao: 'Universidade Estadual do Vale do Acaraú (UVA)',
+        ano: '2000-2004',
+      },
+    ],
+    publicacoes: [
+      'SILVA, C. D.; DURAN, M. L. F. Corpos que Falam, Mães que Sofrem: Estigma Social e Sofrimento na Maternagem Atípica. Artigo completo, 2025.',
+      'DURAN, M. L. F.; SILVA, C. D. O Reforço Positivo como Agente Transformador no Comportamento de Crianças com TOD em Idade Pré-Escolar. Artigo completo, 2025.',
+      'DURAN, M. L. F.; LIMA, D. M. A. Transtorno Opositor Desafiador no Ensino Fundamental: Estratégias e Ações de Inclusão. Trabalho de Conclusão de Curso, 2023.',
+      'DURAN, M. L. F. Transtorno Opositor Desafiador no Ensino Fundamental: Estratégias e Ações de Inclusão. Trabalho de Conclusão de Curso, 2023.',
+      'DURAN, M. L. F.; LIMA, Daniel Mattos de Araújo. Transtorno Opositor Desafiador no Ensino Fundamental: Estratégias e Ações de Inclusão. Trabalho de Conclusão de Curso II, 2023.',
+      'SILVA, C. D.; DURAN, M. L. F. Sustentabilidade Espaço Emocional, Indicador do Desenvolvimento Humano. Associação Brasileira de Odontologia - Seção Ceará, p. 10-13, mar. 2015.',
+      'SILVA, C. D.; DURAN, M. L. F. Excelência no Atendimento Odontológico. Odonto Nordeste.com, Fortaleza, p. 44-46, jan. 2015.',
+      'SILVA, C. D.; DURAN, M. L. F. Funcionário ou Colaborador: Ressignificando a Relação de Trabalho. Odonto Nordeste.com, Fortaleza, p. 10-11, nov. 2014.',
+      'SILVA, C. D.; DURAN, M. L. F. Funcionário ou Colaborador: Ressignificando a Relação de Trabalho. Fortaleza, p. 10-11, abr. 2014.',
+    ],
   },
   {
     nome: 'Mariza Marília Tibolla',
