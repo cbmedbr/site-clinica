@@ -547,6 +547,17 @@ export const profissionais: Prof[] = [
     demandas: 'Transtornos de ansiedade, angústia, depressão, dificuldades nos relacionamentos, conflitos familiares, autoestima, insegurança, ciúmes, dependência emocional, separações e términos de relacionamento, luto e perdas, estresse, sensação de vazio, insatisfação com a vida, autoconhecimento, amadurecimento emocional, repetição de padrões nos vínculos e dificuldades na construção e manutenção de relações. Abuso sexual, vítimas de traumas e preconceitos, transtornos alimentares (anorexia, bulimia, TARE) e transtornos de imagem.',
     atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, CELOS, Elosaúde, ABEPOM, CASACARESC, SC Saúde, Sim Saúde, GEAP, FUSEX, Petrobras, Saúde Caixa e Particular.',
     foto: '/equipe/nicolas_psico.avif',
+    manifesto: 'Atendo adolescentes e adultos que desejam compreender melhor a si mesmos, seus relacionamentos e os conflitos que atravessam suas vidas. Acredito que o sofrimento não deve ser apenas eliminado, mas também escutado em sua singularidade. Meu trabalho é oferecer um espaço de fala, reflexão e acolhimento, onde cada pessoa possa construir novos sentidos para sua própria história.',
+    abordagem_explicada: 'Na primeira sessão, conversamos sobre o que motivou sua busca por terapia e sobre sua história, respeitando seu tempo e sua forma de se expressar. É um encontro para nos conhecermos e começarmos a compreender juntos as questões que deseja trabalhar.',
+    pos_graduacoes: [
+      {
+        tipo: 'Formação',
+        curso: 'Psicanálise',
+        instituicao: 'CETEP',
+        ano: 'Em andamento',
+      },
+    ],
+    instagram_url: 'https://www.instagram.com/psinicolascpellegrin',
   },
   {
     nome: 'Patricia N. de A. Nogueira',
