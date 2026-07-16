@@ -485,6 +485,17 @@ export const profissionais: Prof[] = [
     demandas: 'Ansiedade, Depressão, Estresse e sobrecarga emocional, Burnout (esgotamento profissional), Oscilações de humor, Autoestima e insegurança, Autoconhecimento e desenvolvimento pessoal, Luto, Separações e divórcio, Perdas afetivas e mudanças importantes de vida, Transtornos do sono, Dificuldades nos relacionamentos afetivos, Dependência emocional, Solidão e isolamento social, Experiências traumáticas, Promoção do bem-estar e da qualidade de vida.',
     atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), FUSEX, CELOS, Elosaúde, Saudesc, CASACARESC, ABEPOM, Sim Saúde, GEAP, SC Saúde e Particular.',
     foto: '/equipe/michele_psico.avif',
+    manifesto: 'Cuidar da saúde emocional é um passo importante para viver com mais equilíbrio e autenticidade. Atendo crianças, adolescentes, adultos e idosos, oferecendo um espaço acolhedor e livre de julgamentos, onde cada história é recebida com respeito, escuta e atenção às suas necessidades.',
+    abordagem_explicada: 'Na primeira sessão, quero conhecer sua história, compreender o que motivou sua busca por psicoterapia e ouvir suas necessidades com atenção e acolhimento. É um espaço seguro para nos conhecermos e entendermos juntos como esse processo pode fazer sentido para você.',
+    pos_graduacoes: [
+      {
+        tipo: 'Pós-graduação',
+        curso: 'Terapia Cognitivo-Comportamental',
+        instituicao: 'Faculdade Unyleya',
+        ano: '2026',
+      },
+    ],
+    instagram_url: 'https://www.instagram.com/psi.michelerf',
   },
   {
     nome: 'Monica Scultori',
