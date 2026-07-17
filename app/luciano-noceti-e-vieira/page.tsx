@@ -12,11 +12,16 @@ export const metadata: Metadata = {
   description:
     'Psicólogo e psicanalista com 25 anos de experiência em Florianópolis. Atendimento presencial e online. Psicanálise Freudo-Lacaniana. Agende sua consulta.',
   keywords: 'Luciano Noceti, psicanalista Florianópolis, psicanálise, CRP 12/02627',
+  alternates: {
+    canonical: '/luciano-noceti-e-vieira',
+  },
   openGraph: {
     title: 'Luciano Noceti e Vieira | Psicanalista',
     description: '25 anos de Psicanálise Freudo-Lacaniana. Florianópolis.',
     type: 'profile',
     locale: 'pt_BR',
+    url: 'https://www.lucianonoceti.com.br/luciano-noceti-e-vieira',
+    siteName: 'Clínica Luciano Noceti',
   },
 }
 
@@ -476,11 +481,13 @@ export default function LucianoPage() {
 
       {/* ── Rodapé ── */}
       <footer style={{ background: '#0E0608' }} className="py-6 px-5 text-center">
+        <nav className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1.5 mb-3">
+          <Link href="/" className="text-xs font-medium hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.5)' }}>Início</Link>
+          <Link href="/equipe" className="text-xs font-medium hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.5)' }}>Nossa Equipe</Link>
+          <Link href="/avaliacao-neuropsicologica" className="text-xs font-medium hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.5)' }}>Avaliação Neuropsicológica</Link>
+        </nav>
         <p className="text-xs mb-1" style={{ color: 'rgba(255,255,255,0.3)' }}>
-          © {new Date().getFullYear()} Clínica Luciano Noceti · Rua Felipe Schmidt, 515, Centro, Florianópolis, SC ·{' '}
-          <Link href="/" className="hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.4)' }}>
-            Ver todos os profissionais
-          </Link>
+          © {new Date().getFullYear()} Clínica Luciano Noceti · Rua Felipe Schmidt, 515, Centro, Florianópolis, SC
         </p>
         <p className="text-[10px]" style={{ color: 'rgba(255,255,255,0.2)' }}>
           Sigilo profissional garantido conforme o Código de Ética do Psicólogo (CFP).{' '}

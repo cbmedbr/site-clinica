@@ -89,18 +89,6 @@ export const profissionais: Prof[] = [
     ],
   },
   {
-    nome: 'Ana Karoline Martins',
-    registro: 'CRP 12/20210',
-    ocultarDaEquipe: true,
-    metodo: 'Terapia Cognitiva e Comportamental (TCC) e Neuropsicologia',
-    filtros: ['TCC', 'Neuropsicologia'],
-    formacao: 'Graduação em Psicologia pela Faculdade Estácio de Sá. Pós-Graduação em Neuropsicologia pela Faculdade Metropolitana do Estado de São Paulo. Cursou prevenção ao suicídio (UFSC/AFSP) e desenvolvimento psicomotor. Imersão em ABA. Pós em TCC na FAMEESP. Pós-Graduação em Terapia Cognitivo-Comportamental na UMESP.',
-    publico: 'Atende Crianças a partir de 8 anos, Adolescentes, Adultos e Idosos. Atendimento Presencial.',
-    demandas: 'Transtornos de humor, personalidade, alimentares, luto, ansiedade, depressão, bipolaridade, fobias, TOC, estresse, TDAH, TEPT, gênero e sexualidade, ideação suicida, conflitos familiares e de relacionamentos, desenvolvimento infantil, avaliação psicológica, avaliação para cirurgia bariátrica, laqueadura e vasectomia, orientação profissional.',
-    atendimento: 'Unimed, Saudesc, CELOS, ABEPOM, CASACARESC, SC Saúde, Sim Saúde, Petrobras, Saúde Caixa, GEAP e Particular.',
-    foto: '/equipe/anakarol_psico.avif',
-  },
-  {
     nome: 'André Luiz da Silva',
     registro: 'CRP 12/12629',
     metodo: 'Psicanálise',
@@ -813,3 +801,15 @@ try {
   }
   throw err
 }
+
+/** Nome do fundador — tem página própria (/luciano-noceti-e-vieira), fora de /perfil. */
+export const FUNDADOR_NOME = 'Luciano Noceti e Vieira'
+
+/**
+ * Corpo clínico visível — mesmo critério do grid da home (`!ocultarDaEquipe`),
+ * excluindo o fundador (que tem página própria em /luciano-noceti-e-vieira).
+ * Fonte única para o hub /equipe e a seção "Nossa Equipe" do Footer.
+ */
+export const equipeVisivel: Prof[] = profissionais.filter(
+  p => !p.ocultarDaEquipe && p.nome !== FUNDADOR_NOME,
+)

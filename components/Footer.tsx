@@ -1,8 +1,10 @@
 import {
   MapPin, Phone, Mail, AlertTriangle,
-  Instagram, Facebook, Clock, MessageCircle,
+  Instagram, Facebook, Clock, MessageCircle, Star,
 } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
+import { equipeVisivel, slugify, FUNDADOR_NOME } from '@/lib/profissionais'
 
 const WA_LINK   = 'https://wa.me/5548998056893'
 const IG_LINK   = 'https://www.instagram.com/clinicalucianonoceti/'
@@ -14,9 +16,15 @@ const navLinks = [
   { label: 'Sobre',      href: '#sobre'      },
   { label: 'Abordagens', href: '#abordagens' },
   { label: 'Equipe',     href: '#equipe'     },
+  { label: 'Nossa Equipe', href: '/equipe'   },
+  { label: 'Nossos Espaços', href: '/consultorios' },
   { label: 'Convênios',  href: '#convenios'  },
   { label: 'Contato',    href: '#contato'    },
 ]
+
+const equipeOrdenada = [...equipeVisivel].sort((a, b) =>
+  a.nome.localeCompare(b.nome, 'pt-BR'),
+)
 
 export default function Footer() {
   return (
@@ -109,12 +117,21 @@ export default function Footer() {
               <ul className="space-y-2">
                 {navLinks.map((link) => (
                   <li key={link.href}>
-                    <a
-                      href={link.href}
-                      className="text-neutral-400 text-sm hover:text-[#FCECBF] transition-colors"
-                    >
-                      {link.label}
-                    </a>
+                    {link.href.startsWith('/') ? (
+                      <Link
+                        href={link.href}
+                        className="text-neutral-400 text-sm hover:text-[#FCECBF] transition-colors"
+                      >
+                        {link.label}
+                      </Link>
+                    ) : (
+                      <a
+                        href={link.href}
+                        className="text-neutral-400 text-sm hover:text-[#FCECBF] transition-colors"
+                      >
+                        {link.label}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -194,6 +211,39 @@ export default function Footer() {
                 style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg)' }}
               />
             </div>
+          </div>
+
+          {/* ── Nossa Equipe (índice de perfis — links reais para SEO) ── */}
+          <div className="mt-12 pt-8 border-t border-neutral-700">
+            <div className="flex items-center justify-between mb-4">
+              <h4 className="text-white font-semibold text-sm tracking-wide">Nossa Equipe</h4>
+              <Link
+                href="/equipe"
+                className="inline-flex items-center gap-1 text-xs text-[#FCECBF] hover:text-white transition-colors"
+              >
+                Ver corpo clínico completo
+              </Link>
+            </div>
+            <Link
+              href="/luciano-noceti-e-vieira"
+              className="inline-flex items-center gap-2 text-sm text-neutral-300 hover:text-[#FCECBF] transition-colors mb-4"
+            >
+              <Star className="w-3.5 h-3.5 text-[#FCECBF]" />
+              <span className="font-medium">Luciano Noceti e Vieira</span>
+              <span className="text-neutral-500 text-xs">· Responsável Técnico</span>
+            </Link>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-1.5">
+              {equipeOrdenada.map((p) => (
+                <li key={p.nome}>
+                  <Link
+                    href={`/perfil/${slugify(p.nome)}`}
+                    className="text-neutral-400 text-[13px] hover:text-[#FCECBF] transition-colors"
+                  >
+                    {p.nome}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Bottom bar */}

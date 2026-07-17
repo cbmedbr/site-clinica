@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Nossos Espaços | Clínica Luciano Noceti',
   description:
     'Conheça os consultórios e espaços da Clínica Luciano Noceti no Centro de Florianópolis. Ambientes climatizados, mobiliados e projetados para o bem-estar do paciente.',
+  alternates: {
+    canonical: '/consultorios',
+  },
   openGraph: {
     title: 'Nossos Espaços | Clínica Luciano Noceti',
     description:

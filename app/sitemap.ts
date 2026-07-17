@@ -22,10 +22,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority:        1,
     },
     {
+      url:             `${BASE}/equipe`,
+      lastModified:    NOW,
+      changeFrequency: 'weekly',
+      priority:        0.9,
+    },
+    {
       url:             `${BASE}/avaliacao-neuropsicologica`,
       lastModified:    NOW,
       changeFrequency: 'monthly',
       priority:        0.9,
+    },
+    {
+      url:             `${BASE}/consultorios`,
+      lastModified:    NOW,
+      changeFrequency: 'monthly',
+      priority:        0.7,
     },
     {
       url:             `${BASE}/luciano-noceti-e-vieira`,
