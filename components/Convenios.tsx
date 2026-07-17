@@ -9,8 +9,8 @@ const WA_LINK = 'https://wa.me/5548998056893'
 // scale: aplica transform para logos com muito espaço transparente interno
 const convenios = [
   { nome: 'Unimed',      logo: '/logo/unimed.png'     },
-  { nome: 'SIM Saúde',   logo: '/logo/sim.png'        },
-  { nome: 'SC Saúde',    logo: '/logo/scsaude.jpeg',   scale: 'scale-[1.6]' },
+  { nome: 'SIM Saúde',   logo: '/logo/sim.jpeg'        },
+  { nome: 'SC Saúde',    logo: '/logo/scsaude.png',   scale: 'scale-[1.6]' },
   { nome: 'Petrobras',   logo: '/logo/petrobras.png', scale: 'scale-[1.5]' },
   { nome: 'GEAP Saúde',  logo: '/logo/geapsaude.png' },
   { nome: 'Saudesc',     logo: '/logo/saudesc.jpeg',  scale: 'scale-[1.5]' },
