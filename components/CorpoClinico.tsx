@@ -1,9 +1,9 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useEffect, useCallback, useMemo } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ChevronRight, ChevronDown, Monitor, MapPin, Search, Star } from 'lucide-react'
+import { X, MessageCircle, ChevronRight, ChevronDown, Monitor, MapPin, Search, Star } from 'lucide-react'
 import {
   type Prof,
   equipeVisivel,
@@ -16,6 +16,14 @@ import {
 const profissionais = equipeVisivel
 // Fundador tem card em destaque próprio, linkando para /luciano-noceti-e-vieira.
 const fundador = todosProfissionais.find(p => p.nome === FUNDADOR_NOME)
+
+const WA_BASE = 'https://wa.me/5548998056893'
+function waLink(nome: string) {
+  const primeiroNome = nome.split(' ')[0]
+  const artigo = primeiroNome.toLowerCase().endsWith('a') ? 'a' : 'o'
+  const texto = `Olá, venho do site e tenho interesse em realizar um agendamento com ${artigo} profissional ${nome}. Poderia me auxiliar?`
+  return `${WA_BASE}?text=${encodeURIComponent(texto)}`
+}
 
 /* ─── Ordem fixa dos filtros ──────────────────────────────── */
 const ORDEM_FILTROS = ['Psicanálise', 'TCC', 'Neuropsicologia', 'TEA', 'Gestalt', 'Existencialismo', 'Transpessoal', 'Junguiana', 'Sistêmica Familiar', 'Psicodrama']
@@ -73,11 +81,153 @@ function SelosModalidade({ publico }: { publico: string }) {
   )
 }
 
-/* ─── Card = link real para /perfil/{slug} ────────────────── */
-function Card({ p, display }: { p: Prof; display: string }) {
+/* ─── Modal ───────────────────────────────────────────────── */
+function Modal({ p, onClose }: { p: Prof; onClose: () => void }) {
+  const [fotoExpandida, setFotoExpandida] = useState(false)
+
+  useEffect(() => {
+    const fn = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        if (fotoExpandida) setFotoExpandida(false)
+        else onClose()
+      }
+    }
+    document.addEventListener('keydown', fn)
+    document.body.style.overflow = 'hidden'
+    return () => { document.removeEventListener('keydown', fn); document.body.style.overflow = '' }
+  }, [onClose, fotoExpandida])
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4"
+      onClick={onClose} role="dialog" aria-modal="true" aria-label={`Perfil de ${p.nome}`}>
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" aria-hidden />
+
+      <div
+        className="relative bg-white w-full sm:max-w-lg rounded-t-3xl sm:rounded-3xl
+                   shadow-2xl flex flex-col max-h-[92dvh] sm:max-h-[90vh]"
+        onClick={e => e.stopPropagation()}
+      >
+        {/* Header fixo */}
+        <div className="flex-shrink-0 bg-[#FBF0F1] rounded-t-3xl sm:rounded-t-3xl px-5 pt-5 pb-4">
+          {/* Drag handle mobile */}
+          <div className="w-10 h-1 bg-[#7C2C3B]/20 rounded-full mx-auto mb-4 sm:hidden" />
+          <button onClick={onClose}
+            className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/80 hover:bg-white
+                       flex items-center justify-center shadow transition-colors z-10"
+            aria-label="Fechar modal">
+            <X className="w-4 h-4 text-neutral-500" />
+          </button>
+
+          {/* Foto + acesso à landing page, lado a lado no desktop */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5">
+            <button
+              onClick={() => setFotoExpandida(true)}
+              className="rounded-full focus:outline-none focus:ring-2 focus:ring-[#7C2C3B]/40 hover:opacity-90 transition-opacity flex-shrink-0"
+              aria-label={`Ver foto de ${p.nome} em tamanho real`}
+            >
+              <Foto src={p.foto} nome={p.nome}
+                className="w-32 h-32 rounded-full border-4 border-white shadow-md" />
+            </button>
+
+            <Link
+              href={`/perfil/${slugify(p.nome)}`}
+              className="inline-flex items-center justify-center gap-1.5 rounded-full px-4 py-2.5
+                         bg-[#7C2C3B] text-white text-xs font-bold shadow-sm
+                         hover:bg-[#963347] transition-colors text-center"
+            >
+              Acessar página do profissional
+              <ChevronRight className="w-3.5 h-3.5 flex-shrink-0" />
+            </Link>
+          </div>
+
+          <div className="text-center mt-3">
+            <h3 className="font-serif font-bold text-[#7C2C3B] text-base leading-tight">{p.nome}</h3>
+            <p className="text-[#7C2C3B] text-xs font-semibold mt-0.5 opacity-80">Psicólogo(a) · {p.registro}</p>
+            <p className="text-neutral-600 text-xs mt-1 font-medium">{p.metodo}</p>
+            <div className="mt-1.5">
+              <SelosModalidade publico={p.publico} />
+            </div>
+          </div>
+        </div>
+
+        {/* Corpo com scroll */}
+        <div className="flex-1 overflow-y-auto overscroll-contain px-5 py-5 space-y-5">
+
+          <div>
+            <p className="text-[10px] font-bold text-neutral-400 uppercase tracking-wider mb-1">Formação</p>
+            <p className="text-sm text-neutral-700 leading-relaxed">{p.formacao}</p>
+          </div>
+
+          <div>
+            <p className="text-[10px] font-bold text-neutral-400 uppercase tracking-wider mb-1">Público atendido</p>
+            <p className="text-sm text-neutral-700 leading-relaxed">{p.publico}</p>
+          </div>
+
+          <div>
+            <p className="text-[10px] font-bold text-neutral-400 uppercase tracking-wider mb-1">Demandas</p>
+            <p className="text-sm text-neutral-700 leading-relaxed">{p.demandas}</p>
+          </div>
+
+          <div>
+            <p className="text-[10px] font-bold text-neutral-400 uppercase tracking-wider mb-1">Convênios aceitos</p>
+            <p className="text-sm text-neutral-700 leading-relaxed">{p.atendimento}</p>
+          </div>
+        </div>
+
+        {/* Botão de agendamento — fixo fora do scroll, sempre visível */}
+        <div className="flex-shrink-0 px-5 py-4 border-t border-neutral-100 bg-white rounded-b-3xl">
+          <a href={waLink(p.nome)} target="_blank" rel="noopener noreferrer"
+            className="btn-whatsapp justify-center w-full">
+            <MessageCircle className="w-4 h-4" />
+            Agendar com {p.nome.split(' ')[0]}
+          </a>
+        </div>
+      </div>
+
+      {/* Lightbox */}
+      {fotoExpandida && (
+        <div
+          className="fixed inset-0 z-[60] flex items-center justify-center bg-black/90"
+          onClick={() => setFotoExpandida(false)}
+          role="dialog"
+          aria-modal="true"
+          aria-label={`Foto de ${p.nome} em tamanho real`}
+        >
+          <button
+            onClick={() => setFotoExpandida(false)}
+            className="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/20 hover:bg-white/30
+                       flex items-center justify-center transition-colors"
+            aria-label="Fechar foto"
+          >
+            <X className="w-5 h-5 text-white" />
+          </button>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={p.foto}
+            alt={`Foto de ${p.nome}`}
+            className="w-[280px] h-[460px] object-cover rounded-2xl shadow-2xl"
+            onClick={e => e.stopPropagation()}
+          />
+        </div>
+      )}
+    </div>
+  )
+}
+
+/* ─── Card ────────────────────────────────────────────────────
+   É um <Link> real para /perfil/{slug} (âncora presente no HTML de
+   servidor, essencial para SEO). O clique simples abre o modal;
+   Ctrl/Cmd+clique e botão do meio seguem abrindo a página normalmente.
+──────────────────────────────────────────────────────────────── */
+function Card({ p, display, onOpen }: { p: Prof; display: string; onOpen: () => void }) {
   return (
     <Link
       href={`/perfil/${slugify(p.nome)}`}
+      onClick={e => {
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return
+        e.preventDefault()
+        onOpen()
+      }}
       className={`${display} flex-col items-center text-center bg-[#FAF0F2] rounded-xl border border-[#7C2C3B]/40
                  shadow-sm hover:shadow-md hover:-translate-y-1 hover:border-[#7C2C3B]/60
                  transition-all duration-300 p-5 gap-3`}
@@ -117,7 +267,9 @@ function classeVisibilidade(colapsado: boolean, i: number): string {
 export default function CorpoClinico() {
   const [filtro, setFiltro] = useState('Todos')
   const [busca, setBusca] = useState('')
+  const [aberto, setAberto] = useState<Prof | null>(null)
   const [expandido, setExpandido] = useState(false)
+  const fechar = useCallback(() => setAberto(null), [])
 
   const filtros = useMemo(() => {
     const set = new Set<string>()
@@ -233,7 +385,12 @@ export default function CorpoClinico() {
           <>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
               {visíveis.map((p, i) => (
-                <Card key={p.registro + p.nome} p={p} display={classeVisibilidade(colapsado, i)} />
+                <Card
+                  key={p.registro + p.nome}
+                  p={p}
+                  display={classeVisibilidade(colapsado, i)}
+                  onOpen={() => setAberto(p)}
+                />
               ))}
             </div>
 
@@ -266,6 +423,9 @@ export default function CorpoClinico() {
           </div>
         )}
       </div>
+
+      {/* Modal */}
+      {aberto && <Modal p={aberto} onClose={fechar} />}
     </section>
   )
 }
