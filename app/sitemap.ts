@@ -28,6 +28,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority:        0.9,
     },
     {
+      url:             `${BASE}/consultorios`,
+      lastModified:    NOW,
+      changeFrequency: 'monthly',
+      priority:        0.7,
+    },
+    {
       url:             `${BASE}/luciano-noceti-e-vieira`,
       lastModified:    NOW,
       changeFrequency: 'monthly',

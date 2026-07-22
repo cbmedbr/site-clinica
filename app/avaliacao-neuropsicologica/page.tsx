@@ -28,12 +28,17 @@ export const metadata: Metadata = {
     'laudo neuropsicológico',
     'Clínica Luciano Noceti',
   ],
+  alternates: {
+    canonical: '/avaliacao-neuropsicologica',
+  },
   openGraph: {
     title: 'Avaliação Neuropsicológica | Clínica Luciano Noceti',
     description:
       'Investigação detalhada do funcionamento cognitivo e emocional com instrumentos padrão-ouro. Florianópolis/SC.',
     type: 'website',
     locale: 'pt_BR',
+    url: 'https://www.lucianonoceti.com.br/avaliacao-neuropsicologica',
+    siteName: 'Clínica Luciano Noceti',
   },
 }
 
@@ -1171,16 +1176,14 @@ export default function AvaliacaoNeuropsicologicaPage() {
 
       {/* ── Rodapé ── */}
       <footer style={{ background: '#0E0608' }} className="py-6 px-5 text-center">
+        <nav className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1.5 mb-3">
+          <Link href="/" className="text-xs font-medium hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.5)' }}>Início</Link>
+          <Link href="/#equipe" className="text-xs font-medium hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.5)' }}>Nossa Equipe</Link>
+          <Link href="/consultorios" className="text-xs font-medium hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.5)' }}>Nossos Espaços</Link>
+        </nav>
         <p className="text-xs mb-1" style={{ color: 'rgba(255,255,255,0.3)' }}>
           © {new Date().getFullYear()} Clínica Luciano Noceti · Rua Felipe Schmidt, 515, Centro,
-          Florianópolis, SC ·{' '}
-          <Link
-            href="/"
-            className="hover:text-white transition-colors"
-            style={{ color: 'rgba(255,255,255,0.4)' }}
-          >
-            Ver todos os profissionais
-          </Link>
+          Florianópolis, SC
         </p>
         <p className="text-[10px]" style={{ color: 'rgba(255,255,255,0.2)' }}>
           Sigilo profissional garantido conforme o Código de Ética do Psicólogo (CFP).{' '}

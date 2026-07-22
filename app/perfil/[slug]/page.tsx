@@ -117,11 +117,16 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     title: `${prof.nome} | ${prof.metodo}, ${prof.registro}`,
     description: `${prof.metodo}. ${prof.publico}`,
     keywords: `${prof.nome}, ${prof.metodo}, psicólogo Florianópolis, ${prof.registro}`,
+    alternates: {
+      canonical: `/perfil/${params.slug}`,
+    },
     openGraph: {
       title: `${prof.nome} | ${prof.metodo}`,
       description: prof.publico,
       type: 'profile',
       locale: 'pt_BR',
+      url: `https://www.lucianonoceti.com.br/perfil/${params.slug}`,
+      siteName: 'Clínica Luciano Noceti',
     },
   }
 }
@@ -577,11 +582,13 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
 
       {/* ── Rodapé ── */}
       <footer style={{ background: '#0E0608' }} className="py-6 px-5 text-center">
+        <nav className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1.5 mb-3">
+          <Link href="/" className="text-xs font-medium hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.5)' }}>Início</Link>
+          <Link href="/#equipe" className="text-xs font-medium hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.5)' }}>Nossa Equipe</Link>
+          <Link href="/avaliacao-neuropsicologica" className="text-xs font-medium hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.5)' }}>Avaliação Neuropsicológica</Link>
+        </nav>
         <p className="text-xs mb-1" style={{ color: 'rgba(255,255,255,0.3)' }}>
-          © {new Date().getFullYear()} Clínica Luciano Noceti · Rua Felipe Schmidt, 515, Centro, Florianópolis, SC ·{' '}
-          <Link href="/" className="hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.4)' }}>
-            Ver todos os profissionais
-          </Link>
+          © {new Date().getFullYear()} Clínica Luciano Noceti · Rua Felipe Schmidt, 515, Centro, Florianópolis, SC
         </p>
         <p className="text-[10px]" style={{ color: 'rgba(255,255,255,0.2)' }}>
           Sigilo profissional garantido conforme o Código de Ética do Psicólogo (CFP).{' '}

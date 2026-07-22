@@ -24,6 +24,9 @@ export const metadata: Metadata = {
     'Clínica de Psicologia e Psicanálise no Centro de Florianópolis. Mais de 20.000 pacientes atendidos. Equipe multidisciplinar com 9 abordagens terapêuticas. Atendimento presencial e online. Aceita os principais convênios.',
   keywords:
     'psicologia, psicanálise, terapia, Florianópolis, Luciano Noceti, saúde mental, TCC, Gestalt, Equoterapia, TEA, neuropsicologia',
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: 'Clínica Luciano Noceti | Psicologia',
     description:

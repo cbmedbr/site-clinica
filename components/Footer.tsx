@@ -3,6 +3,7 @@ import {
   Instagram, Facebook, Clock, MessageCircle,
 } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const WA_LINK   = 'https://wa.me/5548998056893'
 const IG_LINK   = 'https://www.instagram.com/clinicalucianonoceti/'
@@ -14,6 +15,7 @@ const navLinks = [
   { label: 'Sobre',      href: '#sobre'      },
   { label: 'Abordagens', href: '#abordagens' },
   { label: 'Equipe',     href: '#equipe'     },
+  { label: 'Nossos Espaços', href: '/consultorios' },
   { label: 'Convênios',  href: '#convenios'  },
   { label: 'Contato',    href: '#contato'    },
 ]
@@ -109,12 +111,21 @@ export default function Footer() {
               <ul className="space-y-2">
                 {navLinks.map((link) => (
                   <li key={link.href}>
-                    <a
-                      href={link.href}
-                      className="text-neutral-400 text-sm hover:text-[#FCECBF] transition-colors"
-                    >
-                      {link.label}
-                    </a>
+                    {link.href.startsWith('/') ? (
+                      <Link
+                        href={link.href}
+                        className="text-neutral-400 text-sm hover:text-[#FCECBF] transition-colors"
+                      >
+                        {link.label}
+                      </Link>
+                    ) : (
+                      <a
+                        href={link.href}
+                        className="text-neutral-400 text-sm hover:text-[#FCECBF] transition-colors"
+                      >
+                        {link.label}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
