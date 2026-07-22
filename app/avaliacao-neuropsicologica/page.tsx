@@ -1178,7 +1178,7 @@ export default function AvaliacaoNeuropsicologicaPage() {
       <footer style={{ background: '#0E0608' }} className="py-6 px-5 text-center">
         <nav className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1.5 mb-3">
           <Link href="/" className="text-xs font-medium hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.5)' }}>Início</Link>
-          <Link href="/equipe" className="text-xs font-medium hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.5)' }}>Nossa Equipe</Link>
+          <Link href="/#equipe" className="text-xs font-medium hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.5)' }}>Nossa Equipe</Link>
           <Link href="/consultorios" className="text-xs font-medium hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.5)' }}>Nossos Espaços</Link>
         </nav>
         <p className="text-xs mb-1" style={{ color: 'rgba(255,255,255,0.3)' }}>
