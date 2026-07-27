@@ -178,8 +178,8 @@ export const profissionais: Prof[] = [
   {
     nome: 'Bruno Antônio Donadon Carvalho',
     registro: 'CRP 12/23026',
-    metodo: 'Psicanálise de Orientação Lacaniana',
-    filtros: ['Psicanálise'],
+    metodo: 'Psicologia Junguiana',
+    filtros: ['Junguiana'],
     formacao: 'Graduação em Psicologia pela Faculdade de Desenvolvimento do RS (Fadergs) desde 2021. Com formação complementar em Filosofia, Teologia e Sociologia, o que enriquece a compreensão do ser humano em sua totalidade.',
     publico: 'Atende Adolescentes a partir dos 13 anos, Adultos e Idosos. Atendimento Presencial e On-line.',
     demandas: 'Ansiedade, Depressão, Síndrome do Pânico, Burnout, TOC, Fobias, Luto, TDAH, Transtornos de Personalidade, Trauma, Estresse, Transtorno Bipolar, Dificuldades nos Relacionamentos, Baixa Autoestima, Crises Existenciais, Dificuldades no Trabalho, Conflitos Familiares, Insônia e Distúrbios do Sono, Dor Emocional, Impulsividade, Dificuldade de Concentração, Medos e Inseguranças, Bloqueios Emocionais, Dificuldades na Comunicação, Procrastinação, Perfeccionismo, Solidão, Sensação de Vazio, Culpa e Vergonha, Dificuldades na Tomada de Decisão, Estresse Pós-Traumático, Dependência Emocional, Dificuldades com Limites, Conflitos de Identidade, Irritabilidade, Crises de Choro, Pensamentos Negativos Recorrentes, Fobia Social, Dificuldades na Vida Amorosa, Transições e Mudanças de Vida.',
@@ -202,7 +202,7 @@ export const profissionais: Prof[] = [
       },
       {
         tipo: 'Curso',
-        curso: 'Psicanálise Analítica',
+        curso: 'Psicologia Analítica',
         instituicao: 'Horizontes',
         ano: '2021',
       },
