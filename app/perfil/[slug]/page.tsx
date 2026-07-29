@@ -405,7 +405,7 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
                     <div>
                       <p className="text-sm font-semibold mb-0.5" style={{ color: '#2D1A1E' }}>Presencial</p>
                       <p className="text-xs leading-relaxed" style={{ color: '#7a5a5e' }}>
-                        Rua Felipe Schmidt, 515, Ed. Pórtico, 2º andar, Sala 204<br />
+                        Rua Felipe Schmidt, 515, Ed. Pórtico, 2º andar, {prof.salaPresencial || 'Sala 204'}<br />
                         Centro, Florianópolis, SC
                       </p>
                     </div>
