@@ -549,7 +549,7 @@ export const profissionais: Prof[] = [
     metodo: 'Terapia Cognitivo-Comportamental (TCC)',
     filtros: ['TCC'],
     formacao: 'Graduação em Psicologia pela Faculdade Anhanguera. Pós-Graduação em Terapia Cognitivo-Comportamental pela Faculdade Unyleya.',
-    publico: 'Atende Crianças a partir de 7 anos, Adolescentes, Adultos e Idosos. Atendimento On-line.',
+    publico: 'Atende Crianças a partir de 7 anos, Adolescentes, Adultos e Idosos. Atendimento On-line e Presencial.',
     demandas: 'Ansiedade, Depressão, Estresse e sobrecarga emocional, Burnout (esgotamento profissional), Oscilações de humor, Autoestima e insegurança, Autoconhecimento e desenvolvimento pessoal, Luto, Separações e divórcio, Perdas afetivas e mudanças importantes de vida, Transtornos do sono, Dificuldades nos relacionamentos afetivos, Dependência emocional, Solidão e isolamento social, Experiências traumáticas, Promoção do bem-estar e da qualidade de vida.',
     atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), FUSEX, CELOS, Elosaúde, Saudesc, CASACARESC, ABEPOM, Sim Saúde, GEAP, SC Saúde e Particular.',
     foto: '/equipe/michele_psico.avif',
@@ -709,7 +709,7 @@ export const profissionais: Prof[] = [
     atendimento: 'Unimed, Cartão Acesso + Fácil, FUSEX, CELOS, Elosaúde, Saudesc, CASACARESC, ABEPOM, Sim Saúde, GEAP, SC Saúde e Particular.',
     foto: '/equipe/tapu_psico.avif',
     manifesto: 'Atendo adolescentes e adultos que buscam compreender melhor seus comportamentos, emoções e relações, especialmente pessoas neurodivergentes, como autistas, e pessoas LGBTQIA+ que procuram um espaço de escuta acolhedor e respeitoso. Também acompanho pacientes que enfrentam ansiedade, dificuldades de comunicação, questões comportamentais, desafios nos relacionamentos, baixa autoestima e momentos de mudança ou sofrimento emocional. Acredito que a terapia deve ser construída em parceria, considerando a história, os valores e o contexto de cada pessoa para promover mudanças consistentes e uma vida com mais autonomia e qualidade.',
-    abordagem_explicada: 'Na primeira sessão, eu preparo uma anamnese para o paciente, a fim de conversarmos sobre sua história, o que motivou a busca pela terapia e conhecer suas relações e como elas influenciam no seu desenvolvimento pessoal. É um momento de escuta, acolhimento e construção de vínculo, para entendermos juntos quais objetivos farão sentido para o seu processo terapêutico.',
+    abordagem_explicada: 'Na primeira sessão, preparo uma anamnese clínica para conhecer a história de vida do paciente, compreender sua queixa principal, seu contexto e os fatores que influenciam seu desenvolvimento. Esse momento também é dedicado à escuta, ao acolhimento e à construção do vínculo terapêutico, permitindo iniciar a definição dos objetivos do processo terapêutico de forma colaborativa. A partir da Análise do Comportamento, busco compreender como as interações entre o indivíduo e o ambiente influenciam seus comportamentos, orientando intervenções individualizadas e baseadas na análise funcional.',
     pos_graduacoes: [
       {
         tipo: 'Especialização (em andamento)',
