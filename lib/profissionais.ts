@@ -840,14 +840,13 @@ try {
   throw err
 }
 
-/** Nome do fundador — tem página própria (/luciano-noceti-e-vieira), fora de /perfil. */
+/** Nome do fundador — também tem página própria (/luciano-noceti-e-vieira), fora de /perfil. */
 export const FUNDADOR_NOME = 'Luciano Noceti e Vieira'
 
 /**
- * Corpo clínico visível — mesmo critério do grid da home (`!ocultarDaEquipe`),
- * excluindo o fundador (que tem página própria em /luciano-noceti-e-vieira).
- * Fonte única para o hub /equipe e a seção "Nossa Equipe" do Footer.
+ * Corpo clínico visível no grid — `!ocultarDaEquipe`, incluindo o fundador
+ * (primeiro no array, por isso sempre na primeira posição quando o filtro/busca o inclui).
  */
 export const equipeVisivel: Prof[] = profissionais.filter(
-  p => !p.ocultarDaEquipe && p.nome !== FUNDADOR_NOME,
+  p => !p.ocultarDaEquipe,
 )

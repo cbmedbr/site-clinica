@@ -7,15 +7,12 @@ import { X, MessageCircle, ChevronRight, ChevronDown, Monitor, MapPin, Search, S
 import {
   type Prof,
   equipeVisivel,
-  profissionais as todosProfissionais,
   slugify,
   FUNDADOR_NOME,
 } from '@/lib/profissionais'
 
-// Corpo clínico filtrável = equipe visível (44, sem o fundador).
+// Corpo clínico filtrável = equipe visível (inclui o fundador, sempre na 1ª posição).
 const profissionais = equipeVisivel
-// Fundador tem card em destaque próprio, linkando para /luciano-noceti-e-vieira.
-const fundador = todosProfissionais.find(p => p.nome === FUNDADOR_NOME)
 
 const WA_BASE = 'https://wa.me/5548998056893'
 function waLink(nome: string) {
@@ -147,6 +144,11 @@ function Modal({ p, onClose }: { p: Prof; onClose: () => void }) {
             <div className="mt-1.5">
               <SelosModalidade publico={p.publico} />
             </div>
+            {p.nome === FUNDADOR_NOME && (
+              <span className="inline-flex items-center gap-1 text-[10px] font-bold tracking-[0.16em] uppercase text-[#B8883A] mt-1.5">
+                <Star className="w-3 h-3" /> Responsável Técnico
+              </span>
+            )}
           </div>
         </div>
 
@@ -247,6 +249,11 @@ function Card({ p, display, onOpen }: { p: Prof; display: string; onOpen: () => 
             AC
           </span>
         )}
+        {p.nome === FUNDADOR_NOME && (
+          <span className="inline-flex items-center gap-1 text-[9px] font-bold tracking-[0.14em] uppercase text-[#B8883A] pt-0.5">
+            <Star className="w-2.5 h-2.5" /> Responsável Técnico
+          </span>
+        )}
       </div>
       <span className="inline-flex items-center gap-0.5 text-[11px] font-semibold text-[#7C2C3B] mt-auto">
         Ver perfil <ChevronRight className="w-3 h-3" />
@@ -310,31 +317,6 @@ export default function CorpoClinico() {
             Clique em qualquer card para ver o perfil completo.
           </p>
         </div>
-
-        {/* Fundador — card em destaque (Responsável Técnico) */}
-        {fundador && (
-          <div className="max-w-2xl mx-auto mb-10">
-            <Link
-              href="/luciano-noceti-e-vieira"
-              className="group flex items-center gap-4 sm:gap-5 bg-[#1A0B0E] rounded-2xl p-5 sm:p-6
-                         shadow-md hover:shadow-lg transition-all"
-            >
-              <Foto src={fundador.foto} nome={fundador.nome}
-                className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-4 border-[#B8883A]/30 flex-shrink-0" />
-              <div className="flex-1 min-w-0 text-left">
-                <span className="inline-flex items-center gap-1 text-[10px] font-bold tracking-[0.18em] uppercase text-[#B8883A] mb-1">
-                  <Star className="w-3 h-3" /> Responsável Técnico
-                </span>
-                <h3 className="font-serif font-bold text-white text-base sm:text-lg leading-tight">{fundador.nome}</h3>
-                <p className="text-white/55 text-xs mt-0.5 line-clamp-1">{fundador.metodo} · {fundador.registro}</p>
-              </div>
-              <span className="inline-flex items-center gap-0.5 text-[11px] font-semibold text-[#B8883A] flex-shrink-0
-                               transition-transform group-hover:translate-x-0.5">
-                Ver perfil <ChevronRight className="w-3.5 h-3.5" />
-              </span>
-            </Link>
-          </div>
-        )}
 
         {/* Busca */}
         <div className="relative max-w-sm mx-auto mb-6">
