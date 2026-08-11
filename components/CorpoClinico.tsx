@@ -23,7 +23,7 @@ function waLink(nome: string) {
 }
 
 /* ─── Ordem fixa dos filtros ──────────────────────────────── */
-const ORDEM_FILTROS = ['Psicanálise', 'TCC', 'Neuropsicologia', 'TEA', 'Gestalt', 'Existencialismo', 'Transpessoal', 'Junguiana', 'Sistêmica Familiar', 'Psicodrama']
+const ORDEM_FILTROS = ['Psicanálise', 'TCC', 'Neuropsicologia', 'TEA', 'Gestalt', 'Centrada na Pessoa', 'Existencialismo', 'Transpessoal', 'Junguiana', 'Sistêmica Familiar', 'Psicodrama']
 
 // Mapeamento de rótulo de filtro → valor interno nos dados
 const FILTRO_MAP: Record<string, string> = { 'TEA': 'ABA' }

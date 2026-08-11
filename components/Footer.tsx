@@ -14,7 +14,7 @@ const navLinks = [
   { label: 'Início',     href: '#inicio'     },
   { label: 'Sobre',      href: '#sobre'      },
   { label: 'Abordagens', href: '#abordagens' },
-  { label: 'Equipe',     href: '#equipe'     },
+  { label: 'Corpo Clínico', href: '#equipe'     },
   { label: 'Nossos Espaços', href: '/consultorios' },
   { label: 'Convênios',  href: '#convenios'  },
   { label: 'Contato',    href: '#contato'    },

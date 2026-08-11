@@ -332,7 +332,7 @@ export default function ConsultoriosClient() {
       <footer className="bg-neutral-800 text-neutral-400 text-center py-6 px-4 text-xs">
         <nav className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1.5 mb-2">
           <Link href="/" className="font-medium hover:text-white transition-colors">Início</Link>
-          <Link href="/#equipe" className="font-medium hover:text-white transition-colors">Nossa Equipe</Link>
+          <Link href="/#equipe" className="font-medium hover:text-white transition-colors">Corpo Clínico</Link>
           <Link href="/avaliacao-neuropsicologica" className="font-medium hover:text-white transition-colors">Avaliação Neuropsicológica</Link>
         </nav>
         <p>© {new Date().getFullYear()} Clínica Luciano Noceti · CRP 12/02627</p>

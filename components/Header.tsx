@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 const navLinks = [
   { label: 'Início',       href: '#inicio'                        },
-  { label: 'Equipe',       href: '#equipe'                        },
+  { label: 'Corpo Clínico', href: '#equipe'                        },
   { label: 'Abordagens',   href: '#abordagens'                    },
   { label: 'Testes Neuro', href: '/avaliacao-neuropsicologica', novo: true },
   { label: 'Nossas Salas', href: '/consultorios'                  },
