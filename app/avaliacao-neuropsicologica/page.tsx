@@ -17,7 +17,7 @@ import DevNav from '@/components/DevNav'
 export const metadata: Metadata = {
   title: 'Avaliação Neuropsicológica em Florianópolis | Clínica Luciano Noceti',
   description:
-    'Avaliação neuropsicológica completa com instrumentos padrão-ouro. Diagnóstico de TDAH, TEA, demências e déficits cognitivos. Centro de Florianópolis, Sala 204. Agende.',
+    'Avaliação neuropsicológica completa com instrumentos padrão-ouro. Diagnóstico de TDAH, TEA, demências e déficits cognitivos. Centro de Florianópolis, Sala 212. Agende.',
   keywords: [
     'avaliação neuropsicológica Florianópolis',
     'teste neuropsicológico',
@@ -376,7 +376,7 @@ export default function AvaliacaoNeuropsicologicaPage() {
                 border: '1px solid rgba(255,255,255,0.15)',
               }}
             >
-              Centro · Sala 204
+              Centro · Sala 212
             </span>
           </div>
 

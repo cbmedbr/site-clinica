@@ -174,18 +174,6 @@ export const SALAS: Sala[] = [
       { src: '/consultorios/sala-204/consultorio-1/consultorio-1-204.avif', alt: 'Sala 204 — Consultório 1' },
     ],
   },
-  {
-    id: 'sala-204-avaliacao',
-    nome: 'Sala de Avaliação Neuropsicológica',
-    categoria: 'consultorio',
-    descricao: 'Sala de avaliação neuropsicológica na Sala 204.',
-    grupo: 'sala-204',
-    destaque: true,
-    fotos: [
-      { src: '/consultorios/sala-204/sala-teste/204-teste.avif', alt: 'Sala 204 — Avaliação Neuropsicológica' },
-      { src: '/consultorios/sala-204/sala-teste/204-teste-2.avif', alt: 'Sala 204 — Avaliação Neuropsicológica' },
-    ],
-  },
 
   // ── Sala 205 ──────────────────────────────────────────────────────────────
   {
@@ -248,11 +236,11 @@ export const SALAS: Sala[] = [
     id: 'sala-212-c1',
     nome: 'Freud',
     categoria: 'consultorio',
-    descricao: 'Consultório individual na Sala 212.',
+    descricao: 'Sala de avaliação neuropsicológica na Sala 212 (consultório Freud).',
     grupo: 'sala-212',
     fotos: [
-      { src: '/consultorios/sala-212/consultorio-1/IMG_20260531_120311778_HDR.jpg.avif', alt: 'Sala 212 — Freud' },
-      { src: '/consultorios/sala-212/consultorio-1/IMG_20260531_120329534_HDR.jpg.avif', alt: 'Sala 212 — Freud' },
+      { src: '/consultorios/sala-212/Freud/freud-1.jpeg', alt: 'Sala 212 — Freud (Avaliação Neuropsicológica)' },
+      { src: '/consultorios/sala-212/Freud/freud-2.jpeg', alt: 'Sala 212 — Freud (Avaliação Neuropsicológica)' },
     ],
   },
   {
@@ -263,10 +251,11 @@ export const SALAS: Sala[] = [
     grupo: 'sala-212',
     destaque: true,
     fotos: [
-      { src: '/consultorios/sala-212/consultorio-2/consultorio-lacan.avif', alt: 'Sala 212 — Lacan' },
-      { src: '/consultorios/sala-212/consultorio-2/consultorio-lacan2.avif', alt: 'Sala 212 — Lacan' },
-      { src: '/consultorios/sala-212/consultorio-2/consultorio-lacan3.avif', alt: 'Sala 212 — Lacan' },
-      { src: '/consultorios/sala-212/consultorio-2/consultoriolacan3.avif', alt: 'Sala 212 — Lacan' },
+      { src: '/consultorios/sala-212/Lacan/lacan-1.jpeg', alt: 'Sala 212 — Lacan' },
+      { src: '/consultorios/sala-212/Lacan/lacan-2.jpeg', alt: 'Sala 212 — Lacan' },
+      { src: '/consultorios/sala-212/Lacan/lacan-3.jpeg', alt: 'Sala 212 — Lacan' },
+      { src: '/consultorios/sala-212/Lacan/lacan-4.jpeg', alt: 'Sala 212 — Lacan' },
+      { src: '/consultorios/sala-212/Lacan/lacan-5.jpeg', alt: 'Sala 212 — Lacan' },
     ],
   },
 ]
