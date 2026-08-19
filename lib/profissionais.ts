@@ -265,7 +265,7 @@ export const profissionais: Prof[] = [
     formacao: 'Especialização em Terapia Cognitivo-Comportamental pelo Instituto WP Cognitivo. Especialização em Neuropsicologia pelo IPOG. Formação em Teoria dos Esquemas pelo WP Cognitivo.',
     publico: 'Atende a partir de 12 anos, Adolescentes, Adultos, Idosos e Casais. Atendimento On-line.',
     demandas: 'Psicóloga e Neuropsicóloga. Realiza avaliação neuropsicológica e psicoterapia clínica. Avaliação Neuropsicológica, TDAH, TEA, Avaliação para cirurgia de vasectomia e laqueadura, Burnout, Transtorno de ansiedade, Transtorno do sono, Transtorno alimentar (incluindo avaliação para cirurgia bariátrica), Orientação Profissional, Dor emocional e autoestima para mulheres, Estresse Pós-Traumático, Atendimento Gestacional e Pós-parto, Fobia Social, Síndrome do Pânico, Sexualidade, Questões relacionadas ao divórcio, Identidade de Gênero, Fobias.',
-    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Fusex, Celos, Elo saúde, Saudesc, Casacaresc, Abepom, Sim Saúde, Geap e Particular.',
+    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Fusex, Celos, Saudesc, Casacaresc, Abepom, Sim Saúde e Particular.',
     foto: '/equipe/cristiane_psico.avif',
     fazNeuropsico: true,
     formacaoNeuro: 'Especialização em Neuropsicologia pelo IPOG',
