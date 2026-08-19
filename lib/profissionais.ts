@@ -669,7 +669,7 @@ export const profissionais: Prof[] = [
     formacao: 'Psicóloga formada pela UNISUL. Praticante da Psicanálise em formação pela Escola Brasileira de Psicanálise/SC.',
     publico: 'Atende Adulto, Idosos e Atendimento Casal. Atendimento Presencial e On-line.',
     demandas: 'Ansiedade, depressão, pânico, fobias, morte e luto, estresse pós traumático, entre outros.',
-    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, CELOS, Elosaúde, ABEPOM, CASACARESC, Sim Saúde, GEAP, FUSEX, Petrobras, Saúde Caixa e Particular.',
+    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, CELOS, Elosaúde, ABEPOM, CASACARESC, SC Saúde, Sim Saúde, GEAP, FUSEX, Petrobras, Saúde Caixa e Particular.',
     foto: '/equipe/sâmya_psico.avif',
   },
   {
