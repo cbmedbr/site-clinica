@@ -97,7 +97,7 @@ export const profissionais: Prof[] = [
     formacao: 'Formado pelo Centro Universitário Filadélfia (UNIFIL) – Londrina/PR, há 14 anos. Com especialização em Dependência Química e Comportamento Suicida, com atuação dedicada ao cuidado e acompanhamento de pessoas que enfrentam o uso abusivo de substâncias e seus impactos emocionais, familiares e sociais. Atuo pela Psicanálise, oferecendo um atendimento ético, sigiloso e acolhedor, focado na sua história e naquilo que faz sentido para você — respeitando seu tempo e seu processo. Mais do que tratar sintomas, meu objetivo é caminhar junto com você no processo de se escutar, se reconhecer e se fortalecer — para que seja possível construir novas formas de viver, se posicionar e se relacionar, sem precisar se abandonar no meio do caminho.',
     publico: 'Atendo adultos e idosos (a partir dos 18 anos). Atendimento On-line.',
     demandas: 'Dependência química (álcool e outras substâncias), ansiedade, depressão, transtorno obsessivo-compulsivo (TOC), conflitos emocionais e relacionais, momentos de crise e angústia.',
-    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, Celos, Abepom, Casacaresc, Sim Saúde, Fusex, Petrobras, Saúde Caixa e Particular.',
+    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, Celos, Abepom, Casacaresc, Sim Saúde, Fusex, Petrobras, Saúde Caixa, Sidesc e Particular.',
     foto: '/equipe/andreluiz_psico.avif',
   },
   {
@@ -173,7 +173,7 @@ export const profissionais: Prof[] = [
     formacao: 'Graduação em Psicologia pela Universidade do Vale do Itajaí, especialização em Saúde Mental Materna e Neurodesenvolvimento Infantil, Pós graduanda em Psicologia Perinatal. Curso de formação em psicopatologia e psicanálise.',
     publico: 'Atende crianças a partir de 5 anos, adolescentes, adultos, gestantes e famílias. Atendimento On-line.',
     demandas: 'Acompanhamento psicológico em todo o ciclo perinatal (antes, durante e após o nascimento); escuta para gestantes, tentantes, mães recentes e famílias em transformação; depressão pós-parto, periparto e saúde mental materna; acompanhamento de processo de adoção e das mudanças subjetivas envolvidas na gestação biológica ou adotiva; processos de luto por morte, perdas gestacionais e perdas simbólicas (fim de relacionamentos, mudanças bruscas, perda de emprego, rupturas afetivas ou identitárias); transtornos de ansiedade, estresse e sintomas psicossomáticos (dores, insônia, tensão, falta de ar); quadros depressivos, crises de ansiedade, ataques de pânico e sofrimento emocional generalizado; atendimento a mulheres, crianças e adolescentes que viveram ou vivem situações de violência (doméstica, sexual, psicológica, de gênero); demandas referentes ao comportamento, socialização, desenvolvimento cognitivo e aprendizagem de crianças e adolescentes; Transtorno do Déficit de Atenção e Hiperatividade (TDAH); conflitos escolares, emocionais e familiares; autolesão, ideação suicida e sofrimento emocional; apoio em processos de separação, guarda, reorganização familiar e adaptação emocional para adultos e crianças; conflitos conjugais; acolhimento de vivências afetivo-sexuais, construção da identidade de gênero, dúvidas, angústias e experiências ligadas ao corpo, à escolha e à expressão de si.',
-    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, Celos, Elo saúde, Abepom, Casacaresc, Sc Saúde, Sim Saúde, Geap, Fusex, Petrobras, Saúde Caixa e Particular.',
+    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, Celos, Abepom, Casacaresc, Sim Saúde, Fusex, Petrobras, Saúde Caixa, Sidesc e Particular.',
     foto: '/equipe/bruna_psico.avif',
   },
   {
@@ -265,7 +265,7 @@ export const profissionais: Prof[] = [
     formacao: 'Especialização em Terapia Cognitivo-Comportamental pelo Instituto WP Cognitivo. Especialização em Neuropsicologia pelo IPOG. Formação em Teoria dos Esquemas pelo WP Cognitivo.',
     publico: 'Atende a partir de 12 anos, Adolescentes, Adultos, Idosos e Casais. Atendimento On-line.',
     demandas: 'Psicóloga e Neuropsicóloga. Realiza avaliação neuropsicológica e psicoterapia clínica. Avaliação Neuropsicológica, TDAH, TEA, Avaliação para cirurgia de vasectomia e laqueadura, Burnout, Transtorno de ansiedade, Transtorno do sono, Transtorno alimentar (incluindo avaliação para cirurgia bariátrica), Orientação Profissional, Dor emocional e autoestima para mulheres, Estresse Pós-Traumático, Atendimento Gestacional e Pós-parto, Fobia Social, Síndrome do Pânico, Sexualidade, Questões relacionadas ao divórcio, Identidade de Gênero, Fobias.',
-    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Fusex, Celos, Saudesc, Casacaresc, Abepom, Sim Saúde e Particular.',
+    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, Celos, Abepom, Casacaresc, Sim Saúde, Fusex, Petrobras, Saúde Caixa, Sidesc e Particular.',
     foto: '/equipe/cristiane_psico.avif',
     fazNeuropsico: true,
     formacaoNeuro: 'Especialização em Neuropsicologia pelo IPOG',
@@ -278,7 +278,7 @@ export const profissionais: Prof[] = [
     formacao: 'Graduação em Psicologia pela Universidade do Oeste de Santa Catarina (UNOESC). Pós-graduação em Tanatologia pela Unyleya. Pós-graduação em Psicologia Clínica pela Universidade do Oeste de Santa Catarina (UNOESC). Pós-graduação em Psicologia Transpessoal pelo Instituto Zen.',
     publico: 'Adolescentes (a partir de 13 anos), Adultos e Casais. Atendimento exclusivamente na modalidade On-line.',
     demandas: 'Acompanhamento em Processos de Luto: Suporte especializado para lidar com a perda de entes queridos e "lutos simbólicos", como términos de relacionamento, mudanças de cidade e transições de carreira. Cuidado em Saúde Mental: Acolhimento em momentos de ansiedade profunda, esgotamento emocional (Burnout), estados de tristeza e oscilações de humor, focando no resgate do equilíbrio integral. Travessias de Vida e Crises Existenciais: Auxílio na busca por sentido e propósito em momentos de mudança, como a preparação para a aposentadoria e crises de identidade. Fortalecimento após Traumas: Atendimento sensível para superação de violências (emocionais ou físicas) e vivências traumáticas, visando a reconstrução da segurança interna. Conflitos e Vínculos: Mediação de dificuldades em relacionamentos amorosos e familiares, promovendo comunicações mais conscientes e saudáveis. Saúde Mental Materna: Suporte emocional durante o puerpério e os desafios de ajustamento à maternidade. Avaliações Específicas: Realização de avaliação psicológica para cirurgia bariátrica e procedimentos de esterilização.',
-    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, Celos, Abepom, Casacaresc, Sim Saúde, Fusex, Petrobras, Saúde Caixa e Particular.',
+    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, Celos, Abepom, Casacaresc, Sim Saúde, Fusex, Petrobras, Saúde Caixa, Sidesc e Particular.',
     foto: '/equipe/debora_psico.avif',
   },
   {
@@ -300,7 +300,7 @@ export const profissionais: Prof[] = [
     formacao: 'Graduação em Psicologia pela Unisul (2009), Formação em psicanálise pela Maiêutica Florianópolis – Instituição Psicanalítica (2017).',
     publico: 'Atende Adolescentes a partir dos 16 anos e Adultos. Atendimento On-line.',
     demandas: 'Ansiedade: preocupação excessiva, medos, pânico. Depressão; Inibição: Dificuldades em iniciar, manter ou terminar relacionamentos; Dificuldades no desenvolvimento profissional. Fobias: Fobia social- medo de falar em publico, permanecer em espaços, de interagir com pessoas, etc Conflitos familiares, alienação parental. Sofrimentos relacionados a imagem corporal. Transtornos Alimentares: (Bulimia, Anorexia) Transtornos do Sono (insônia primaria e secundaria) Transtorno pós traumático: após acidentes ou violência sofrida, Avaliação para cirurgia bariátrica.',
-    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, Celos, Abepom, Casacaresc, Sim Saúde, Fusex, Petrobras, Saúde Caixa e Particular.',
+    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, Celos, Abepom, Casacaresc, Sim Saúde, Fusex, Petrobras, Saúde Caixa, Sidesc e Particular.',
     foto: '/equipe/eduardo_psico.avif',
   },
   {
@@ -311,7 +311,7 @@ export const profissionais: Prof[] = [
     formacao: 'Formada em Psicologia pela ULBRA - Universidade Luterana do Brasil; Pós-Graduação em Terapia Cognitivo Comportamental com certificação Internacional pelo CBI Of Miami; MBA em Gestão de Recursos Humanos pela Universidade Veiga de Almeida - RJ; Pós-graduação em Saúde Mental e Psicologia Integrativa. Cursos de Transtornos de Humor, Saúde Mental, Transtornos Alimentares, Dependência Química, estados terminais de câncer e Transplante de Medula Óssea.',
     publico: 'Adultos, Idosos e Casais. Atendimento On-line.',
     demandas: 'Transtornos de Ansiedade, compulsões, estresse, TEPT (Transtorno de estresse pós-traumático), Fobias em geral, obsessões, medo, angústia, luto, obesidade, dependência química, síndrome do pânico, Suicídio, TAG (Transtorno de Ansiedade Generalizada), TOC (Transtorno obsessivo compulsivo), TDAH (Transtorno de déficit de atenção e hiperatividade), Transtornos de Humor (Bipolar, Hipomania, depressão), Transtornos de personalidade em geral (Antissocial, esquiva, Borderline, dependente, histriônica, narcista), Transtornos Alimentares (Bulimia, Anorexia, etc), Orientação Profissional, LGBTQIA+, Processos de autoconhecimento, autoestima, dependência emocional, Dificuldades nos relacionamentos, dificuldade na tomada de decisão, síndrome de Burnout, sintomas psicossomáticos, estados terminais de câncer. Avaliação para cirurgia bariátrica.',
-    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, Celos, Abepom, Casacaresc, Sim Saúde, Fusex, Petrobras, Saúde Caixa e Particular.',
+    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, Celos, Abepom, Casacaresc, Sim Saúde, Fusex, Petrobras, Saúde Caixa, Sidesc e Particular.',
     foto: '/equipe/fabiana_psico.avif',
   },
   {
@@ -344,7 +344,7 @@ export const profissionais: Prof[] = [
     formacao: 'Graduação em Psicologia pelo Centro Universitário Estácio de Santa Catarina, Pós Graduanda em Psicologia Baseada em Evidências: Terapias Cognitivo-Comportamentais.',
     publico: 'Adolescente a partir dos 15 anos, Adulto e Idoso. Atendimento On-line.',
     demandas: 'Transtornos de ansiedade, Depressão, Crise de Pânico, TOC, Fobias, Comportamento alimentar, estresse e esgotamento profissional, problemas familiares e conjugais, separação conjugal, dependência emocional, processo de autoconhecimento e autoestima, bipolaridade, borderline, Dependência química, Preocupações, Pensamentos recorrentes de perigo ou morte, Pensamentos de autocrítica, Sentimento de culpa, Crenças de incapacidade, Orientação Parental, demandas gerais referentes ao comportamento, ao social/relacional da infância e adolescência; automutilação, luto, habilidades sociais/socioemocionais, ideação suicida, conflitos familiares e de relacionamentos, separação dos pais, adaptação escolar, TDAH.',
-    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, Celos, Abepom, Casacaresc, Sim Saúde, Fusex, Petrobras, Saúde Caixa e Particular.',
+    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, Celos, Abepom, Casacaresc, Sim Saúde, Fusex, Petrobras, Saúde Caixa, Sidesc e Particular.',
     foto: '/equipe/gabrieli_psico.avif',
   },
   {
@@ -355,7 +355,7 @@ export const profissionais: Prof[] = [
     formacao: 'Graduada em Psicologia pela Universidade Estácio de Sá de Santa Catarina. Especialização em Psicologia Intercultural.',
     publico: 'Adultos (18+) e Casais. Atendimento exclusivamente na modalidade On-line.',
     demandas: 'Atende demandas relacionadas à ansiedade, depressão, tristezas, abuso sexual, estresse e esgotamento profissional, processo de autoconhecimento e autoestima, insegurança, entre outros.',
-    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, Celos, Abepom, Casacaresc, Sim Saúde, Fusex, Sc Saúde, Petrobras, Saúde Caixa e Particular.',
+    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, Celos, Abepom, Casacaresc, Sim Saúde, Fusex, Petrobras, Saúde Caixa, Sidesc e Particular.',
     foto: '/equipe/hillary_psico.avif',
   },
   {
@@ -377,7 +377,7 @@ export const profissionais: Prof[] = [
     formacao: 'Formada em psicologia pela instituição Estácio de Sá; Pós graduanda em terapia cognitivo comportamental, Formação em Terapia do Esquema. Pós-Graduação Lato Sensu em Neuropsicologia no IPOG.',
     publico: 'Atende Adultos, Idosos. Atendimento on-line.',
     demandas: 'Psicoterapia com enfoque nas demandas: depressão, ansiedade, pensamentos acelerados ou repetitivos, exaustão emocional, sobrecarga mental, irritabilidade, sensação de vazio, perda de sentido, autocobrança, perfeccionismo, estagnação e emoções intensas e persistentes. Também contempla dificuldades ligadas a relacionamentos, dependência emocional, autoestima, conflitos familiares e conjugais, esgotamento profissional, adaptação a transições do ciclo de vida e desenvolvimento de habilidades para lidar com os desafios cotidianos.',
-    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, Celos, Abepom, Casacaresc, Sim Saúde, Fusex, Petrobras, Saúde Caixa e Particular.',
+    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, Celos, Abepom, Casacaresc, Sim Saúde, Fusex, Petrobras, Saúde Caixa, Sidesc e Particular.',
     foto: '/equipe/juliana_psico.avif',
   },
   {
@@ -388,7 +388,7 @@ export const profissionais: Prof[] = [
     formacao: 'Graduada em Psicologia clínica pela Universidade do Sul de Santa Catarina.',
     publico: 'Atende Adultos, pessoas com deficiência e familiares, Atendimento casais. Atendimento On-line.',
     demandas: 'Dificuldades familiares, adoecimento físico, processos de aprendizagem, condições de trabalho, adaptação a novas situações e transtornos mentais, como depressão e pânico. Avaliação para esterilização/anticoncepção (laqueadura), Avaliação para esterilização/anticoncepção (vasectomia), Orientação profissional.',
-    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, Celos, Abepom, Casacaresc, Fusex, Petrobras, Saúde Caixa e Particular.',
+    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, Celos, Abepom, Casacaresc, Sim Saúde, Fusex, Petrobras, Saúde Caixa, Sidesc e Particular.',
     foto: '/equipe/keli_psico.avif',
   },
   {
@@ -410,7 +410,7 @@ export const profissionais: Prof[] = [
     formacao: 'Graduação em Psicologia (UNISUL/2001); Especialização em Gerontologia (UFSC/2010); Especialização em Saúde Coletiva (UFSC/2014); Especialização em Neuropsicologia e Avaliação Neuropsicológica (Faculdade Metropolitana/2026); Psicodrama (Atuare/2004); Arteterapia Junguiana (Incorporarte/2009), Psicologia Familiar Sistêmica (Instituto Expansão/2011), Psicologia Analítica (CIPA/2012); Constelação Familiar Sistêmica (Ipê Roxo/2017); Contoterapia (Ipê Roxo/2018); Doula da Morte (AmortSer/2019 - RS); Análise do Comportamento Aplicado ao Autismo – ABA (ESCON/2019).',
     publico: 'Atende Adultos com Transtorno do Espectro Autista (TEA) - suporte 1 e 2, Adolescentes a partir dos 15 anos, Adultos e Idosos. Atendimento On-line e Presencial (particular).',
     demandas: 'Transtornos de ansiedade, Depressão, Bipolaridade, TDAH, Altas Habilidades, Transtorno do Espectro Autista, Sobrepeso e Obesidade, Avaliações (cirurgia bariátrica, laqueadura/vasectomia), Acompanhamento FIV, Acompanhamento gravidez, parto e puerpério, Acompanhamento processo de adoção, Mudança de carreira, Adaptação de curso de vida, Acompanhamento de paciente oncológico ou com outras doenças ameaçadoras ou restritivas à vida (em qualquer idade), Acompanhamento hospitalar presencial ou online (particular), Acompanhamento de Luto, Arteterapia (particular/presencial), Estímulo cognitivo com idosos (particular/presencial), Terapia de casal, Grupos familiares (particular/presencial).',
-    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, Celos, Abepom, Casacaresc, Sim Saúde, Fusex, Petrobras, Saúde Caixa e Particular.',
+    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, Celos, Abepom, Casacaresc, Sim Saúde, Fusex, Petrobras, Saúde Caixa, Sidesc e Particular.',
     foto: '/equipe/Luciana_psico.avif',
     manifesto: 'Atendo pessoas que questionam seu momento de vida e se sentem perdidas ou com dificuldade de superar uma questão muito importante e querem encontrar o seu caminho, seu lugar nas relações, no seu fazer e no mundo, se reconectando com seus valores e sua essência.',
     abordagem_explicada: 'Na primeira sessão, você me conta brevemente quem você é e qual a questão que te motivou a buscar psicoterapia. Também me apresento e respondo suas dúvidas. Nas sessões seguintes, vamos juntos compreender em que lugar você está e qual caminho você está buscando.',
@@ -525,7 +525,7 @@ export const profissionais: Prof[] = [
     formacao: 'Graduação em Psicologia pela Faculdade Estácio de Sá.',
     publico: 'Atende Adolescente a partir dos 14 anos, Adultos e Idosos. Atendimento Online.',
     demandas: 'Problemas no relacionamento amoroso ou familiar. Ansiedade, tristeza, medo, depressão. Problemas no trabalho e carreira. Processos de lutos e perdas. Fobias ex: (lugares apertados, altura, animais, relacionamento, ficar sozinho, multidões…).',
-    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, Celos, Abepom, Casacaresc, Sim Saúde, Fusex, Petrobras, Saúde Caixa e Particular.',
+    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, Celos, Abepom, Casacaresc, Sim Saúde, Fusex, Petrobras, Saúde Caixa, Sidesc e Particular.',
     foto: '/equipe/mariza_psico.avif',
   },
   {
@@ -722,7 +722,7 @@ export const profissionais: Prof[] = [
     formacao: 'Graduada em psicologia pela Universidade Estácio de Santa Catarina, Pós Graduação em Comportamento Alimentar na Faculdade IPGS.',
     publico: 'Atende Adultos. Atendimento On-line.',
     demandas: 'Transtornos de ansiedade, depressão, crise de Pânico, TOC, Fobias, comportamento alimentar, autoestima, relacionamento.',
-    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, Celos, Abepom, Casacaresc, Sim Saúde, Fusex, Petrobras, Saúde Caixa e Particular.',
+    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, Celos, Abepom, Casacaresc, Sim Saúde, Fusex, Petrobras, Saúde Caixa, Sidesc e Particular.',
     foto: '/equipe/thalita_psico.avif',
     manifesto: 'Sou psicóloga e atendo adultos que, muitas vezes, estão funcionando bem por fora, mas sentem que estão repetindo padrões emocionais, comportamentais e relacionais que já não fazem sentido para a vida que desejam construir. Acredito que a psicoterapia é um espaço de autoconhecimento, consciência e transformação. Um processo que ajuda a compreender não apenas os sintomas ou dificuldades atuais, mas também a forma como nossas experiências, relações e histórias moldaram quem somos e como nos posicionamos diante da vida. Meu trabalho une acolhimento, escuta qualificada e direcionamento. Busco ajudar cada pessoa a compreender seus padrões, fortalecer sua autonomia emocional e desenvolver recursos para construir uma vida mais alinhada aos seus valores, desejos e objetivos. Acredito em processos que promovam clareza, consciência e mudança consistente.',
     abordagem_explicada: 'A primeira sessão é um momento para nos conhecermos e entendermos o que motivou a busca pela terapia. Além de ouvir sua história e suas demandas, procuro identificar padrões emocionais e comportamentais que possam estar contribuindo para os desafios atuais. Sempre que possível, já ofereço devolutivas, reflexões e direcionamentos iniciais, para que você saia desse primeiro encontro não apenas acolhido, mas também com uma compreensão mais clara sobre o que está acontecendo e sobre os caminhos que podemos construir juntos.',
