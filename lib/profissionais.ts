@@ -642,6 +642,7 @@ export const profissionais: Prof[] = [
   {
     nome: 'Rafaela Vestri',
     registro: 'CRP 12/28700',
+    ocultarDaEquipe: true,
     metodo: 'Psicanálise de Orientação Lacaniana',
     filtros: ['Psicanálise'],
     formacao: 'Graduação em Psicologia pela Universidade Fernando Pessoa (Portugal) e pela UniCesusc (Florianópolis). Em formação contínua pelo Instituto Clínico de Psicanálise de Orientação Lacaniana da Escola Brasileira de Psicanálise.',
