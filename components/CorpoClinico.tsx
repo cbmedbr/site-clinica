@@ -145,7 +145,7 @@ function Modal({ p, onClose }: { p: Prof; onClose: () => void }) {
               <SelosModalidade publico={p.publico} />
             </div>
             {p.nome === FUNDADOR_NOME && (
-              <span className="inline-flex items-center gap-1 text-[10px] font-bold tracking-[0.16em] uppercase text-[#B8883A] mt-1.5">
+              <span className="inline-flex items-center gap-1 text-[10px] font-bold tracking-[0.16em] uppercase text-[#8A6224] mt-1.5">
                 <Star className="w-3 h-3" /> Responsável Técnico
               </span>
             )}
@@ -250,7 +250,7 @@ function Card({ p, display, onOpen }: { p: Prof; display: string; onOpen: () => 
           </span>
         )}
         {p.nome === FUNDADOR_NOME && (
-          <span className="inline-flex items-center gap-1 text-[9px] font-bold tracking-[0.14em] uppercase text-[#B8883A] pt-0.5">
+          <span className="inline-flex items-center gap-1 text-[9px] font-bold tracking-[0.14em] uppercase text-[#8A6224] pt-0.5">
             <Star className="w-2.5 h-2.5" /> Responsável Técnico
           </span>
         )}

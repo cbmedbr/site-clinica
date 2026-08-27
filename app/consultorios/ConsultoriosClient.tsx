@@ -152,8 +152,8 @@ export default function ConsultoriosClient() {
       </div>
 
       {/* Hero */}
-      <section className="relative bg-[#1A0B0E] py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#7C2C3B]/80 via-[#4A1520]/60 to-[#1A0B0E]" />
+      <section className="relative bg-[#6B2434] py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#7C2C3B]/80 via-[#6B2434]/60 to-[#5E1F2C]" />
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-6">
             <MapPin className="w-3.5 h-3.5 text-[#FCECBF]" />
@@ -307,11 +307,11 @@ export default function ConsultoriosClient() {
           })()}
 
           {/* CTA */}
-          <div className="mt-16 bg-[#1A0B0E] rounded-3xl p-10 text-center">
+          <div className="mt-16 bg-[#7C2C3B] rounded-3xl p-10 text-center">
             <h2 className="font-serif font-bold text-2xl sm:text-3xl text-[#FCECBF] mb-3">
               Faça parte da nossa equipe!
             </h2>
-            <p className="text-white/60 text-sm mb-7 max-w-md mx-auto leading-relaxed">
+            <p className="text-white/75 text-sm mb-7 max-w-md mx-auto leading-relaxed">
               Consultórios com a estrutura completa para o atendimento.
             </p>
             <a

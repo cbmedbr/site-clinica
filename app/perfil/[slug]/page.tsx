@@ -287,11 +287,11 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
       {prof.manifesto && (
         <section className="py-16 px-5 sm:px-8" style={{ background: 'white' }}>
           <ScrollReveal className="max-w-2xl mx-auto text-center">
-            <div className="w-px h-10 mx-auto mb-6" style={{ background: 'linear-gradient(to bottom, transparent, #B8883A)' }} />
+            <div className="w-px h-10 mx-auto mb-6" style={{ background: 'linear-gradient(to bottom, transparent, #8A6224)' }} />
             <p className="font-serif text-xl sm:text-2xl leading-relaxed italic" style={{ color: '#2D1A1E' }}>
               &ldquo;{prof.manifesto}&rdquo;
             </p>
-            <div className="w-px h-10 mx-auto mt-6" style={{ background: 'linear-gradient(to bottom, #B8883A, transparent)' }} />
+            <div className="w-px h-10 mx-auto mt-6" style={{ background: 'linear-gradient(to bottom, #8A6224, transparent)' }} />
           </ScrollReveal>
         </section>
       )}
@@ -333,8 +333,8 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
             <ScrollReveal>
               <div className="flex flex-col sm:flex-row gap-8 items-start">
                 <div className="sm:w-48 flex-shrink-0">
-                  <div className="w-8 h-px mb-3" style={{ background: '#B8883A' }} />
-                  <span className="text-[10px] font-bold tracking-[0.22em] uppercase block mb-2" style={{ color: '#B8883A' }}>
+                  <div className="w-8 h-px mb-3" style={{ background: '#8A6224' }} />
+                  <span className="text-[10px] font-bold tracking-[0.22em] uppercase block mb-2" style={{ color: '#8A6224' }}>
                     Abordagem
                   </span>
                   <p className="font-serif font-bold text-lg leading-snug" style={{ color: '#2D1A1E' }}>{prof.metodo}</p>
@@ -354,7 +354,7 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
       {prof.publicacoes && prof.publicacoes.length > 0 && (
         <section className="py-14 px-5 sm:px-8" style={{ background: 'white' }}>
           <div className="max-w-3xl mx-auto">
-            <span className="text-[10px] font-bold tracking-[0.22em] uppercase block mb-4" style={{ color: '#B8883A' }}>Publicações</span>
+            <span className="text-[10px] font-bold tracking-[0.22em] uppercase block mb-4" style={{ color: '#8A6224' }}>Publicações</span>
             <ol className="space-y-3">
               {prof.publicacoes.map((pub, i) => (
                 <li key={i} className="text-sm leading-relaxed" style={{ color: '#5a4044' }}>
@@ -374,7 +374,7 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
 
           <ScrollReveal delay={0} direction="left">
             <div className="rounded-2xl p-6 h-full" style={{ background: 'white', border: '1px solid rgba(124,44,59,0.08)', boxShadow: '0 2px 16px rgba(26,11,14,0.05)' }}>
-              <span className="text-[10px] font-bold tracking-[0.22em] uppercase block mb-4" style={{ color: '#B8883A' }}>Formação</span>
+              <span className="text-[10px] font-bold tracking-[0.22em] uppercase block mb-4" style={{ color: '#8A6224' }}>Formação</span>
               <p className="text-sm leading-relaxed mb-4" style={{ color: '#5a4044' }}>{prof.formacao}</p>
               {prof.pos_graduacoes && prof.pos_graduacoes.length > 0 && (
                 <ul className="space-y-2 pt-4" style={{ borderTop: '1px solid rgba(124,44,59,0.08)' }}>
@@ -396,7 +396,7 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
 
           <ScrollReveal delay={80} direction="right">
             <div className="rounded-2xl p-6 h-full" style={{ background: 'white', border: '1px solid rgba(124,44,59,0.08)', boxShadow: '0 2px 16px rgba(26,11,14,0.05)' }}>
-              <span className="text-[10px] font-bold tracking-[0.22em] uppercase block mb-4" style={{ color: '#B8883A' }}>Atendimento</span>
+              <span className="text-[10px] font-bold tracking-[0.22em] uppercase block mb-4" style={{ color: '#8A6224' }}>Atendimento</span>
               <div className="space-y-4">
                 {isPresencial && (
                   <div className="flex gap-3 items-start">
@@ -426,7 +426,7 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
                   </div>
                 )}
                 <div className="pt-3" style={{ borderTop: '1px solid rgba(124,44,59,0.08)' }}>
-                  <p className="text-[10px] font-bold tracking-wider uppercase mb-1.5" style={{ color: '#B8883A' }}>Público</p>
+                  <p className="text-[10px] font-bold tracking-wider uppercase mb-1.5" style={{ color: '#8A6224' }}>Público</p>
                   <p className="text-xs leading-relaxed" style={{ color: '#5a4044' }}>{prof.publico}</p>
                 </div>
               </div>
@@ -443,8 +443,8 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
           <div className="max-w-5xl mx-auto">
             <ScrollReveal>
               <div className="flex items-center gap-4 mb-10">
-                <div className="w-8 h-px" style={{ background: '#B8883A' }} />
-                <span className="text-[10px] font-bold tracking-[0.25em] uppercase" style={{ color: '#B8883A' }}>
+                <div className="w-8 h-px" style={{ background: '#8A6224' }} />
+                <span className="text-[10px] font-bold tracking-[0.25em] uppercase" style={{ color: '#8A6224' }}>
                   Áreas de atuação
                 </span>
               </div>
@@ -483,8 +483,8 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
         <div className="max-w-5xl mx-auto">
           <ScrollReveal>
             <div className="flex items-center gap-4 mb-10">
-              <div className="w-8 h-px" style={{ background: '#B8883A' }} />
-              <span className="text-[10px] font-bold tracking-[0.25em] uppercase" style={{ color: '#B8883A' }}>
+              <div className="w-8 h-px" style={{ background: '#8A6224' }} />
+              <span className="text-[10px] font-bold tracking-[0.25em] uppercase" style={{ color: '#8A6224' }}>
                 Como é a primeira sessão
               </span>
             </div>
@@ -498,7 +498,7 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
                 style={{
                   width: '1px',
                   bottom: '20px',
-                  background: 'linear-gradient(to bottom, #B8883A, rgba(124,44,59,0.15))',
+                  background: 'linear-gradient(to bottom, #8A6224, rgba(124,44,59,0.15))',
                 }}
               />
 
@@ -528,7 +528,7 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
       <section className="py-10 px-5 sm:px-8" style={{ background: '#FAF7F4' }}>
         <div className="max-w-5xl mx-auto">
           <ScrollReveal>
-            <span className="text-[10px] font-bold tracking-[0.22em] uppercase block mb-5 text-center" style={{ color: '#B8883A' }}>
+            <span className="text-[10px] font-bold tracking-[0.22em] uppercase block mb-5 text-center" style={{ color: '#8A6224' }}>
               Convênios aceitos
             </span>
             <div className="flex flex-wrap justify-center gap-2">
@@ -553,7 +553,7 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
       ══════════════════════════════════════════════ */}
       <section className="py-16 px-5 sm:px-8" style={{ background: '#FEF8E6' }}>
         <ScrollReveal className="max-w-5xl mx-auto text-center">
-          <div className="w-px h-8 mx-auto mb-8" style={{ background: 'linear-gradient(to bottom, transparent, #B8883A)' }} />
+          <div className="w-px h-8 mx-auto mb-8" style={{ background: 'linear-gradient(to bottom, transparent, #8A6224)' }} />
           <p className="font-serif font-bold mb-2" style={{ fontSize: 'clamp(1.6rem, 4vw, 2.4rem)', color: '#2D1A1E' }}>
             Pronto para começar?
           </p>
@@ -576,7 +576,7 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
               Seguir no Instagram
             </a>
           </div>
-          <div className="w-px h-8 mx-auto mt-8" style={{ background: 'linear-gradient(to bottom, #B8883A, transparent)' }} />
+          <div className="w-px h-8 mx-auto mt-8" style={{ background: 'linear-gradient(to bottom, #8A6224, transparent)' }} />
         </ScrollReveal>
       </section>
 

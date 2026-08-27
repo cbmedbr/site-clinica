@@ -9,7 +9,7 @@ export default function AvaliacoesGoogle() {
         <div className="text-center">
           <span
             className="text-[10px] font-bold tracking-[0.25em] uppercase block mb-3"
-            style={{ color: '#B8883A' }}
+            style={{ color: '#8A6224' }}
           >
             AVALIAÇÕES
           </span>

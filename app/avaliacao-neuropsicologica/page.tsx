@@ -303,7 +303,7 @@ export default function AvaliacaoNeuropsicologicaPage() {
       `}</style>
 
       {/* ── BARRA TOPO ── */}
-      <div style={{ background: '#7C2C3B', borderBottom: '2px solid #1A0B0E' }} className="py-2.5 px-4">
+      <div style={{ background: '#7C2C3B', borderBottom: '2px solid #5E1F2C' }} className="py-2.5 px-4">
         <div className="max-w-5xl mx-auto">
           <Link
             href="/"
@@ -318,13 +318,13 @@ export default function AvaliacaoNeuropsicologicaPage() {
       {/* ══════════════════════════════════════════════
           HERO
       ══════════════════════════════════════════════ */}
-      <section className="relative overflow-hidden" style={{ minHeight: '380px', background: '#1A0B0E' }}>
+      <section className="relative overflow-hidden" style={{ minHeight: '380px', background: '#6B2434' }}>
         <HeroNeuralBackground />
         <div
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(110deg, rgba(26,11,14,0.98) 0%, rgba(26,11,14,0.95) 40%, rgba(26,11,14,0.55) 62%, rgba(26,11,14,0.0) 80%)',
+              'linear-gradient(110deg, rgba(107,36,52,0.97) 0%, rgba(107,36,52,0.93) 40%, rgba(107,36,52,0.58) 62%, rgba(107,36,52,0.0) 80%)',
           }}
         />
 
@@ -418,7 +418,7 @@ export default function AvaliacaoNeuropsicologicaPage() {
           <ScrollReveal>
             <span
               className="text-[10px] font-bold tracking-[0.25em] uppercase block mb-3"
-              style={{ color: '#B8883A' }}
+              style={{ color: '#8A6224' }}
             >
               O QUE É
             </span>
@@ -444,11 +444,11 @@ export default function AvaliacaoNeuropsicologicaPage() {
             <ScrollReveal delay={80} direction="right">
               <div
                 className="rounded-2xl p-6"
-                style={{ background: '#1A0B0E', border: '1px solid rgba(184,136,58,0.2)' }}
+                style={{ background: '#7C2C3B', border: '1px solid rgba(252,236,191,0.28)' }}
               >
                 <span
                   className="text-[10px] font-bold tracking-[0.22em] uppercase block mb-4"
-                  style={{ color: '#B8883A' }}
+                  style={{ color: '#FCECBF' }}
                 >
                   Garantias do processo
                 </span>
@@ -463,7 +463,7 @@ export default function AvaliacaoNeuropsicologicaPage() {
                     <div key={item} className="flex items-start gap-3">
                       <div
                         className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
-                        style={{ background: 'rgba(124,44,59,0.3)' }}
+                        style={{ background: 'rgba(255,255,255,0.16)' }}
                       >
                         <Check className="w-3 h-3" style={{ color: '#FCECBF' }} />
                       </div>
@@ -500,7 +500,7 @@ export default function AvaliacaoNeuropsicologicaPage() {
           <ScrollReveal>
             <span
               className="text-[10px] font-bold tracking-[0.25em] uppercase block mb-3"
-              style={{ color: '#B8883A' }}
+              style={{ color: '#8A6224' }}
             >
               INDICAÇÕES
             </span>
@@ -580,7 +580,7 @@ export default function AvaliacaoNeuropsicologicaPage() {
           <ScrollReveal>
             <span
               className="text-[10px] font-bold tracking-[0.25em] uppercase block mb-3"
-              style={{ color: '#B8883A' }}
+              style={{ color: '#8A6224' }}
             >
               PROCESSO
             </span>
@@ -599,7 +599,7 @@ export default function AvaliacaoNeuropsicologicaPage() {
               style={{
                 width: '1px',
                 bottom: '20px',
-                background: 'linear-gradient(to bottom, #B8883A, rgba(124,44,59,0.1))',
+                background: 'linear-gradient(to bottom, #8A6224, rgba(124,44,59,0.1))',
               }}
             />
 
@@ -647,7 +647,7 @@ export default function AvaliacaoNeuropsicologicaPage() {
           <ScrollReveal>
             <span
               className="text-[10px] font-bold tracking-[0.25em] uppercase block mb-3"
-              style={{ color: '#B8883A' }}
+              style={{ color: '#8A6224' }}
             >
               DOMÍNIOS COGNITIVOS
             </span>
@@ -698,24 +698,24 @@ export default function AvaliacaoNeuropsicologicaPage() {
       {/* ══════════════════════════════════════════════
           INSTRUMENTOS PADRÃO-OURO
       ══════════════════════════════════════════════ */}
-      <section className="py-16 px-5 sm:px-8" style={{ background: '#1A0B0E' }}>
+      <section className="py-16 px-5 sm:px-8" style={{ background: '#FEF8E6' }}>
         <div className="max-w-5xl mx-auto">
           <ScrollReveal>
             <span
               className="text-[10px] font-bold tracking-[0.25em] uppercase block mb-3"
-              style={{ color: '#B8883A' }}
+              style={{ color: '#8A6224' }}
             >
               RIGOR TÉCNICO
             </span>
             <h2
               className="font-serif font-bold mb-3"
-              style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.2rem)', color: 'white' }}
+              style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.2rem)', color: '#2D1A1E' }}
             >
               Instrumentos utilizados nas avaliações
             </h2>
-            <p className="text-sm mb-4 max-w-2xl" style={{ color: 'rgba(255,255,255,0.6)' }}>
+            <p className="text-sm mb-4 max-w-2xl" style={{ color: '#5a4044' }}>
               Utilizamos instrumentos de referência mundial e nacional, reconhecidos como{' '}
-              <span className="font-semibold" style={{ color: '#E8B97A' }}>
+              <span className="font-semibold" style={{ color: '#7C2C3B' }}>
                 Padrão Ouro
               </span>{' '}
               em avaliação neuropsicológica, garantindo diagnósticos de alta precisão e validade
@@ -724,12 +724,12 @@ export default function AvaliacaoNeuropsicologicaPage() {
             <div
               className="inline-flex items-center gap-2 rounded-full px-3 py-1 mb-10"
               style={{
-                background: 'rgba(184,136,58,0.15)',
-                border: '1px solid rgba(184,136,58,0.25)',
+                background: 'rgba(124,44,59,0.07)',
+                border: '1px solid rgba(124,44,59,0.18)',
               }}
             >
-              <Medal className="w-3.5 h-3.5" style={{ color: '#E8B97A' }} />
-              <span className="text-[10px] font-semibold" style={{ color: '#E8B97A' }}>
+              <Medal className="w-3.5 h-3.5" style={{ color: '#7C2C3B' }} />
+              <span className="text-[10px] font-semibold" style={{ color: '#7C2C3B' }}>
                 Todos os instrumentos têm aprovação do CFP (Conselho Federal de Psicologia)
               </span>
             </div>
@@ -741,34 +741,34 @@ export default function AvaliacaoNeuropsicologicaPage() {
                 <div
                   className="rounded-xl p-4 h-full"
                   style={{
-                    background: 'rgba(255,255,255,0.04)',
-                    border: '1px solid rgba(255,255,255,0.08)',
+                    background: 'white',
+                    border: '1px solid rgba(124,44,59,0.10)',
                   }}
                 >
                   <div className="flex items-baseline gap-2 mb-2 flex-wrap">
                     <span
                       className="font-serif font-bold text-base"
-                      style={{ color: '#FCECBF' }}
+                      style={{ color: '#7C2C3B' }}
                     >
                       {inst.sigla}
                     </span>
-                    <span className="text-[10px]" style={{ color: 'rgba(255,255,255,0.4)' }}>
+                    <span className="text-[10px]" style={{ color: '#9a7a7e' }}>
                       {inst.nome}
                     </span>
                   </div>
                   <p
                     className="text-xs leading-relaxed mb-1"
-                    style={{ color: 'rgba(255,255,255,0.6)' }}
+                    style={{ color: '#5a4044' }}
                   >
                     <span
                       className="font-semibold"
-                      style={{ color: 'rgba(255,255,255,0.8)' }}
+                      style={{ color: '#2D1A1E' }}
                     >
                       Avalia:
                     </span>{' '}
                     {inst.avalia}
                   </p>
-                  <p className="text-[10px]" style={{ color: 'rgba(255,255,255,0.35)' }}>
+                  <p className="text-[10px]" style={{ color: '#9a7a7e' }}>
                     ⏱ {inst.tempo}
                   </p>
                 </div>
@@ -848,7 +848,7 @@ export default function AvaliacaoNeuropsicologicaPage() {
               <div className="flex-1">
                 <p
                   className="text-xs font-bold tracking-widest uppercase mb-1"
-                  style={{ color: '#B8883A' }}
+                  style={{ color: '#8A6224' }}
                 >
                   Investimento
                 </p>
@@ -864,18 +864,18 @@ export default function AvaliacaoNeuropsicologicaPage() {
               </div>
               <div
                 className="flex-shrink-0 rounded-xl px-6 py-4 text-center"
-                style={{ background: '#1A0B0E' }}
+                style={{ background: '#7C2C3B' }}
               >
                 <p
                   className="text-[10px] font-bold tracking-widest uppercase mb-1"
-                  style={{ color: '#B8883A' }}
+                  style={{ color: '#FCECBF' }}
                 >
                   Parcele em até
                 </p>
                 <p className="font-serif font-bold text-3xl" style={{ color: 'white' }}>
                   12x
                 </p>
-                <p className="text-[10px]" style={{ color: 'rgba(255,255,255,0.5)' }}>
+                <p className="text-[10px]" style={{ color: 'rgba(255,255,255,0.7)' }}>
                   no cartão
                 </p>
               </div>
@@ -892,7 +892,7 @@ export default function AvaliacaoNeuropsicologicaPage() {
           <ScrollReveal>
             <span
               className="text-[10px] font-bold tracking-[0.25em] uppercase block mb-3"
-              style={{ color: '#B8883A' }}
+              style={{ color: '#8A6224' }}
             >
               QUEM REALIZA
             </span>
@@ -985,7 +985,7 @@ export default function AvaliacaoNeuropsicologicaPage() {
           <ScrollReveal>
             <span
               className="text-[10px] font-bold tracking-[0.25em] uppercase block mb-3"
-              style={{ color: '#B8883A' }}
+              style={{ color: '#8A6224' }}
             >
               FAQ
             </span>
@@ -1046,7 +1046,7 @@ export default function AvaliacaoNeuropsicologicaPage() {
           <ScrollReveal>
             <span
               className="text-[10px] font-bold tracking-[0.25em] uppercase block mb-3"
-              style={{ color: '#B8883A' }}
+              style={{ color: '#8A6224' }}
             >
               AVALIAÇÕES
             </span>
@@ -1119,22 +1119,22 @@ export default function AvaliacaoNeuropsicologicaPage() {
       {/* ══════════════════════════════════════════════
           CTA FINAL
       ══════════════════════════════════════════════ */}
-      <section className="py-16 px-5 sm:px-8" style={{ background: '#1A0B0E' }}>
+      <section className="py-16 px-5 sm:px-8" style={{ background: '#FEF8E6' }}>
         <ScrollReveal className="max-w-5xl mx-auto text-center">
           <div
             className="w-px h-8 mx-auto mb-8"
-            style={{ background: 'linear-gradient(to bottom, transparent, #B8883A)' }}
+            style={{ background: 'linear-gradient(to bottom, transparent, #8A6224)' }}
           />
 
           <p
-            className="font-serif font-bold text-white mb-2"
-            style={{ fontSize: 'clamp(1.6rem, 4vw, 2.4rem)' }}
+            className="font-serif font-bold mb-2"
+            style={{ fontSize: 'clamp(1.6rem, 4vw, 2.4rem)', color: '#2D1A1E' }}
           >
             Pronto para dar clareza ao que está acontecendo?
           </p>
           <p
             className="text-sm mb-8 max-w-md mx-auto"
-            style={{ color: 'rgba(255,255,255,0.45)' }}
+            style={{ color: '#7a5a5e' }}
           >
             Atendimento particular, com cuidado, ética e sigilo absoluto.
           </p>
@@ -1157,17 +1157,17 @@ export default function AvaliacaoNeuropsicologicaPage() {
           </div>
 
           <div className="space-y-1">
-            <p className="text-xs font-semibold" style={{ color: 'rgba(255,255,255,0.5)' }}>
+            <p className="text-xs font-semibold" style={{ color: '#5a4044' }}>
               (48) 99190-8715
             </p>
-            <p className="text-xs" style={{ color: 'rgba(255,255,255,0.3)' }}>
+            <p className="text-xs" style={{ color: '#9a7a7e' }}>
               Rua Felipe Schmidt, 515 · Edifício Pórtico · 2º andar · Sala 204 · Centro · Florianópolis/SC
             </p>
           </div>
 
           <div
             className="w-px h-8 mx-auto mt-8"
-            style={{ background: 'linear-gradient(to bottom, #B8883A, transparent)' }}
+            style={{ background: 'linear-gradient(to bottom, #8A6224, transparent)' }}
           />
         </ScrollReveal>
       </section>
@@ -1175,7 +1175,7 @@ export default function AvaliacaoNeuropsicologicaPage() {
       <DevNav currentPath="/avaliacao-neuropsicologica" />
 
       {/* ── Rodapé ── */}
-      <footer style={{ background: '#0E0608' }} className="py-6 px-5 text-center">
+      <footer style={{ background: '#5E1F2C' }} className="py-6 px-5 text-center">
         <nav className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1.5 mb-3">
           <Link href="/" className="text-xs font-medium hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.5)' }}>Início</Link>
           <Link href="/#equipe" className="text-xs font-medium hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.5)' }}>Corpo Clínico</Link>
