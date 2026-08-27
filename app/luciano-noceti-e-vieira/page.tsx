@@ -103,23 +103,26 @@ export default function LucianoPage() {
       </div>
 
       {/* ══════════════════════════════════════════════
-          HERO — claro, gradiente creme → rosé
+          HERO — claro, foto do consultório sob véu creme
       ══════════════════════════════════════════════ */}
       <section className="relative overflow-hidden" style={{ minHeight: '480px' }}>
-        {/* base — campo creme que aquece para rosé à direita */}
-        <div
-          className="absolute inset-0"
-          style={{ background: 'linear-gradient(120deg, #FEF8E6 0%, #FDF2E0 30%, #F9E7E6 56%, #F1D4D8 78%, #E6B7BF 100%)' }}
+        <Image
+          src="/hero-landing.avif"
+          alt=""
+          fill
+          className="object-cover object-center"
+          priority
+          sizes="100vw"
         />
-        {/* halo de luz atrás do retrato */}
+        {/* véu creme — denso à esquerda, onde fica o texto; quase limpo à direita */}
         <div
           className="absolute inset-0"
-          style={{ background: 'radial-gradient(circle at 76% 42%, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 52%)' }}
+          style={{ background: 'linear-gradient(100deg, rgba(254,248,230,0.96) 0%, rgba(254,248,230,0.92) 34%, rgba(254,248,230,0.62) 56%, rgba(252,236,191,0.26) 78%, rgba(255,255,255,0.10) 100%)' }}
         />
-        {/* textura diagonal sutil */}
+        {/* no mobile o texto fica centralizado sobre a foto inteira — véu uniforme */}
         <div
-          className="absolute inset-0"
-          style={{ backgroundImage: 'repeating-linear-gradient(120deg, rgba(124,44,59,0.04) 0px, rgba(124,44,59,0.04) 1px, transparent 1px, transparent 8px)' }}
+          className="absolute inset-0 sm:hidden"
+          style={{ background: 'rgba(254,248,230,0.92)' }}
         />
 
         <div className="relative max-w-5xl mx-auto px-5 sm:px-8 py-14 flex flex-col sm:flex-row items-center gap-10">
