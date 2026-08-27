@@ -164,10 +164,12 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
         .tag-pill:hover { background: #7C2C3B; color: white; border-color: #7C2C3B; }
         .btn-ghost-white { transition: border-color 0.18s ease, color 0.18s ease; }
         .btn-ghost-white:hover { border-color: rgba(255,255,255,0.5) !important; color: white !important; }
+        .btn-ghost-dark { transition: border-color 0.18s ease, color 0.18s ease; }
+        .btn-ghost-dark:hover { border-color: rgba(124,44,59,0.5) !important; color: #7C2C3B !important; }
       `}</style>
 
       {/* ── Barra topo ── */}
-      <div style={{ background: '#1A0B0E' }} className="py-2.5 px-4">
+      <div style={{ background: '#6B2434' }} className="py-2.5 px-4">
         <div className="max-w-5xl mx-auto flex items-center justify-between">
           <Link href="/" className="inline-flex items-center gap-1.5 text-white/60 hover:text-white text-xs font-medium transition-colors">
             <ArrowLeft className="w-3 h-3" />
@@ -194,7 +196,7 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
         {/* gradient overlay — dark left, transparent right */}
         <div
           className="absolute inset-0"
-          style={{ background: 'linear-gradient(110deg, rgba(26,11,14,0.81) 0%, rgba(26,11,14,0.73) 45%, rgba(26,11,14,0.35) 75%, rgba(26,11,14,0.05) 100%)' }}
+          style={{ background: 'linear-gradient(110deg, rgba(107,36,52,0.88) 0%, rgba(107,36,52,0.80) 45%, rgba(107,36,52,0.42) 75%, rgba(107,36,52,0.06) 100%)' }}
         />
 
         <div className="relative max-w-5xl mx-auto px-5 sm:px-8 py-14 flex flex-col sm:flex-row items-center gap-10">
@@ -223,7 +225,7 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
           <div className="flex-1 text-white text-center sm:text-left">
             <span
               className="inline-block text-[10px] font-bold tracking-[0.25em] uppercase mb-3"
-              style={{ color: '#B8883A' }}
+              style={{ color: '#E8B97A' }}
             >
               Psicólogo{prof.registro ? ` · ${prof.registro}` : ''}
             </span>
@@ -304,7 +306,7 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
               <div
                 className="rounded-2xl p-6"
                 style={{
-                  background: 'linear-gradient(135deg, #1A0B0E 0%, #2D1A1E 100%)',
+                  background: 'linear-gradient(135deg, #7C2C3B 0%, #5E1F2C 100%)',
                   display: 'grid',
                   gridTemplateColumns: `repeat(${prof.stats.length}, 1fr)`,
                   gap: '1rem',
@@ -312,8 +314,8 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
               >
                 {prof.stats.map(({ v, l }, i) => (
                   <div key={i} className="text-center px-2">
-                    <div className="font-serif font-bold text-2xl sm:text-3xl mb-1" style={{ color: '#E8B97A' }}>{v}</div>
-                    <div className="text-xs leading-tight" style={{ color: 'rgba(255,255,255,0.45)' }}>{l}</div>
+                    <div className="font-serif font-bold text-2xl sm:text-3xl mb-1" style={{ color: '#FCECBF' }}>{v}</div>
+                    <div className="text-xs leading-tight" style={{ color: 'rgba(255,255,255,0.62)' }}>{l}</div>
                   </div>
                 ))}
               </div>
@@ -437,7 +439,7 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
           ÁREAS DE ATUAÇÃO
       ══════════════════════════════════════════════ */}
       {grupos.length > 0 && (
-        <section className="py-14 px-5 sm:px-8" style={{ background: '#1A0B0E' }}>
+        <section className="py-14 px-5 sm:px-8" style={{ background: '#FEF8E6' }}>
           <div className="max-w-5xl mx-auto">
             <ScrollReveal>
               <div className="flex items-center gap-4 mb-10">
@@ -451,7 +453,7 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
             <div className="space-y-7">
               {grupos.map(({ categoria, itens }, gi) => (
                 <ScrollReveal key={categoria} delay={gi * 60}>
-                  <p className="text-[10px] font-bold tracking-[0.2em] uppercase mb-3" style={{ color: 'rgba(255,255,255,0.35)' }}>
+                  <p className="text-[10px] font-bold tracking-[0.2em] uppercase mb-3" style={{ color: '#7a5a5e' }}>
                     {categoria}
                   </p>
                   <div className="flex flex-wrap gap-2">
@@ -459,9 +461,9 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
                       <span key={item}
                         className="tag-pill inline-block rounded-full text-xs px-3.5 py-1.5 font-medium cursor-default"
                         style={{
-                          background: 'rgba(255,255,255,0.06)',
-                          color: 'rgba(255,255,255,0.72)',
-                          border: '1px solid rgba(255,255,255,0.1)',
+                          background: 'white',
+                          color: '#5a4044',
+                          border: '1px solid rgba(124,44,59,0.12)',
                         }}>
                         {item}
                       </span>
@@ -549,13 +551,13 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
       {/* ══════════════════════════════════════════════
           CTA FINAL
       ══════════════════════════════════════════════ */}
-      <section className="py-16 px-5 sm:px-8" style={{ background: '#1A0B0E' }}>
+      <section className="py-16 px-5 sm:px-8" style={{ background: '#FEF8E6' }}>
         <ScrollReveal className="max-w-5xl mx-auto text-center">
           <div className="w-px h-8 mx-auto mb-8" style={{ background: 'linear-gradient(to bottom, transparent, #B8883A)' }} />
-          <p className="font-serif font-bold text-white mb-2" style={{ fontSize: 'clamp(1.6rem, 4vw, 2.4rem)' }}>
+          <p className="font-serif font-bold mb-2" style={{ fontSize: 'clamp(1.6rem, 4vw, 2.4rem)', color: '#2D1A1E' }}>
             Pronto para começar?
           </p>
-          <p className="text-sm mb-8" style={{ color: 'rgba(255,255,255,0.45)' }}>
+          <p className="text-sm mb-8" style={{ color: '#7a5a5e' }}>
             Entre em contato e agende sua primeira consulta com {prof.nome.split(' ')[0]}.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -568,8 +570,8 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
             </a>
             <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer"
               aria-label="Instagram da Clínica Luciano Noceti"
-              className="btn-ghost-white inline-flex items-center justify-center gap-2 rounded-full px-7 py-3 text-sm font-semibold"
-              style={{ color: 'rgba(255,255,255,0.65)', border: '1.5px solid rgba(255,255,255,0.15)' }}>
+              className="btn-ghost-dark inline-flex items-center justify-center gap-2 rounded-full px-7 py-3 text-sm font-semibold"
+              style={{ color: '#5a4044', border: '1.5px solid rgba(124,44,59,0.22)' }}>
               <InstagramIcon className="w-4 h-4" style={{ color: '#E4405F' }} />
               Seguir no Instagram
             </a>
@@ -581,7 +583,7 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
       <DevNav currentPath={`/perfil/${params.slug}`} />
 
       {/* ── Rodapé ── */}
-      <footer style={{ background: '#0E0608' }} className="py-6 px-5 text-center">
+      <footer style={{ background: '#5E1F2C' }} className="py-6 px-5 text-center">
         <nav className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1.5 mb-3">
           <Link href="/" className="text-xs font-medium hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.5)' }}>Início</Link>
           <Link href="/#equipe" className="text-xs font-medium hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.5)' }}>Corpo Clínico</Link>
