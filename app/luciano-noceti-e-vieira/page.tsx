@@ -103,20 +103,23 @@ export default function LucianoPage() {
       </div>
 
       {/* ══════════════════════════════════════════════
-          HERO — dark cinematic
+          HERO — claro, gradiente creme → rosé
       ══════════════════════════════════════════════ */}
       <section className="relative overflow-hidden" style={{ minHeight: '480px' }}>
-        <Image
-          src="/hero_landing_page.png"
-          alt=""
-          fill
-          className="object-cover object-center"
-          priority
-          sizes="100vw"
-        />
+        {/* base — campo creme que aquece para rosé à direita */}
         <div
           className="absolute inset-0"
-          style={{ background: 'linear-gradient(110deg, rgba(107,36,52,0.88) 0%, rgba(107,36,52,0.80) 45%, rgba(107,36,52,0.42) 75%, rgba(107,36,52,0.06) 100%)' }}
+          style={{ background: 'linear-gradient(120deg, #FEF8E6 0%, #FDF2E0 30%, #F9E7E6 56%, #F1D4D8 78%, #E6B7BF 100%)' }}
+        />
+        {/* halo de luz atrás do retrato */}
+        <div
+          className="absolute inset-0"
+          style={{ background: 'radial-gradient(circle at 76% 42%, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 52%)' }}
+        />
+        {/* textura diagonal sutil */}
+        <div
+          className="absolute inset-0"
+          style={{ backgroundImage: 'repeating-linear-gradient(120deg, rgba(124,44,59,0.04) 0px, rgba(124,44,59,0.04) 1px, transparent 1px, transparent 8px)' }}
         />
 
         <div className="relative max-w-5xl mx-auto px-5 sm:px-8 py-14 flex flex-col sm:flex-row items-center gap-10">
@@ -127,7 +130,7 @@ export default function LucianoPage() {
               className="relative w-36 h-36 sm:w-52 sm:h-52 overflow-hidden"
               style={{
                 borderRadius: '18px',
-                boxShadow: '0 0 0 3px rgba(184,136,58,0.4), 0 20px 60px rgba(0,0,0,0.5)',
+                boxShadow: '0 0 0 3px rgba(255,255,255,0.9), 0 0 0 4.5px rgba(124,44,59,0.22), 0 18px 45px rgba(124,44,59,0.20)',
               }}
             >
               <Image
@@ -142,30 +145,30 @@ export default function LucianoPage() {
           </div>
 
           {/* Texto */}
-          <div className="flex-1 text-white text-center sm:text-left">
+          <div className="flex-1 text-center sm:text-left" style={{ color: '#2D1A1E' }}>
             <span
               className="inline-block text-[10px] font-bold tracking-[0.25em] uppercase mb-3"
-              style={{ color: '#E8B97A' }}
+              style={{ color: '#8A6224' }}
             >
               Psicólogo · Psicanalista · CRP 12/02627
             </span>
 
             <h1 className="font-serif font-bold leading-tight mb-2" style={{ fontSize: 'clamp(2rem, 5vw, 3rem)' }}>
               Luciano{' '}
-              <span style={{ color: '#E8B97A' }}>Noceti e Vieira</span>
+              <span style={{ color: '#7C2C3B' }}>Noceti e Vieira</span>
             </h1>
 
-            <p className="text-white/60 text-sm font-medium mb-5">
+            <p className="text-sm font-medium mb-5" style={{ color: '#7a5a5e' }}>
               Psicanálise Freudo-Lacaniana · 25 anos de experiência
             </p>
 
             <div className="flex flex-wrap gap-2 justify-center sm:justify-start mb-6">
               <span className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full"
-                style={{ background: 'rgba(184,136,58,0.15)', color: '#E8B97A', border: '1px solid rgba(184,136,58,0.3)' }}>
+                style={{ background: 'rgba(124,44,59,0.07)', color: '#7C2C3B', border: '1px solid rgba(124,44,59,0.2)' }}>
                 <MapPin className="w-3 h-3" /> Presencial · Florianópolis
               </span>
               <span className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full"
-                style={{ background: 'rgba(255,255,255,0.08)', color: 'rgba(255,255,255,0.75)', border: '1px solid rgba(255,255,255,0.15)' }}>
+                style={{ background: 'white', color: '#5a4044', border: '1px solid rgba(124,44,59,0.14)' }}>
                 <Monitor className="w-3 h-3" /> Online
               </span>
             </div>
@@ -180,8 +183,8 @@ export default function LucianoPage() {
               </a>
               <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer"
                 aria-label="Instagram da Clínica Luciano Noceti"
-                className="btn-ghost-white inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold"
-                style={{ color: 'rgba(255,255,255,0.75)', border: '1.5px solid rgba(255,255,255,0.2)' }}>
+                className="btn-ghost-dark inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold"
+                style={{ color: '#5a4044', border: '1.5px solid rgba(124,44,59,0.22)' }}>
                 <InstagramIcon className="w-4 h-4" style={{ color: '#E4405F' }} />
                 Instagram
               </a>
@@ -189,14 +192,14 @@ export default function LucianoPage() {
                 <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer"
                   aria-label="Perfil LinkedIn de Luciano Noceti e Vieira"
                   className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all hover:opacity-90"
-                  style={{ color: '#60A5FA', border: '1.5px solid rgba(10,102,194,0.45)' }}>
+                  style={{ color: '#0A66C2', border: '1.5px solid rgba(10,102,194,0.35)' }}>
                   <LinkedInIcon className="w-4 h-4" style={{ color: '#0A66C2' }} />
                   LinkedIn
                 </a>
               ) : (
                 <span
                   className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold cursor-not-allowed"
-                  style={{ color: 'rgba(255,255,255,0.2)', border: '1.5px solid rgba(255,255,255,0.08)' }}
+                  style={{ color: '#c0a8ac', border: '1.5px solid rgba(124,44,59,0.12)' }}
                   title="LinkedIn não informado">
                   <LinkedInIcon className="w-4 h-4" />
                   LinkedIn
