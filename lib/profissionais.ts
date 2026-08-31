@@ -155,9 +155,8 @@ export const profissionais: Prof[] = [
     instagram_url: 'https://www.instagram.com/psi.bzoccoler/',
   },
   {
-    nome: 'Betina',
+    nome: 'Betina Schmidt Ortiz',
     registro: 'CRP 12/14362',
-    ocultarDaEquipe: true,
     metodo: 'Análise do Comportamento Aplicada (ABA) e Neuropsicologia',
     filtros: ['ABA', 'Neuropsicologia'],
     formacao: 'Graduação em Psicologia pela Faculdade de Ciências Sociais de Florianópolis (FCSF - CESUSC); Pós-graduanda em Neuropsicologia; Terapia ABA - Análise do Comportamento Aplicada; Reabilitação NeuroCognitiva - TEA, TDAH, AVC, TCE e outros comprometimentos das funções cerebrais que demandem intervenção.',
