@@ -155,6 +155,18 @@ export const profissionais: Prof[] = [
     instagram_url: 'https://www.instagram.com/psi.bzoccoler/',
   },
   {
+    nome: 'Betina',
+    registro: 'CRP 12/14362',
+    ocultarDaEquipe: true,
+    metodo: 'Análise do Comportamento Aplicada (ABA) e Neuropsicologia',
+    filtros: ['ABA', 'Neuropsicologia'],
+    formacao: 'Graduação em Psicologia pela Faculdade de Ciências Sociais de Florianópolis (FCSF - CESUSC); Pós-graduanda em Neuropsicologia; Terapia ABA - Análise do Comportamento Aplicada; Reabilitação NeuroCognitiva - TEA, TDAH, AVC, TCE e outros comprometimentos das funções cerebrais que demandem intervenção.',
+    publico: 'Atende a partir dos 6 anos (Crianças, Adolescentes e Adultos) e Estrangeiros de língua inglesa. Atendimento Presencial e On-line.',
+    demandas: 'Psicoterapia Clínica, Avaliação Psicológica, Terapia ABA, Reabilitação Cognitiva, TDAH, Transtornos de ansiedade e depressão, Crises de pânico, Estresse pós-traumático, Sexualidade, TOC, Fobias, Luto, Comportamento alimentar, Esgotamento profissional e burnout, Questões familiares e conjugais, Dependência emocional, Autoconhecimento e autoestima, Demandas gerais referentes ao comportamento, Transtornos de personalidade, Dependência química, Pensamentos recorrentes de perigo ou morte, Sentimento de culpa, Crenças de incapacidade, Orientação parental, Automutilação, Habilidades sociais e socioemocionais, Ideação suicida, Conflitos familiares e de relacionamentos, Separação dos pais.',
+    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, Celos, Elo saúde, Abepom, Casacaresc, Sc Saúde, Sim Saúde, Geap, Fusex, Petrobras, Saúde Caixa, Sidesc e Particular.',
+    foto: '/equipe/betina_psico.avif',
+  },
+  {
     nome: 'Bibiana Mari Dutra Vieira',
     registro: 'CRP 12/15211',
     metodo: 'Psicanálise e EMDR',
