@@ -1,8 +1,9 @@
 import { z } from 'zod'
 
 const FILTROS_VALIDOS = [
-  'ABA', 'AC', 'Centrada na Pessoa', 'Existencialismo', 'Gestalt', 'Junguiana', 'Neuropsicologia',
-  'Psicanálise', 'Psicodrama', 'Sistêmica Familiar', 'TCC', 'Transpessoal',
+  'ABA', 'AC', 'Avaliação Psicológica', 'Centrada na Pessoa', 'Existencialismo', 'Gestalt',
+  'Junguiana', 'Neuropsicologia', 'Psicanálise', 'Psicodrama', 'Sistêmica Familiar', 'TCC',
+  'Transpessoal',
 ] as const
 
 export const ProfSchema = z.object({
@@ -157,11 +158,11 @@ export const profissionais: Prof[] = [
   {
     nome: 'Betina Schmidt Ortiz',
     registro: 'CRP 12/14362',
-    metodo: 'Análise do Comportamento Aplicada (ABA) e Neuropsicologia',
-    filtros: ['ABA', 'Neuropsicologia'],
-    formacao: 'Graduação em Psicologia pela Faculdade de Ciências Sociais de Florianópolis (FCSF - CESUSC); Pós-graduanda em Neuropsicologia; Terapia ABA - Análise do Comportamento Aplicada; Reabilitação NeuroCognitiva - TEA, TDAH, AVC, TCE e outros comprometimentos das funções cerebrais que demandem intervenção.',
+    metodo: 'Psicoterapia Clínica e Avaliação Psicológica',
+    filtros: ['Avaliação Psicológica'],
+    formacao: 'Graduação em Psicologia pela Faculdade de Ciências Sociais de Florianópolis (FCSF - CESUSC).',
     publico: 'Atende a partir dos 6 anos (Crianças, Adolescentes e Adultos) e Estrangeiros de língua inglesa. Atendimento Presencial e On-line.',
-    demandas: 'Psicoterapia Clínica, Avaliação Psicológica, Terapia ABA, Reabilitação Cognitiva, TDAH, Transtornos de ansiedade e depressão, Crises de pânico, Estresse pós-traumático, Sexualidade, TOC, Fobias, Luto, Comportamento alimentar, Esgotamento profissional e burnout, Questões familiares e conjugais, Dependência emocional, Autoconhecimento e autoestima, Demandas gerais referentes ao comportamento, Transtornos de personalidade, Dependência química, Pensamentos recorrentes de perigo ou morte, Sentimento de culpa, Crenças de incapacidade, Orientação parental, Automutilação, Habilidades sociais e socioemocionais, Ideação suicida, Conflitos familiares e de relacionamentos, Separação dos pais.',
+    demandas: 'Psicoterapia Clínica, Avaliação Psicológica, TDAH, Transtornos de ansiedade e depressão, Crises de pânico, Estresse pós-traumático, Sexualidade, TOC, Fobias, Luto, Comportamento alimentar, Esgotamento profissional e burnout, Questões familiares e conjugais, Dependência emocional, Autoconhecimento e autoestima, Demandas gerais referentes ao comportamento, Transtornos de personalidade, Dependência química, Pensamentos recorrentes de perigo ou morte, Sentimento de culpa, Crenças de incapacidade, Orientação parental, Automutilação, Habilidades sociais e socioemocionais, Ideação suicida, Conflitos familiares e de relacionamentos, Separação dos pais.',
     atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, Celos, Elo saúde, Abepom, Casacaresc, Sc Saúde, Sim Saúde, Geap, Fusex, Petrobras, Saúde Caixa, Sidesc e Particular.',
     foto: '/equipe/betina_psico.avif',
   },
