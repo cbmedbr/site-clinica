@@ -373,6 +373,7 @@ export const profissionais: Prof[] = [
   {
     nome: 'Julia Guidi Leite',
     registro: 'CRP 12/27432',
+    ocultarDaEquipe: true,
     metodo: 'Psicanálise de orientação Lacaniana',
     filtros: ['Psicanálise'],
     formacao: 'Formada pela Universidade do Vale do Itajaí (UNIVALI).',
