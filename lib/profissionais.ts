@@ -564,6 +564,33 @@ export const profissionais: Prof[] = [
     instagram_url: 'https://www.instagram.com/psi.michelerf',
   },
   {
+    nome: 'Michelly de Liz',
+    registro: 'CRP 12/13437',
+    metodo: 'Terapia Cognitivo-Comportamental (TCC)',
+    filtros: ['TCC'],
+    formacao: 'Especialista em Terapia Cognitivo-Comportamental (2023); Pós-graduanda em Psicologia Baseada em Evidências.',
+    publico: 'Atende Adultos a partir de 18 anos. Atendimento Presencial e On-line.',
+    demandas: 'Transtornos de ansiedade, Transtornos depressivos, Transtornos de humor, Desenvolvimento pessoal, Transtorno de estresse pós-traumático, Transtornos de personalidade em geral, Processos de autoconhecimento, Burnout.',
+    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, Celos, Elo saúde, Abepom, Casacaresc, Sc Saúde, Sim Saúde, Geap, Fusex, Petrobras, Saúde Caixa, Sidesc e Particular.',
+    foto: '/equipe/michelly_psico.avif',
+    linkedin_url: 'https://www.linkedin.com/in/michelly-de-liz-31284458',
+    instagram_url: 'https://www.instagram.com/michellydeliz.psi/',
+    manifesto: 'Atendo adultos que buscam compreender melhor seus pensamentos, emoções e comportamentos, e como eles se conectam no dia a dia. Acredito que mudanças reais acontecem quando entendemos os padrões que sustentam nosso sofrimento e aprendemos a lidar com eles de forma mais consciente e ativa. Meu trabalho, fundamentado na Terapia Cognitivo Comportamental, une escuta acolhedora e estratégias práticas, sempre respeitando o ritmo e a história de cada pessoa.',
+    abordagem_explicada: 'No primeiro encontro, meu objetivo é te conhecer: sua história, o momento atual e o que te trouxe até aqui. Conversamos sobre suas queixas e expectativas, e começo a organizar, junto com você, uma compreensão inicial de como seus pensamentos, emoções e comportamentos se relacionam. É um espaço de escuta acolhedora e sem julgamentos, onde você pode falar no seu tempo. A partir daí, alinhamos juntos os objetivos e o formato do trabalho que faremos.',
+    pos_graduacoes: [
+      {
+        tipo: 'Pós-graduação',
+        curso: 'Terapia Cognitivo-Comportamental',
+        ano: '2023',
+      },
+      {
+        tipo: 'Pós-graduação',
+        curso: 'Psicologia Baseada em Evidências',
+        ano: 'Em andamento',
+      },
+    ],
+  },
+  {
     nome: 'Monica Scultori',
     registro: 'CRP 12/19265',
     metodo: 'Existencialista Sartreana',
