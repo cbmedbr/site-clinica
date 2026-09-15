@@ -482,7 +482,7 @@ export const profissionais: Prof[] = [
     metodo: 'Terapia Cognitivo-Comportamental (TCC)',
     filtros: ['TCC'],
     formacao: 'Graduada em Psicologia pela Universidade do Vale do Itajaí (UNIVALI), Campus Balneário Camboriú; Pós-graduanda em Psicologia Clínica pela Faculdade Mar Atlântico; Curso de Formação Continuada em Psicologia e Terapia Cognitivo-Comportamental (200 horas) pela JT Psicologia; Curso de Formação para atuação como terapeuta pelo CIM - Certificação Ítalo Marsili.',
-    publico: 'Atende Adolescentes a partir de 13 anos, Adultos e Idosos. Atendimento Presencial.',
+    publico: 'Atende Adolescentes a partir de 13 anos, Adultos e Idosos. Atendimento Presencial e On-line.',
     demandas: 'Ansiedade, TDAH, Regulação emocional, Depressão e luto, Elaboração de estratégias comportamentais, Traumas e ressignificação de experiências difíceis, Autoestima e autoimagem, Relacionamentos e habilidades sociais, Apego e padrões relacionais, Limites e valores pessoais, Modificação de crenças e pensamentos disfuncionais, Personalidade (temperamento e comportamento), Crises e conflitos, Autorrealização e busca de sentido, Psicodiagnóstico e exame do estado mental.',
     atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, Celos, Elo saúde, Abepom, Casacaresc, Sc Saúde, Sim Saúde, Geap, Fusex, Petrobras, Saúde Caixa, Sidesc e Particular.',
     foto: '/equipe/mariaeduarda_psico.avif',
