@@ -144,6 +144,12 @@ const instrumentos = [
     tempo: '60 a 120 min',
   },
   {
+    sigla: 'WISC-IV',
+    nome: 'Escala Wechsler de Inteligência para Crianças',
+    avalia: 'compreensão verbal, raciocínio perceptual, memória de trabalho e velocidade de processamento em crianças e adolescentes (6 a 16 anos), além de atenção, organização visuoespacial, planejamento, formação de conceitos, flexibilidade cognitiva e resolução de problemas',
+    tempo: '65 a 80 min',
+  },
+  {
     sigla: 'SON-R 2½–7',
     nome: 'Teste Não Verbal de Inteligência',
     avalia: 'inteligência não verbal, raciocínio abstrato e habilidades visuoespaciais',
