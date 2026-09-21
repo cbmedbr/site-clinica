@@ -272,14 +272,13 @@ export const profissionais: Prof[] = [
   {
     nome: 'Cristiane Cabreira Oppitz',
     registro: 'CRP 12/13995',
-    metodo: 'Terapia Cognitivo-Comportamental (TCC) e Neuropsicologia',
-    filtros: ['TCC', 'Neuropsicologia'],
+    metodo: 'Terapia Cognitivo-Comportamental (TCC)',
+    filtros: ['TCC'],
     formacao: 'Especialização em Terapia Cognitivo-Comportamental pelo Instituto WP Cognitivo. Especialização em Neuropsicologia pelo IPOG. Formação em Teoria dos Esquemas pelo WP Cognitivo.',
     publico: 'Atende a partir de 12 anos, Adolescentes, Adultos, Idosos e Casais. Atendimento On-line.',
-    demandas: 'Psicóloga e Neuropsicóloga. Realiza avaliação neuropsicológica e psicoterapia clínica. Avaliação Neuropsicológica, TDAH, TEA, Avaliação para cirurgia de vasectomia e laqueadura, Burnout, Transtorno de ansiedade, Transtorno do sono, Transtorno alimentar (incluindo avaliação para cirurgia bariátrica), Orientação Profissional, Dor emocional e autoestima para mulheres, Estresse Pós-Traumático, Atendimento Gestacional e Pós-parto, Fobia Social, Síndrome do Pânico, Sexualidade, Questões relacionadas ao divórcio, Identidade de Gênero, Fobias.',
+    demandas: 'TDAH, TEA, Avaliação para cirurgia de vasectomia e laqueadura, Burnout, Transtorno de ansiedade, Transtorno do sono, Transtorno alimentar (incluindo avaliação para cirurgia bariátrica), Orientação Profissional, Dor emocional e autoestima para mulheres, Estresse Pós-Traumático, Atendimento Gestacional e Pós-parto, Fobia Social, Síndrome do Pânico, Sexualidade, Questões relacionadas ao divórcio, Identidade de Gênero, Fobias.',
     atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, Celos, Abepom, Casacaresc, Sim Saúde, Fusex, Petrobras, Saúde Caixa, Sidesc e Particular.',
     foto: '/equipe/cristiane_psico.avif',
-    fazNeuropsico: true,
     formacaoNeuro: 'Especialização em Neuropsicologia pelo IPOG',
   },
   {
