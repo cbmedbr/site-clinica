@@ -258,6 +258,11 @@ const faqItems = [
       'Sim, realizamos avaliações a partir de 5 anos de idade, com instrumentos adequados a cada faixa etária, inclusive testes não verbais para crianças menores ou com dificuldades de linguagem.',
   },
   {
+    pergunta: 'O que o WISC-IV avalia nas crianças?',
+    resposta:
+      'O WISC-IV avalia diferentes funções cognitivas importantes para a aprendizagem e o desenvolvimento infantil: compreensão verbal (capacidade de entender, organizar e expressar informações através da linguagem), raciocínio perceptual (habilidade de resolver problemas utilizando raciocínio lógico e percepção visual), memória de trabalho (capacidade de manter e manipular informações mentalmente por um curto período) e velocidade de processamento (rapidez e eficiência para perceber, organizar e responder às informações), além de atenção e concentração, organização visuoespacial, planejamento e raciocínio lógico, formação de conceitos, flexibilidade cognitiva e capacidade de aprendizagem e resolução de problemas. A avaliação permite compreender como a criança processa informações e quais áreas podem estar favorecendo ou dificultando seu desempenho escolar e cotidiano.',
+  },
+  {
     pergunta: 'Qual a diferença entre avaliação neuropsicológica e avaliação psicológica?',
     resposta:
       'A avaliação neuropsicológica foca especificamente nas funções cognitivas (atenção, memória, funções executivas, linguagem e percepção) e sua relação com o funcionamento do cérebro. A avaliação psicológica é mais ampla, voltada para aspectos emocionais e de personalidade.',
