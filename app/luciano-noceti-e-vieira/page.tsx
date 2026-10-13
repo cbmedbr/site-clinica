@@ -105,13 +105,13 @@ export default function LucianoPage() {
       {/* ══════════════════════════════════════════════
           HERO — claro, foto do consultório sob véu creme
       ══════════════════════════════════════════════ */}
-      <section className="relative overflow-hidden" style={{ minHeight: '480px' }}>
+      <section className="relative overflow-hidden" style={{ minHeight: '680px' }}>
         <Image
-          src="/hero-consultorio-amplo.avif"
+          src="/hero-consultorio-sala.avif"
           alt=""
           fill
           className="object-cover"
-          style={{ objectPosition: 'center 55%' }}
+          style={{ objectPosition: 'center' }}
           priority
           sizes="100vw"
         />
