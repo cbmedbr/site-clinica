@@ -185,15 +185,32 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
           HERO — claro, foto do consultório sob véu creme
       ══════════════════════════════════════════════ */}
       <section className="relative overflow-hidden" style={{ minHeight: '680px' }}>
+        {/* fundo — a própria foto desfocada; preenche qualquer proporção sem revelar emenda */}
         <Image
-          src="/hero-consultorio-sala.avif"
+          src="/hero-sala-fundo.avif"
           alt=""
           fill
           className="object-cover"
-          style={{ objectPosition: 'center' }}
           priority
           sizes="100vw"
         />
+        {/* foto do consultório — largura fixa à direita, dissolvida à esquerda pela máscara */}
+        <div
+          className="absolute inset-y-0 right-0 w-full sm:w-[58%]"
+          style={{
+            WebkitMaskImage: 'linear-gradient(to right, transparent 0%, #000 30%)',
+            maskImage: 'linear-gradient(to right, transparent 0%, #000 30%)',
+          }}
+        >
+          <Image
+            src="/hero-sala.avif"
+            alt=""
+            fill
+            className="object-cover object-center"
+            priority
+            sizes="(max-width: 640px) 100vw, 58vw"
+          />
+        </div>
         {/* véu creme — denso à esquerda, onde fica o texto; quase limpo à direita */}
         <div
           className="absolute inset-0"
