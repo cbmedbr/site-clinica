@@ -107,7 +107,7 @@ export default function LucianoPage() {
       ══════════════════════════════════════════════ */}
       <section className="relative overflow-hidden" style={{ minHeight: '480px' }}>
         <Image
-          src="/hero-landing.avif"
+          src="/hero-consultorio.avif"
           alt=""
           fill
           className="object-cover object-center"
