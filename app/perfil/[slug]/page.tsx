@@ -186,10 +186,11 @@ export default function PerfilPage({ params }: { params: { slug: string } }) {
       ══════════════════════════════════════════════ */}
       <section className="relative overflow-hidden" style={{ minHeight: '480px' }}>
         <Image
-          src="/hero-consultorio.avif"
+          src="/hero-consultorio-amplo.avif"
           alt=""
           fill
-          className="object-cover object-center"
+          className="object-cover"
+          style={{ objectPosition: 'center 55%' }}
           priority
           sizes="100vw"
         />
