@@ -113,6 +113,29 @@ export const profissionais: Prof[] = [
     foto: '/equipe/andre_psico.avif',
   },
   {
+    nome: 'Angeliza Muller Gomes',
+    registro: 'CRP 12/30615',
+    metodo: 'Terapia Cognitivo-Comportamental (TCC)',
+    filtros: ['TCC'],
+    formacao: 'Graduação em Psicologia pelo Centro Universitário Estácio de Santa Catarina; Pós-graduanda em Neurociência e Comportamento.',
+    publico: 'Atende a partir dos 12 anos (Adolescentes, Adultos e Idosos). Atendimento Presencial e On-line.',
+    demandas: 'Ansiedade, Crises de pânico, Ansiedade social, Preocupação excessiva, Pensamentos acelerados, Transtorno bipolar, Tristeza persistente, Oscilações de humor, Sensação de vazio, Falta de motivação, Desânimo, Transtorno Obsessivo-Compulsivo (TOC), Dificuldade de concentração, Controle de impulsos, Irritabilidade, Burnout, Esgotamento emocional, Cansaço extremo, Ansiedade no trabalho ou nos estudos, Dificuldade de desligar ou descansar, Síndrome do impostor, Autocobrança excessiva, Perfeccionismo, Medo de errar ou fracassar, Orientação de carreira, Procrastinação, Organização de rotina, Gestão do tempo, Pressão por desempenho e provas, Dificuldade em priorizar a si mesmo, Sentimentos de inadequação, Não pertencimento, Busca por propósito, Mudanças corporais, Comparação estética e redes sociais, Insônia, Hábitos saudáveis de autocuidado, Dificuldade em lidar com frustrações, Raiva, Vergonha, Culpa, Medo da rejeição, Medo do futuro, Dificuldade de se posicionar e dizer não, Limites saudáveis, Medo do julgamento alheio, Dependência emocional, Ciúmes, Insegurança nas relações, Medo do abandono, Término de relacionamento, Reconstrução emocional, Conflitos entre pais e filhos, Dinâmicas familiares desafiadoras, Apoio no processo de envelhecimento, Luto por familiares, pets ou términos, Superação de perdas, Divórcio, Assédio, Bullying, Violência psicológica ou doméstica, Adaptação a grandes mudanças de vida, Fases acadêmicas e universitárias.',
+    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, Celos, Elo saúde, Abepom, Casacaresc, Sc Saúde, Sim Saúde, Geap, Fusex, Petrobras, Saúde Caixa, Sidesc e Particular.',
+    foto: '/equipe/angeliza_psico.avif',
+    pos_graduacoes: [
+      {
+        tipo: 'Graduação',
+        curso: 'Psicologia',
+        instituicao: 'Centro Universitário Estácio de Santa Catarina',
+      },
+      {
+        tipo: 'Pós-graduação',
+        curso: 'Neurociência e Comportamento',
+        ano: 'Em andamento',
+      },
+    ],
+  },
+  {
     nome: 'Anna de Lima Estanislau',
     registro: 'CRP 12/13484',
     ocultarDaEquipe: true,
