@@ -964,6 +964,36 @@ export const profissionais: Prof[] = [
     instagram_url: 'https://www.instagram.com/psico_vanessaoliveira',
   },
   {
+    nome: 'Vicente Matheus Muniz Schaff',
+    registro: 'CRP 12/31792',
+    metodo: 'Sistêmica pós-moderna',
+    filtros: ['Sistêmica Familiar', 'ABA'],
+    formacao: 'Psicólogo formado pela Universidade Federal de Santa Catarina (UFSC). Residência em Práticas Terapêuticas orientada pela linha Sistêmica (ASSIM), em andamento; Especialização em Intervenção ABA aplicada ao Autismo e a outros Transtornos do Desenvolvimento (PUC-PR e ArtMed), em andamento.',
+    publico: 'Atende Crianças a partir dos 6 anos, Adolescentes, Adultos, Idosos e Casais. Atendimento Presencial e On-line.',
+    demandas: 'Ansiedade, Esgotamento profissional, Estados de tristeza, Transições de vida, Luto, Separação, Maternidade e paternidade, Aposentadoria, Mudanças de carreira, Dependência emocional, Inseguranças, Ruídos de comunicação, Conflitos familiares, Conflitos conjugais, Dificuldade de estabelecer limites saudáveis, Autoestima, Sofrimento emocional, Traumas, Sintomas psicossomáticos, Estresse crônico, Autocobrança, Perfeccionismo, Terapia de Casal.',
+    atendimento: 'Unimed, Cartão Acesso + Fácil (Unimed), Saudesc, Celos, Elo saúde, Abepom, Casacaresc, Sc Saúde, Sim Saúde, Geap, Fusex, Petrobras, Saúde Caixa, Sidesc e Particular.',
+    foto: '/equipe/vicente_psico.avif',
+    pos_graduacoes: [
+      {
+        tipo: 'Graduação',
+        curso: 'Psicologia',
+        instituicao: 'Universidade Federal de Santa Catarina (UFSC)',
+      },
+      {
+        tipo: 'Residência',
+        curso: 'Práticas Terapêuticas, orientada pela linha Sistêmica',
+        instituicao: 'ASSIM',
+        ano: 'Em andamento',
+      },
+      {
+        tipo: 'Especialização',
+        curso: 'Intervenção ABA aplicada ao Autismo e a outros Transtornos do Desenvolvimento',
+        instituicao: 'PUC-PR e ArtMed',
+        ano: 'Em andamento',
+      },
+    ],
+  },
+  {
     nome: 'Wicleff Luiz Rufino',
     registro: 'CRP 12/14220',
     metodo: 'Terapia Cognitivo Comportamental (TCC), Neuropsicologia',
