@@ -9,6 +9,7 @@ import { slugify } from '@/lib/profissionais'
 import HeroNeuralBackground from '@/components/HeroNeuralBackground'
 import ScrollReveal from '@/components/ScrollReveal'
 import WhatsAppFab from '@/components/WhatsAppFab'
+import WhatsAppBarraMobile from '@/components/WhatsAppBarraMobile'
 import WhatsAppAdsMessage from '@/components/WhatsAppAdsMessage'
 import EquipeExpansivel from '@/components/EquipeExpansivel'
 
@@ -321,7 +322,10 @@ export default function PsicoterapiaLanding(props: PsicoterapiaLandingProps) {
         </p>
       </footer>
 
-      <WhatsAppFab href={waLink} />
+      <div className="hidden md:block">
+        <WhatsAppFab href={waLink} />
+      </div>
+      <WhatsAppBarraMobile href={waLink} />
       <WhatsAppAdsMessage numero={WA_AGENDAMENTO} textoAnuncio={props.textoWhatsAppAnuncio} />
     </div>
   )

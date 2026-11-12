@@ -16,7 +16,7 @@ export type MembroEquipe = {
 // sem sair da página. O perfil abre em nova aba para a landing continuar aberta.
 export default function EquipeExpansivel({
   membros,
-  inicial = 9,
+  inicial = 6,
 }: {
   membros: MembroEquipe[]
   inicial?: number
