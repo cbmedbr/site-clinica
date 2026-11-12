@@ -17,7 +17,7 @@ import DevNav from '@/components/DevNav'
 export const metadata: Metadata = {
   title: 'Avaliação Neuropsicológica em Florianópolis | Clínica Luciano Noceti',
   description:
-    'Avaliação neuropsicológica completa com instrumentos padrão-ouro. Diagnóstico de TDAH, TEA, demências e déficits cognitivos. Centro de Florianópolis, Sala 212. Agende.',
+    'Avaliação neuropsicológica completa com instrumentos padrão-ouro. Diagnóstico de TDAH, TEA, demências e déficits cognitivos. Centro de Florianópolis, Sala 204. Agende.',
   keywords: [
     'avaliação neuropsicológica Florianópolis',
     'teste neuropsicológico',
@@ -245,7 +245,7 @@ const faqItems = [
   {
     pergunta: 'A avaliação neuropsicológica é coberta por convênio?',
     resposta:
-      'O atendimento é particular. Dependendo do seu plano de saúde, pode haver reembolso parcial; recomendamos verificar diretamente com o seu convênio.',
+      'O atendimento é particular. Atendimento por plano de saúde é sob consulta, e alguns planos oferecem reembolso. Fale com nossa equipe pelo WhatsApp e verificamos o seu caso.',
   },
   {
     pergunta: 'Quanto tempo dura o processo completo?',
@@ -281,6 +281,11 @@ const faqItems = [
     pergunta: 'Como funciona o pagamento?',
     resposta:
       'O valor da avaliação completa é informado no contato com nossa equipe. Aceitamos pagamento particular, com parcelamento em até 12x no cartão de crédito.',
+  },
+  {
+    pergunta: 'E se for preciso acompanhamento com psiquiatra?',
+    resposta:
+      'Se houver necessidade, oferecemos desconto em consulta com psiquiatra parceiro.',
   },
   {
     pergunta: 'O que acontece na devolutiva final?',
@@ -387,7 +392,7 @@ export default function AvaliacaoNeuropsicologicaPage() {
                 border: '1px solid rgba(255,255,255,0.15)',
               }}
             >
-              Centro · Sala 212
+              Centro · Sala 204
             </span>
           </div>
 

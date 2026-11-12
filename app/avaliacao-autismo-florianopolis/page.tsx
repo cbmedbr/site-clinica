@@ -1,0 +1,1158 @@
+import type { Metadata } from 'next'
+import Image from 'next/image'
+import Link from 'next/link'
+import {
+  ArrowLeft, Check, ChevronDown,
+  ClipboardList, Brain, Eye, FileText,
+  BookOpen, MessageSquare, Lightbulb, Award, Heart,
+  Star, MapPin, Medal, MessageCircle, ExternalLink,
+} from 'lucide-react'
+import { profissionais, slugify } from '@/lib/profissionais'
+import { gerarFaqLD } from '@/lib/jsonld'
+import HeroNeuralBackground from '@/components/HeroNeuralBackground'
+import ScrollReveal from '@/components/ScrollReveal'
+import WhatsAppFab from '@/components/WhatsAppFab'
+import DevNav from '@/components/DevNav'
+
+export const metadata: Metadata = {
+  title: 'Avaliação de Autismo (TEA) em Florianópolis | Clínica Luciano Noceti',
+  description:
+    'Avaliação de autismo (TEA) para crianças a partir de 5 anos, adolescentes e adultos. Laudo técnico completo e devolutiva. Centro de Florianópolis, Sala 204. Agende pelo WhatsApp.',
+  keywords: [
+    'avaliação de autismo Florianópolis',
+    'avaliação TEA Florianópolis',
+    'avaliação autismo adulto',
+    'avaliação autismo infantil',
+    'laudo de autismo',
+    'avaliação neuropsicológica TEA',
+    'Clínica Luciano Noceti',
+  ],
+  alternates: {
+    canonical: '/avaliacao-autismo-florianopolis',
+  },
+  openGraph: {
+    title: 'Avaliação de Autismo (TEA) em Florianópolis | Clínica Luciano Noceti',
+    description:
+      'Avaliação de autismo (TEA) com instrumentos validados pelo CFP e laudo técnico completo. Centro de Florianópolis/SC.',
+    type: 'website',
+    locale: 'pt_BR',
+    url: 'https://www.lucianonoceti.com.br/avaliacao-autismo-florianopolis',
+    siteName: 'Clínica Luciano Noceti',
+  },
+}
+
+const WA_NEURO_LINK =
+  'https://wa.me/5548991908715?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20sobre%20a%20Avalia%C3%A7%C3%A3o%20de%20Autismo%20%28TEA%29.'
+
+const paragrafosOQueE = [
+  'A avaliação de autismo é feita por meio de uma avaliação neuropsicológica completa. Investigamos sinais relacionados ao Transtorno do Espectro Autista (TEA), como habilidades sociais, comunicação, comportamento e desenvolvimento, junto com atenção, memória, linguagem e funções executivas.',
+  'Usamos instrumentos específicos para TEA, como a SRS-2 (Escala de Responsividade Social) e o PROTEA-R para crianças, combinados com testes cognitivos adequados a cada idade, inclusive testes não verbais para crianças com dificuldades de linguagem.',
+  'Conduzimos cada atendimento com ética, sigilo e rigor técnico. Ao final, a família ou o paciente recebe uma devolutiva clara e um laudo técnico detalhado, que pode ser apresentado na escola e a médicos.',
+]
+
+const indicacoes = [
+  {
+    titulo: 'Dificuldades na interação social',
+    descricao:
+      'Investiga habilidades sociais, responsividade social e traços associados ao TEA, com instrumentos como SRS-2 e SSRS.',
+  },
+  {
+    titulo: 'Atrasos no desenvolvimento infantil',
+    descricao:
+      'Avalia marcos do desenvolvimento (cognitivo, motor, linguagem e socioemocional) e sinais de TEA em crianças, com IDADI e PROTEA-R.',
+  },
+  {
+    titulo: 'Suspeita de autismo em adolescentes e adultos',
+    descricao:
+      'Investiga traços associados ao TEA e o funcionamento cognitivo em adolescentes e adultos que buscam um diagnóstico.',
+  },
+  {
+    titulo: 'Laudo para escola e tratamento',
+    descricao:
+      'O laudo orienta adaptações escolares, planejamentos terapêuticos e encaminhamentos para médicos e outros especialistas.',
+  },
+]
+
+const processosAvaliacao = [
+  {
+    icon: ClipboardList,
+    titulo: 'Anamnese',
+    descricao: 'Conversa inicial para entender o histórico de vida, saúde e comportamentos atuais.',
+  },
+  {
+    icon: Brain,
+    titulo: 'Aplicação de Testes',
+    descricao: 'Testes cognitivos (atenção, memória, raciocínio), emocionais e comportamentais, com base científica.',
+  },
+  {
+    icon: Eye,
+    titulo: 'Observação Clínica',
+    descricao: 'A psicóloga observa como a pessoa reage emocional e comportamentalmente às tarefas.',
+  },
+  {
+    icon: FileText,
+    titulo: 'Entrega do Laudo',
+    descricao: 'Devolutiva detalhada e entrega do laudo ao paciente, com orientações e encaminhamentos.',
+  },
+]
+
+const dominiosCognitivos = [
+  {
+    icon: Brain,
+    titulo: 'Atenção e Concentração',
+    descricao: 'Capacidade de focar, sustentar e alternar atenção.',
+  },
+  {
+    icon: BookOpen,
+    titulo: 'Memória',
+    descricao: 'Habilidade de reter e recordar informações imediatas e de longo prazo.',
+  },
+  {
+    icon: MessageSquare,
+    titulo: 'Linguagem',
+    descricao: 'Compreensão, comunicação e expressão verbal.',
+  },
+  {
+    icon: Lightbulb,
+    titulo: 'Raciocínio Lógico',
+    descricao: 'Resolver problemas, tomar decisões e raciocínio abstrato.',
+  },
+  {
+    icon: Award,
+    titulo: 'Funções Executivas',
+    descricao: 'Planejamento, organização, controle inibitório e flexibilidade cognitiva.',
+  },
+  {
+    icon: Heart,
+    titulo: 'Emoções e Comportamento',
+    descricao: 'Regulação emocional, humor e interações sociais.',
+  },
+]
+
+const instrumentos = [
+  {
+    sigla: 'SRS-2',
+    nome: 'Escala de Responsividade Social (2ª edição)',
+    avalia: 'habilidades sociais e traços associados ao TEA',
+    tempo: '15 a 20 min',
+  },
+  {
+    sigla: 'PROTEA-R',
+    nome: 'Protocolo de Avaliação do Transtorno do Espectro Autista – Revisado',
+    avalia: 'comportamentos e sinais relacionados ao TEA em crianças',
+    tempo: '60 a 90 min',
+  },
+  {
+    sigla: 'SSRS',
+    nome: 'Sistema de Avaliação de Habilidades Sociais',
+    avalia: 'habilidades sociais, problemas de comportamento e competência social',
+    tempo: '15 a 25 min',
+  },
+  {
+    sigla: 'IDADI',
+    nome: 'Inventário de Desenvolvimento Infantil',
+    avalia: 'marcos do desenvolvimento infantil (cognitivo, motor, linguagem e socioemocional)',
+    tempo: '20 a 30 min',
+  },
+  {
+    sigla: 'WISC-IV',
+    nome: 'Escala Wechsler de Inteligência para Crianças',
+    avalia: 'compreensão verbal, raciocínio perceptual, memória de trabalho e velocidade de processamento em crianças e adolescentes (6 a 16 anos), além de atenção, organização visuoespacial, planejamento, formação de conceitos, flexibilidade cognitiva e resolução de problemas',
+    tempo: '65 a 80 min',
+  },
+  {
+    sigla: 'WAIS',
+    nome: 'Escala Wechsler de Inteligência para Adultos',
+    avalia: 'inteligência global, compreensão verbal, raciocínio perceptual, memória operacional e velocidade de processamento',
+    tempo: '60 a 120 min',
+  },
+  {
+    sigla: 'SON-R 2½–7',
+    nome: 'Teste Não Verbal de Inteligência',
+    avalia: 'inteligência não verbal, raciocínio abstrato e habilidades visuoespaciais',
+    tempo: '45 a 60 min',
+  },
+  {
+    sigla: 'WASI',
+    nome: 'Escala Wechsler Abreviada de Inteligência',
+    avalia: 'inteligência geral (QI estimado), raciocínio verbal e não verbal',
+    tempo: '15 a 30 min',
+  },
+]
+
+const especialistas = profissionais
+  .filter(p => p.fazNeuropsico)
+  .map(p => ({ ...p, slug: slugify(p.nome) }))
+
+const GOOGLE_REVIEWS_LINK = 'https://maps.app.goo.gl/mhVodvAMZFhw5gqT8'
+
+const faqItems = [
+  {
+    pergunta: 'Como é feita a avaliação de autismo (TEA)?',
+    resposta:
+      'Por meio de uma avaliação neuropsicológica completa: entrevista inicial (anamnese), aplicação de testes, observação clínica e devolutiva com entrega do laudo. Usamos instrumentos específicos para TEA, como SRS-2 e PROTEA-R (crianças), junto com testes cognitivos adequados à idade.',
+  },
+  {
+    pergunta: 'A partir de qual idade vocês avaliam autismo?',
+    resposta:
+      'Avaliamos crianças a partir de 5 anos, adolescentes e adultos, com instrumentos adequados a cada faixa etária, inclusive testes não verbais para crianças com dificuldades de linguagem.',
+  },
+  {
+    pergunta: 'Quanto tempo dura o processo completo?',
+    resposta:
+      'Entre 7 e 10 sessões presenciais de 1 hora cada, realizadas semanalmente. O laudo técnico é entregue em 4 a 6 semanas após o término das sessões.',
+  },
+  {
+    pergunta: 'O laudo serve para a escola?',
+    resposta:
+      'Sim. O laudo neuropsicológico é um documento técnico-científico reconhecido por escolas, médicos, psiquiatras e outros especialistas. Serve para orientar diagnósticos, adaptações escolares, planejamentos terapêuticos e encaminhamentos.',
+  },
+  {
+    pergunta: 'Preciso de encaminhamento médico?',
+    resposta:
+      'Não. Qualquer pessoa pode solicitar a avaliação diretamente, sem necessidade de encaminhamento médico. Basta entrar em contato com nossa equipe.',
+  },
+  {
+    pergunta: 'A avaliação é coberta por plano de saúde?',
+    resposta:
+      'O atendimento é particular. Atendimento por plano de saúde é sob consulta, e alguns planos oferecem reembolso. Fale com nossa equipe pelo WhatsApp e verificamos o seu caso.',
+  },
+  {
+    pergunta: 'Como funciona o pagamento?',
+    resposta:
+      'O valor da avaliação completa é informado no contato com nossa equipe. Aceitamos pagamento particular, com parcelamento em até 12x no cartão de crédito.',
+  },
+  {
+    pergunta: 'E se for preciso acompanhamento com psiquiatra?',
+    resposta:
+      'Se houver necessidade, oferecemos desconto em consulta com psiquiatra parceiro.',
+  },
+  {
+    pergunta: 'O que acontece na devolutiva final?',
+    resposta:
+      'Na última sessão, a psicóloga explica os resultados em detalhes, apresenta o laudo completo e oferece orientações sobre cuidados, tratamentos ou encaminhamentos recomendados. Todo o processo é conduzido com sigilo absoluto, conforme o Código de Ética do Psicólogo (CFP).',
+  },
+]
+
+export default function AvaliacaoAutismoPage() {
+  const faqLD = gerarFaqLD(faqItems)
+
+  return (
+    <div className="min-h-screen font-sans" style={{ background: '#FAF7F4', color: '#2D1A1E' }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLD) }}
+      />
+      <style>{`
+        html { scrollbar-color: #7C2C3B #FAF7F4; scrollbar-width: thin; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #FAF7F4; }
+        ::-webkit-scrollbar-thumb { background: #7C2C3B; border-radius: 3px; }
+        details > summary { list-style: none; cursor: pointer; }
+        details > summary::-webkit-details-marker { display: none; }
+        .faq-chevron { transition: transform 0.25s ease; }
+        details[open] .faq-chevron { transform: rotate(180deg); }
+        details[open] > summary { color: #7C2C3B; }
+        .faq-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.3s ease; }
+        details[open] .faq-body { grid-template-rows: 1fr; }
+        .faq-inner { overflow: hidden; }
+      `}</style>
+
+      {/* ── BARRA TOPO ── */}
+      <div style={{ background: '#7C2C3B', borderBottom: '2px solid #5E1F2C' }} className="py-2.5 px-4">
+        <div className="max-w-5xl mx-auto">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-1.5 text-white/70 hover:text-white text-xs font-medium transition-colors"
+          >
+            <ArrowLeft className="w-3 h-3" />
+            Acessar site da clínica
+          </Link>
+        </div>
+      </div>
+
+      {/* ══════════════════════════════════════════════
+          HERO
+      ══════════════════════════════════════════════ */}
+      <section className="relative overflow-hidden" style={{ minHeight: '380px', background: '#6B2434' }}>
+        <HeroNeuralBackground />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'linear-gradient(110deg, rgba(107,36,52,0.97) 0%, rgba(107,36,52,0.93) 40%, rgba(107,36,52,0.58) 62%, rgba(107,36,52,0.0) 80%)',
+          }}
+        />
+
+        <div className="relative z-10 max-w-5xl mx-auto px-5 sm:px-8 py-8 md:py-12 flex flex-col items-start">
+          {/* Badge */}
+          <span
+            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold mb-5"
+            style={{
+              background: 'rgba(255,255,255,0.1)',
+              border: '1px solid rgba(255,255,255,0.2)',
+              color: 'rgba(255,255,255,0.85)',
+            }}
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-[#FCECBF] animate-pulse" />
+            Avaliação Especializada
+          </span>
+
+          {/* Título */}
+          <h1
+            className="font-serif font-bold text-white leading-tight mb-4 max-w-2xl"
+            style={{ fontSize: 'clamp(2rem, 5.5vw, 3.5rem)' }}
+          >
+            Avaliação de{' '}
+            <span style={{ color: '#E8B97A' }}>Autismo (TEA)</span>{' '}
+            em Florianópolis
+          </h1>
+
+          <p className="text-white/70 text-base sm:text-lg mb-5 max-w-xl leading-relaxed">
+            Investigação cuidadosa de sinais do Transtorno do Espectro Autista em crianças,
+            adolescentes e adultos, com laudo técnico completo e devolutiva para a família.
+          </p>
+
+          {/* Badges localização */}
+          <div className="flex flex-wrap gap-2 mb-5">
+            <span
+              className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full"
+              style={{
+                background: 'rgba(184,136,58,0.15)',
+                color: '#E8B97A',
+                border: '1px solid rgba(184,136,58,0.3)',
+              }}
+            >
+              <MapPin className="w-3 h-3" /> Presencial · Florianópolis
+            </span>
+            <span
+              className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full"
+              style={{
+                background: 'rgba(255,255,255,0.08)',
+                color: 'rgba(255,255,255,0.7)',
+                border: '1px solid rgba(255,255,255,0.15)',
+              }}
+            >
+              Centro · Sala 204
+            </span>
+          </div>
+
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row gap-3">
+            <a
+              href={WA_NEURO_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-full px-7 py-3 text-sm font-bold transition-all hover:opacity-90 hover:scale-[1.02]"
+              style={{
+                background: '#7C2C3B',
+                color: 'white',
+                boxShadow: '0 4px 24px rgba(124,44,59,0.45)',
+              }}
+            >
+              <MessageCircle className="w-4 h-4" />
+              Agendar via WhatsApp
+            </a>
+            <a
+              href="#o-que-e"
+              className="inline-flex items-center justify-center gap-2 rounded-full px-7 py-3 text-sm font-semibold transition-colors"
+              style={{
+                color: 'rgba(255,255,255,0.7)',
+                border: '1.5px solid rgba(255,255,255,0.2)',
+              }}
+            >
+              Saiba mais ↓
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════
+          O QUE É
+      ══════════════════════════════════════════════ */}
+      <section id="o-que-e" className="py-16 px-5 sm:px-8" style={{ background: 'white' }}>
+        <div className="max-w-5xl mx-auto">
+          <ScrollReveal>
+            <span
+              className="text-[10px] font-bold tracking-[0.25em] uppercase block mb-3"
+              style={{ color: '#8A6224' }}
+            >
+              O QUE É
+            </span>
+            <h2
+              className="font-serif font-bold mb-10"
+              style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.2rem)', color: '#2D1A1E' }}
+            >
+              Como funciona a avaliação de autismo?
+            </h2>
+          </ScrollReveal>
+
+          <div className="grid sm:grid-cols-2 gap-10 items-start">
+            <ScrollReveal direction="left">
+              <div className="space-y-4">
+                {paragrafosOQueE.map((p, i) => (
+                  <p key={i} className="text-sm leading-relaxed" style={{ color: '#5a4044' }}>
+                    {p}
+                  </p>
+                ))}
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={80} direction="right">
+              <div
+                className="rounded-2xl p-6"
+                style={{ background: '#7C2C3B', border: '1px solid rgba(252,236,191,0.28)' }}
+              >
+                <span
+                  className="text-[10px] font-bold tracking-[0.22em] uppercase block mb-4"
+                  style={{ color: '#FCECBF' }}
+                >
+                  Garantias do processo
+                </span>
+                <div className="space-y-3">
+                  {[
+                    'Instrumentos padrão-ouro validados pelo CFP',
+                    'Laudo técnico completo e fundamentado',
+                    'Regulamentado pelo Conselho Federal de Psicologia',
+                    'Sigilo profissional absoluto',
+                    'Devolutiva clara e orientada para o paciente',
+                  ].map((item) => (
+                    <div key={item} className="flex items-start gap-3">
+                      <div
+                        className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
+                        style={{ background: 'rgba(255,255,255,0.16)' }}
+                      >
+                        <Check className="w-3 h-3" style={{ color: '#FCECBF' }} />
+                      </div>
+                      <span
+                        className="text-sm leading-relaxed"
+                        style={{ color: 'rgba(255,255,255,0.75)' }}
+                      >
+                        {item}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+                <p
+                  className="mt-5 pt-5 text-xs italic leading-relaxed"
+                  style={{
+                    borderTop: '1px solid rgba(255,255,255,0.08)',
+                    color: 'rgba(255,255,255,0.4)',
+                  }}
+                >
+                  &ldquo;A avaliação é conduzida com ética, sigilo absoluto e cuidado integral,
+                  respeitando a história e o ritmo de cada pessoa.&rdquo;
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════
+          PARA QUEM É INDICADA
+      ══════════════════════════════════════════════ */}
+      <section className="py-16 px-5 sm:px-8" style={{ background: '#FAF7F4' }}>
+        <div className="max-w-5xl mx-auto">
+          <ScrollReveal>
+            <span
+              className="text-[10px] font-bold tracking-[0.25em] uppercase block mb-3"
+              style={{ color: '#8A6224' }}
+            >
+              INDICAÇÕES
+            </span>
+            <h2
+              className="font-serif font-bold mb-3"
+              style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.2rem)', color: '#2D1A1E' }}
+            >
+              Quando a avaliação é recomendada
+            </h2>
+            <p className="text-sm mb-10" style={{ color: '#7a5a5e' }}>
+              A avaliação é indicada para pessoas com:
+            </p>
+          </ScrollReveal>
+
+          <div className="grid sm:grid-cols-2 gap-4 mb-4">
+            {indicacoes.map(({ titulo, descricao }, i) => (
+              <ScrollReveal key={titulo} delay={i * 60}>
+                <div
+                  className="rounded-2xl p-5 h-full"
+                  style={{
+                    background: 'white',
+                    borderLeft: '3px solid #7C2C3B',
+                    boxShadow: '0 2px 12px rgba(26,11,14,0.06)',
+                  }}
+                >
+                  <h3
+                    className="font-serif font-bold mb-2 text-base"
+                    style={{ color: '#7C2C3B' }}
+                  >
+                    {titulo}
+                  </h3>
+                  <p className="text-sm leading-relaxed" style={{ color: '#5a4044' }}>
+                    {descricao}
+                  </p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          {/* Card largo */}
+          <ScrollReveal>
+            <div
+              className="rounded-2xl p-6"
+              style={{
+                background: 'white',
+                borderLeft: '3px solid #7C2C3B',
+                boxShadow: '0 2px 12px rgba(26,11,14,0.06)',
+              }}
+            >
+              <h3
+                className="font-serif font-bold mb-2 text-base"
+                style={{ color: '#7C2C3B' }}
+              >
+                Diagnóstico ou suspeita de TEA
+              </h3>
+              <p className="text-sm leading-relaxed" style={{ color: '#5a4044' }}>
+                Confirma ou investiga o Transtorno do Espectro Autista (TEA) e atrasos no
+                neurodesenvolvimento, com precisão diagnóstica para orientar o tratamento.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal>
+            <p className="text-center text-xs mt-6 font-medium" style={{ color: '#9a7a7e' }}>
+              Atendemos crianças (a partir de 5 anos), adolescentes e adultos
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════
+          COMO FUNCIONA
+      ══════════════════════════════════════════════ */}
+      <section className="py-16 px-5 sm:px-8" style={{ background: 'white' }}>
+        <div className="max-w-5xl mx-auto">
+          <ScrollReveal>
+            <span
+              className="text-[10px] font-bold tracking-[0.25em] uppercase block mb-3"
+              style={{ color: '#8A6224' }}
+            >
+              PROCESSO
+            </span>
+            <h2
+              className="font-serif font-bold mb-12"
+              style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.2rem)', color: '#2D1A1E' }}
+            >
+              Como é feita a avaliação
+            </h2>
+          </ScrollReveal>
+
+          <div className="relative max-w-2xl">
+            {/* Linha vertical conectando os passos */}
+            <div
+              className="absolute left-5 top-5 hidden sm:block"
+              style={{
+                width: '1px',
+                bottom: '20px',
+                background: 'linear-gradient(to bottom, #8A6224, rgba(124,44,59,0.1))',
+              }}
+            />
+
+            <ol className="space-y-0">
+              {processosAvaliacao.map(({ icon: Icon, titulo, descricao }, i) => (
+                <ScrollReveal key={titulo} delay={i * 100} direction="left">
+                  <li className="relative flex gap-5 pb-9 last:pb-0">
+                    <div
+                      className="relative z-10 flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-white"
+                      style={{
+                        background: '#7C2C3B',
+                        boxShadow: '0 0 0 4px rgba(124,44,59,0.1)',
+                        fontSize: '0.875rem',
+                      }}
+                    >
+                      {i + 1}
+                    </div>
+                    <div className="pt-1.5 flex-1">
+                      <div className="flex items-center gap-2 mb-1">
+                        <Icon className="w-4 h-4" style={{ color: '#7C2C3B' }} />
+                        <h3
+                          className="font-serif font-bold text-base"
+                          style={{ color: '#2D1A1E' }}
+                        >
+                          {titulo}
+                        </h3>
+                      </div>
+                      <p className="text-sm leading-relaxed" style={{ color: '#5a4044' }}>
+                        {descricao}
+                      </p>
+                    </div>
+                  </li>
+                </ScrollReveal>
+              ))}
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════
+          O QUE SERÁ AVALIADO
+      ══════════════════════════════════════════════ */}
+      <section className="py-16 px-5 sm:px-8" style={{ background: '#FAF7F4' }}>
+        <div className="max-w-5xl mx-auto">
+          <ScrollReveal>
+            <span
+              className="text-[10px] font-bold tracking-[0.25em] uppercase block mb-3"
+              style={{ color: '#8A6224' }}
+            >
+              DOMÍNIOS COGNITIVOS
+            </span>
+            <h2
+              className="font-serif font-bold mb-3"
+              style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.2rem)', color: '#2D1A1E' }}
+            >
+              Funções cognitivas e emocionais analisadas
+            </h2>
+            <p className="text-sm mb-10" style={{ color: '#7a5a5e' }}>
+              Análise detalhada das funções que impactam o dia a dia:
+            </p>
+          </ScrollReveal>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {dominiosCognitivos.map(({ icon: Icon, titulo, descricao }, i) => (
+              <ScrollReveal key={titulo} delay={i * 50}>
+                <div
+                  className="rounded-2xl p-5 h-full transition-all duration-200 hover:-translate-y-0.5"
+                  style={{
+                    background: 'white',
+                    border: '1px solid rgba(124,44,59,0.08)',
+                    boxShadow: '0 2px 12px rgba(26,11,14,0.05)',
+                  }}
+                >
+                  <div
+                    className="w-10 h-10 rounded-xl flex items-center justify-center mb-3"
+                    style={{ background: '#F4E6E9' }}
+                  >
+                    <Icon className="w-5 h-5" style={{ color: '#7C2C3B' }} />
+                  </div>
+                  <h3
+                    className="font-serif font-bold mb-1.5 text-sm"
+                    style={{ color: '#7C2C3B' }}
+                  >
+                    {titulo}
+                  </h3>
+                  <p className="text-xs leading-relaxed" style={{ color: '#7a5a5e' }}>
+                    {descricao}
+                  </p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════
+          INSTRUMENTOS PADRÃO-OURO
+      ══════════════════════════════════════════════ */}
+      <section className="py-16 px-5 sm:px-8" style={{ background: '#FEF8E6' }}>
+        <div className="max-w-5xl mx-auto">
+          <ScrollReveal>
+            <span
+              className="text-[10px] font-bold tracking-[0.25em] uppercase block mb-3"
+              style={{ color: '#8A6224' }}
+            >
+              RIGOR TÉCNICO
+            </span>
+            <h2
+              className="font-serif font-bold mb-3"
+              style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.2rem)', color: '#2D1A1E' }}
+            >
+              Instrumentos utilizados nas avaliações
+            </h2>
+            <p className="text-sm mb-4 max-w-2xl" style={{ color: '#5a4044' }}>
+              Utilizamos instrumentos de referência mundial e nacional, reconhecidos como{' '}
+              <span className="font-semibold" style={{ color: '#7C2C3B' }}>
+                Padrão Ouro
+              </span>{' '}
+              em avaliação neuropsicológica, garantindo diagnósticos de alta precisão e validade
+              médica e escolar.
+            </p>
+            <div
+              className="inline-flex items-center gap-2 rounded-full px-3 py-1 mb-10"
+              style={{
+                background: 'rgba(124,44,59,0.07)',
+                border: '1px solid rgba(124,44,59,0.18)',
+              }}
+            >
+              <Medal className="w-3.5 h-3.5" style={{ color: '#7C2C3B' }} />
+              <span className="text-[10px] font-semibold" style={{ color: '#7C2C3B' }}>
+                Todos os instrumentos têm aprovação do CFP (Conselho Federal de Psicologia)
+              </span>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {instrumentos.map((inst, i) => (
+              <ScrollReveal key={inst.sigla} delay={i * 30}>
+                <div
+                  className="rounded-xl p-4 h-full"
+                  style={{
+                    background: 'white',
+                    border: '1px solid rgba(124,44,59,0.10)',
+                  }}
+                >
+                  <div className="flex items-baseline gap-2 mb-2 flex-wrap">
+                    <span
+                      className="font-serif font-bold text-base"
+                      style={{ color: '#7C2C3B' }}
+                    >
+                      {inst.sigla}
+                    </span>
+                    <span className="text-[10px]" style={{ color: '#9a7a7e' }}>
+                      {inst.nome}
+                    </span>
+                  </div>
+                  <p
+                    className="text-xs leading-relaxed mb-1"
+                    style={{ color: '#5a4044' }}
+                  >
+                    <span
+                      className="font-semibold"
+                      style={{ color: '#2D1A1E' }}
+                    >
+                      Avalia:
+                    </span>{' '}
+                    {inst.avalia}
+                  </p>
+                  <p className="text-[10px]" style={{ color: '#9a7a7e' }}>
+                    ⏱ {inst.tempo}
+                  </p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════
+          DURAÇÃO E ENTREGA
+      ══════════════════════════════════════════════ */}
+      <section className="py-16 px-5 sm:px-8" style={{ background: '#7C2C3B' }}>
+        <div className="max-w-5xl mx-auto">
+          <ScrollReveal>
+            <span
+              className="text-[10px] font-bold tracking-[0.25em] uppercase block mb-3"
+              style={{ color: 'rgba(252,236,191,0.7)' }}
+            >
+              RESUMO PRÁTICO
+            </span>
+            <h2
+              className="font-serif font-bold text-white mb-10"
+              style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.2rem)' }}
+            >
+              Quanto tempo dura e o que você recebe
+            </h2>
+          </ScrollReveal>
+
+          <div className="grid sm:grid-cols-3 gap-4 mb-6">
+            {[
+              {
+                valor: '7 a 10',
+                label: 'sessões presenciais',
+                sublabel: '1h cada, semanalmente',
+              },
+              {
+                valor: '4 a 6',
+                label: 'semanas para o laudo',
+                sublabel: 'após o término das sessões',
+              },
+              {
+                valor: '5+ anos',
+                label: 'de especialização',
+                sublabel: 'Crianças, adolescentes e adultos',
+              },
+            ].map(({ valor, label, sublabel }, i) => (
+              <ScrollReveal key={label} delay={i * 80}>
+                <div
+                  className="rounded-2xl p-6 text-center"
+                  style={{
+                    background: 'rgba(255,255,255,0.1)',
+                    border: '1px solid rgba(255,255,255,0.15)',
+                  }}
+                >
+                  <div
+                    className="font-serif font-bold text-3xl mb-1"
+                    style={{ color: '#FCECBF' }}
+                  >
+                    {valor}
+                  </div>
+                  <div className="text-sm font-semibold text-white mb-0.5">{label}</div>
+                  <div className="text-xs" style={{ color: 'rgba(255,255,255,0.55)' }}>
+                    {sublabel}
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          {/* Card investimento */}
+          <ScrollReveal>
+            <div
+              className="rounded-2xl p-6 flex flex-col sm:flex-row items-start sm:items-center gap-5"
+              style={{ background: 'rgba(255,255,255,0.97)' }}
+            >
+              <div className="flex-1">
+                <p
+                  className="text-xs font-bold tracking-widest uppercase mb-1"
+                  style={{ color: '#8A6224' }}
+                >
+                  Investimento
+                </p>
+                <p
+                  className="font-serif font-bold text-2xl sm:text-3xl"
+                  style={{ color: '#7C2C3B' }}
+                >
+                  Valor sob consulta
+                </p>
+                <p className="text-xs mt-1" style={{ color: '#9a7a7e' }}>
+                  O valor da avaliação completa é informado no contato com nossa equipe.
+                </p>
+              </div>
+              <div
+                className="flex-shrink-0 rounded-xl px-6 py-4 text-center"
+                style={{ background: '#7C2C3B' }}
+              >
+                <p
+                  className="text-[10px] font-bold tracking-widest uppercase mb-1"
+                  style={{ color: '#FCECBF' }}
+                >
+                  Parcele em até
+                </p>
+                <p className="font-serif font-bold text-3xl" style={{ color: 'white' }}>
+                  12x
+                </p>
+                <p className="text-[10px]" style={{ color: 'rgba(255,255,255,0.7)' }}>
+                  no cartão
+                </p>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════
+          ESPECIALISTAS
+      ══════════════════════════════════════════════ */}
+      <section className="py-16 px-5 sm:px-8" style={{ background: '#FAF7F4' }}>
+        <div className="max-w-5xl mx-auto">
+          <ScrollReveal>
+            <span
+              className="text-[10px] font-bold tracking-[0.25em] uppercase block mb-3"
+              style={{ color: '#8A6224' }}
+            >
+              QUEM REALIZA
+            </span>
+            <h2
+              className="font-serif font-bold mb-3"
+              style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.2rem)', color: '#2D1A1E' }}
+            >
+              Psicólogas especializadas
+            </h2>
+            <p className="text-sm mb-10" style={{ color: '#7a5a5e' }}>
+              Profissionais com formação especializada em avaliação neuropsicológica
+            </p>
+          </ScrollReveal>
+
+          <div className="grid sm:grid-cols-2 gap-5">
+            {especialistas.map((esp, i) => (
+              <ScrollReveal key={esp.nome} delay={i * 80}>
+                <div
+                  className="rounded-2xl p-6 h-full transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl"
+                  style={{
+                    background: 'white',
+                    border: '1px solid rgba(124,44,59,0.1)',
+                    boxShadow: '0 2px 16px rgba(26,11,14,0.06)',
+                  }}
+                >
+                  <div className="flex items-start gap-5 mb-4">
+                    <div
+                      className="w-20 h-20 rounded-full overflow-hidden flex-shrink-0"
+                      style={{ boxShadow: '0 0 0 3px rgba(252,236,191,0.5)' }}
+                    >
+                      <Image
+                        src={esp.foto}
+                        alt={`Foto de ${esp.nome}`}
+                        width={80}
+                        height={80}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h3
+                        className="font-serif font-bold text-lg leading-snug mb-0.5"
+                        style={{ color: '#7C2C3B' }}
+                      >
+                        {esp.nome}
+                      </h3>
+                      <p
+                        className="text-xs font-semibold mb-1"
+                        style={{ color: 'rgba(124,44,59,0.6)' }}
+                      >
+                        {esp.registro}
+                      </p>
+                      <p className="text-xs leading-relaxed" style={{ color: '#7a5a5e' }}>
+                        {esp.metodo}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    className="rounded-xl p-3 mb-4 flex items-start gap-2"
+                    style={{ background: '#F4E6E9' }}
+                  >
+                    <Award
+                      className="w-3.5 h-3.5 flex-shrink-0 mt-0.5"
+                      style={{ color: '#7C2C3B' }}
+                    />
+                    <p className="text-xs" style={{ color: '#5a4044' }}>
+                      {esp.formacaoNeuro}
+                    </p>
+                  </div>
+
+                  <Link
+                    href={`/perfil/${esp.slug}`}
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold transition-all hover:gap-2.5"
+                    style={{ color: '#7C2C3B' }}
+                  >
+                    Ver perfil completo →
+                  </Link>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════
+          FAQ
+      ══════════════════════════════════════════════ */}
+      <section className="py-16 px-5 sm:px-8" style={{ background: 'white' }}>
+        <div className="max-w-5xl mx-auto">
+          <ScrollReveal>
+            <span
+              className="text-[10px] font-bold tracking-[0.25em] uppercase block mb-3"
+              style={{ color: '#8A6224' }}
+            >
+              FAQ
+            </span>
+            <h2
+              className="font-serif font-bold mb-10"
+              style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.2rem)', color: '#2D1A1E' }}
+            >
+              Perguntas frequentes
+            </h2>
+          </ScrollReveal>
+
+          <div className="grid md:grid-cols-2 gap-2">
+            {faqItems.map(({ pergunta, resposta }, i) => (
+              <ScrollReveal key={i} delay={i * 40}>
+                <details
+                  className="rounded-2xl overflow-hidden"
+                  style={{
+                    background: '#FAF7F4',
+                    border: '1px solid rgba(124,44,59,0.1)',
+                  }}
+                >
+                  <summary
+                    className="flex items-center justify-between gap-4 p-5 font-semibold text-sm select-none"
+                    style={{ color: '#2D1A1E' }}
+                  >
+                    <span>{pergunta}</span>
+                    <ChevronDown
+                      className="faq-chevron w-4 h-4 flex-shrink-0"
+                      style={{ color: '#7C2C3B' }}
+                    />
+                  </summary>
+                  <div className="faq-body">
+                    <div className="faq-inner">
+                      <div className="px-5 pb-5">
+                        <div
+                          className="pt-4"
+                          style={{ borderTop: '1px solid rgba(124,44,59,0.08)' }}
+                        >
+                          <p className="text-sm leading-relaxed" style={{ color: '#5a4044' }}>
+                            {resposta}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </details>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════
+          AVALIAÇÕES GOOGLE
+      ══════════════════════════════════════════════ */}
+      <section className="py-16 px-5 sm:px-8" style={{ background: '#FAF7F4' }}>
+        <div className="max-w-5xl mx-auto text-center">
+          <ScrollReveal>
+            <span
+              className="text-[10px] font-bold tracking-[0.25em] uppercase block mb-3"
+              style={{ color: '#8A6224' }}
+            >
+              AVALIAÇÕES
+            </span>
+            <h2
+              className="font-serif font-bold mb-8"
+              style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.2rem)', color: '#2D1A1E' }}
+            >
+              O que dizem sobre nós
+            </h2>
+
+            <div
+              className="inline-flex flex-col sm:flex-row items-center gap-4 rounded-2xl px-8 py-6 mb-8"
+              style={{ background: 'white', border: '1px solid rgba(124,44,59,0.08)' }}
+            >
+              <div className="flex flex-col items-center gap-1">
+                <div className="flex gap-1" aria-hidden="true">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-6 h-6 fill-current" style={{ color: '#F59E0B' }} />
+                  ))}
+                </div>
+                <span className="sr-only">Avaliação 4,6 de 5 estrelas no Google</span>
+                <div className="flex items-baseline gap-2 mt-1">
+                  <span
+                    className="font-serif font-bold"
+                    style={{ fontSize: '2.5rem', color: '#2D1A1E', lineHeight: 1 }}
+                    aria-hidden="true"
+                  >
+                    4,6
+                  </span>
+                  <span className="text-sm font-medium" style={{ color: '#9a7a7e' }}>de 5</span>
+                </div>
+              </div>
+
+              <div className="hidden sm:block w-px h-14" style={{ background: 'rgba(124,44,59,0.12)' }} />
+
+              <div className="text-center sm:text-left">
+                <p className="font-semibold text-base" style={{ color: '#2D1A1E' }}>
+                  +200 avaliações verificadas
+                </p>
+                <p className="text-sm" style={{ color: '#9a7a7e' }}>no Google</p>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center gap-4">
+              <a
+                href={GOOGLE_REVIEWS_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-sm font-bold
+                           transition-all hover:opacity-90 hover:scale-[1.02]"
+                style={{
+                  background: '#7C2C3B',
+                  color: 'white',
+                  boxShadow: '0 4px 20px rgba(124,44,59,0.3)',
+                }}
+              >
+                Ver avaliações no Google
+                <ExternalLink className="w-4 h-4" />
+              </a>
+
+              <p className="text-xs max-w-md" style={{ color: '#b09a9e' }}>
+                Em respeito ao Código de Ética do Psicólogo (CFP), não exibimos
+                depoimentos individuais de pacientes.
+              </p>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════
+          CTA FINAL
+      ══════════════════════════════════════════════ */}
+      <section className="py-16 px-5 sm:px-8" style={{ background: '#FEF8E6' }}>
+        <ScrollReveal className="max-w-5xl mx-auto text-center">
+          <div
+            className="w-px h-8 mx-auto mb-8"
+            style={{ background: 'linear-gradient(to bottom, transparent, #8A6224)' }}
+          />
+
+          <p
+            className="font-serif font-bold mb-2"
+            style={{ fontSize: 'clamp(1.6rem, 4vw, 2.4rem)', color: '#2D1A1E' }}
+          >
+            Pronto para dar clareza ao que está acontecendo?
+          </p>
+          <p
+            className="text-sm mb-8 max-w-md mx-auto"
+            style={{ color: '#7a5a5e' }}
+          >
+            Atendimento particular, com cuidado, ética e sigilo absoluto.
+          </p>
+
+          <div className="flex justify-center mb-10">
+            <a
+              href={WA_NEURO_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3.5 text-sm font-bold transition-all hover:opacity-90 hover:scale-[1.02]"
+              style={{
+                background: '#7C2C3B',
+                color: 'white',
+                boxShadow: '0 4px 24px rgba(124,44,59,0.4)',
+              }}
+            >
+              <MessageCircle className="w-4 h-4" />
+              Agendar Avaliação de Autismo via WhatsApp
+            </a>
+          </div>
+
+          <div className="space-y-1">
+            <p className="text-xs font-semibold" style={{ color: '#5a4044' }}>
+              (48) 99190-8715
+            </p>
+            <p className="text-xs" style={{ color: '#9a7a7e' }}>
+              Rua Felipe Schmidt, 515 · Edifício Pórtico · 2º andar · Sala 204 · Centro · Florianópolis/SC
+            </p>
+          </div>
+
+          <div
+            className="w-px h-8 mx-auto mt-8"
+            style={{ background: 'linear-gradient(to bottom, #8A6224, transparent)' }}
+          />
+        </ScrollReveal>
+      </section>
+
+      <DevNav currentPath="/avaliacao-autismo-florianopolis" />
+
+      {/* ── Rodapé ── */}
+      <footer style={{ background: '#5E1F2C' }} className="py-6 px-5 text-center">
+        <nav className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1.5 mb-3">
+          <Link href="/" className="text-xs font-medium hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.5)' }}>Início</Link>
+          <Link href="/#equipe" className="text-xs font-medium hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.5)' }}>Corpo Clínico</Link>
+          <Link href="/consultorios" className="text-xs font-medium hover:text-white transition-colors" style={{ color: 'rgba(255,255,255,0.5)' }}>Nossos Espaços</Link>
+        </nav>
+        <p className="text-xs mb-1" style={{ color: 'rgba(255,255,255,0.3)' }}>
+          © {new Date().getFullYear()} Clínica Luciano Noceti · Rua Felipe Schmidt, 515, Centro,
+          Florianópolis, SC
+        </p>
+        <p className="text-[10px]" style={{ color: 'rgba(255,255,255,0.2)' }}>
+          Sigilo profissional garantido conforme o Código de Ética do Psicólogo (CFP).{' '}
+          <Link
+            href="/politica-de-privacidade"
+            className="underline hover:text-white transition-colors"
+          >
+            Política de Privacidade
+          </Link>
+        </p>
+      </footer>
+
+      <WhatsAppFab href={WA_NEURO_LINK} />
+    </div>
+  )
+}
