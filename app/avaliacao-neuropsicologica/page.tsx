@@ -12,6 +12,7 @@ import { gerarFaqLD } from '@/lib/jsonld'
 import HeroNeuralBackground from '@/components/HeroNeuralBackground'
 import ScrollReveal from '@/components/ScrollReveal'
 import WhatsAppFab from '@/components/WhatsAppFab'
+import WhatsAppAdsMessage from '@/components/WhatsAppAdsMessage'
 import DevNav from '@/components/DevNav'
 
 export const metadata: Metadata = {
@@ -1213,6 +1214,7 @@ export default function AvaliacaoNeuropsicologicaPage() {
       </footer>
 
       <WhatsAppFab href={WA_NEURO_LINK} />
+      <WhatsAppAdsMessage textoAnuncio="Olá! Vim pelo site e gostaria de saber sobre a Avaliação Neuropsicológica." />
     </div>
   )
 }
