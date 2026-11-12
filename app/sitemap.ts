@@ -28,6 +28,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority:        0.9,
     },
     {
+      url:             `${BASE}/avaliacao-autismo-florianopolis`,
+      lastModified:    NOW,
+      changeFrequency: 'monthly',
+      priority:        0.9,
+    },
+    {
       url:             `${BASE}/consultorios`,
       lastModified:    NOW,
       changeFrequency: 'monthly',
