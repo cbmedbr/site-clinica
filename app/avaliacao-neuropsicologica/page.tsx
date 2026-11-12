@@ -12,6 +12,7 @@ import { gerarFaqLD } from '@/lib/jsonld'
 import HeroNeuralBackground from '@/components/HeroNeuralBackground'
 import ScrollReveal from '@/components/ScrollReveal'
 import WhatsAppFab from '@/components/WhatsAppFab'
+import WhatsAppBarraMobile from '@/components/WhatsAppBarraMobile'
 import WhatsAppAdsMessage from '@/components/WhatsAppAdsMessage'
 import DevNav from '@/components/DevNav'
 
@@ -1213,7 +1214,10 @@ export default function AvaliacaoNeuropsicologicaPage() {
         </p>
       </footer>
 
-      <WhatsAppFab href={WA_NEURO_LINK} />
+      <div className="hidden md:block">
+        <WhatsAppFab href={WA_NEURO_LINK} />
+      </div>
+      <WhatsAppBarraMobile href={WA_NEURO_LINK} />
       <WhatsAppAdsMessage textoAnuncio="Olá! Vim pelo site e gostaria de saber sobre a Avaliação Neuropsicológica." />
     </div>
   )

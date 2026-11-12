@@ -34,6 +34,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority:        0.9,
     },
     {
+      url:             `${BASE}/psicologo-florianopolis`,
+      lastModified:    NOW,
+      changeFrequency: 'monthly',
+      priority:        0.9,
+    },
+    {
+      url:             `${BASE}/psicologo-infantil-florianopolis`,
+      lastModified:    NOW,
+      changeFrequency: 'monthly',
+      priority:        0.9,
+    },
+    {
       url:             `${BASE}/consultorios`,
       lastModified:    NOW,
       changeFrequency: 'monthly',
