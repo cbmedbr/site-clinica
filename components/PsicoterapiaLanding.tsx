@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import {
   ArrowLeft, Check, ChevronDown, MapPin, MessageCircle, ExternalLink, Star,
@@ -11,6 +10,7 @@ import HeroNeuralBackground from '@/components/HeroNeuralBackground'
 import ScrollReveal from '@/components/ScrollReveal'
 import WhatsAppFab from '@/components/WhatsAppFab'
 import WhatsAppAdsMessage from '@/components/WhatsAppAdsMessage'
+import EquipeExpansivel from '@/components/EquipeExpansivel'
 
 // WhatsApp do setor de agendamento (psicoterapia)
 export const WA_AGENDAMENTO = '5548998056893'
@@ -228,26 +228,15 @@ export default function PsicoterapiaLanding(props: PsicoterapiaLandingProps) {
             <h2 className="font-serif font-bold mb-2" style={h2Style}>{props.equipeTitulo}</h2>
             <p className="text-sm mb-10" style={{ color: '#7a5a5e' }}>{props.equipeSubtitulo}</p>
           </ScrollReveal>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-            {props.equipe.map((p, i) => (
-              <ScrollReveal key={p.nome} delay={(i % 3) * 60}>
-                <Link
-                  href={`/perfil/${slugify(p.nome)}`}
-                  className="flex items-center gap-4 rounded-2xl p-4 h-full transition-shadow hover:shadow-md"
-                  style={{ background: '#FAF7F4', border: '1px solid rgba(124,44,59,0.1)' }}
-                >
-                  <div className="relative w-14 h-14 rounded-full overflow-hidden flex-shrink-0" style={{ background: '#F4E6E9' }}>
-                    <Image src={p.foto} alt={p.nome} fill sizes="56px" className="object-cover" />
-                  </div>
-                  <div className="min-w-0">
-                    <p className="font-serif font-bold text-sm leading-snug">{p.nome}</p>
-                    <p className="text-[11px] font-semibold" style={{ color: 'rgba(124,44,59,0.6)' }}>{p.registro}</p>
-                    <p className="text-xs leading-snug" style={{ color: '#7a5a5e' }}>{p.metodo}</p>
-                  </div>
-                </Link>
-              </ScrollReveal>
-            ))}
-          </div>
+          <EquipeExpansivel
+            membros={props.equipe.map(p => ({
+              nome: p.nome,
+              registro: p.registro,
+              metodo: p.metodo,
+              foto: p.foto,
+              slug: slugify(p.nome),
+            }))}
+          />
         </div>
       </section>
 

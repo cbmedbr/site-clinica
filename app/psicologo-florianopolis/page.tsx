@@ -21,7 +21,6 @@ const norm = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCa
 
 const equipe = profissionais
   .filter(p => !p.ocultarDaEquipe && /adulto/.test(norm(p.publico)) && /ansiedad/.test(norm(p.demandas)))
-  .slice(0, 9)
 
 const faqItems = [
   {
@@ -66,7 +65,7 @@ export default function PsicologoFlorianopolisPage() {
       paraQuemTitulo="Psicoterapia para adultos"
       paraQuem={['Ansiedade', 'Depressão', 'Luto', 'Estresse e burnout', 'Síndrome do pânico', 'Traumas', 'Relacionamentos', 'Autoconhecimento']}
       publicoNota="Atendemos adultos, idosos e também adolescentes."
-      equipeTitulo="Alguns dos nossos psicólogos"
+      equipeTitulo="Nossos psicólogos"
       equipeSubtitulo="Mais de 40 psicólogos com diferentes abordagens. O agendamento indica o profissional para você."
       equipe={equipe}
       faqItems={faqItems}
