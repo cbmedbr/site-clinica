@@ -12,6 +12,7 @@ import WhatsAppFab from '@/components/WhatsAppFab'
 import WhatsAppBarraMobile from '@/components/WhatsAppBarraMobile'
 import WhatsAppAdsMessage from '@/components/WhatsAppAdsMessage'
 import EquipeExpansivel from '@/components/EquipeExpansivel'
+import WhatsAppConversaoAgendamento from '@/components/WhatsAppConversaoAgendamento'
 
 // WhatsApp do setor de agendamento (psicoterapia)
 export const WA_AGENDAMENTO = '5548998056893'
@@ -326,6 +327,7 @@ export default function PsicoterapiaLanding(props: PsicoterapiaLandingProps) {
         <WhatsAppFab href={waLink} />
       </div>
       <WhatsAppBarraMobile href={waLink} />
+      <WhatsAppConversaoAgendamento />
       <WhatsAppAdsMessage numero={WA_AGENDAMENTO} textoAnuncio={props.textoWhatsAppAnuncio} />
     </div>
   )
