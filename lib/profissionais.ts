@@ -104,6 +104,7 @@ export const profissionais: Prof[] = [
   {
     nome: 'André Pagani',
     registro: 'CRP 12/20097',
+    ocultarDaEquipe: true,
     metodo: 'Neuropsicologia, Análise do Comportamento (ABA) e Terapia Cognitivo-Comportamental (TCC)',
     filtros: ['Neuropsicologia', 'ABA', 'TCC'],
     formacao: 'Graduação em Psicologia pelo CESUSC. Pós-graduação em Análise do Comportamento Aplicada (ABA) pela ESCON. Pós-graduação em Neuropsicologia pela Faculdade Metropolitana.',
