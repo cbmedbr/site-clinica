@@ -13,7 +13,8 @@ import HeroNeuralBackground from '@/components/HeroNeuralBackground'
 import ScrollReveal from '@/components/ScrollReveal'
 import WhatsAppFab from '@/components/WhatsAppFab'
 import WhatsAppBarraMobile from '@/components/WhatsAppBarraMobile'
-import WhatsAppAdsMessage from '@/components/WhatsAppAdsMessage'
+import WhatsAppMensagemOrigem from '@/components/WhatsAppMensagemOrigem'
+import { WHATSAPP_PAGINAS, montarLinkWhatsApp } from '@/lib/whatsapp-origem'
 import DevNav from '@/components/DevNav'
 
 export const metadata: Metadata = {
@@ -44,8 +45,8 @@ export const metadata: Metadata = {
   },
 }
 
-const WA_NEURO_LINK =
-  'https://wa.me/5548991908715?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20Avalia%C3%A7%C3%A3o%20Neuropsicol%C3%B3gica'
+// Link sem código de origem; com origem Google Ads o WhatsAppMensagemOrigem acrescenta (G1) no clique
+const WA_NEURO_LINK = montarLinkWhatsApp(WHATSAPP_PAGINAS.neuro, false)
 
 const paragrafosOQueE = [
   'A avaliação neuropsicológica é um processo clínico que investiga, em profundidade, como funcionam diferentes áreas da mente. Examinamos inteligência, atenção em suas modalidades sustentada, seletiva e alternada, memória imediata, operacional e de longo prazo, e funções executivas como planejamento, controle inibitório e flexibilidade cognitiva.',
@@ -1218,7 +1219,7 @@ export default function AvaliacaoNeuropsicologicaPage() {
         <WhatsAppFab href={WA_NEURO_LINK} />
       </div>
       <WhatsAppBarraMobile href={WA_NEURO_LINK} />
-      <WhatsAppAdsMessage textoAnuncio="Olá! Vim pelo site e gostaria de saber sobre a Avaliação Neuropsicológica." />
+      <WhatsAppMensagemOrigem pagina={WHATSAPP_PAGINAS.neuro} />
     </div>
   )
 }

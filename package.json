@@ -9,7 +9,8 @@
     "lint": "next lint",
     "cards": "node scripts/generate-cards.mjs",
     "cards:neuro": "node scripts/generate-neuro-cards.mjs",
-    "cards:neuro-carrossel": "node scripts/generate-neuro-cards-carrossel.mjs"
+    "cards:neuro-carrossel": "node scripts/generate-neuro-cards-carrossel.mjs",
+    "test:whatsapp": "node scripts/test-whatsapp-origem.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.372.0",

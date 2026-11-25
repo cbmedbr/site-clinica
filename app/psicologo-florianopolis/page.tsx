@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { profissionais } from '@/lib/profissionais'
 import PsicoterapiaLanding from '@/components/PsicoterapiaLanding'
+import { WHATSAPP_PAGINAS } from '@/lib/whatsapp-origem'
 
 export const metadata: Metadata = {
   title: 'Psicólogo em Florianópolis | Terapia para Ansiedade | Clínica Luciano Noceti',
@@ -60,8 +61,7 @@ export default function PsicologoFlorianopolisPage() {
       tituloAntes="Psicólogo em"
       tituloDestaque="Florianópolis"
       subtitulo="Terapia para ansiedade, depressão, luto e estresse, com psicólogos de várias abordagens. Presencial no Centro ou online."
-      textoWhatsApp="Olá! Gostaria de agendar uma sessão de psicoterapia."
-      textoWhatsAppAnuncio="Olá! Vim pelo site e gostaria de agendar uma sessão de psicoterapia."
+      whatsApp={WHATSAPP_PAGINAS.psicologo}
       paraQuemTitulo="Psicoterapia para adultos"
       paraQuem={['Ansiedade', 'Depressão', 'Luto', 'Estresse e burnout', 'Síndrome do pânico', 'Traumas', 'Relacionamentos', 'Autoconhecimento']}
       publicoNota="Atendemos adultos, idosos e também adolescentes."
