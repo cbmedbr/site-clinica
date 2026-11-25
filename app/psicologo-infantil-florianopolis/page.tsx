@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { profissionais } from '@/lib/profissionais'
 import PsicoterapiaLanding from '@/components/PsicoterapiaLanding'
+import { WHATSAPP_PAGINAS } from '@/lib/whatsapp-origem'
 
 export const metadata: Metadata = {
   title: 'Psicólogo Infantil em Florianópolis | Crianças e Adolescentes | Clínica Luciano Noceti',
@@ -60,8 +61,7 @@ export default function PsicologoInfantilFlorianopolisPage() {
       tituloDestaque="Infantil"
       tituloDepois="em Florianópolis"
       subtitulo="Psicoterapia para crianças a partir de 2 anos e adolescentes, com orientação para os pais. Presencial no Centro ou online."
-      textoWhatsApp="Olá! Gostaria de agendar psicoterapia para meu filho(a)."
-      textoWhatsAppAnuncio="Olá! Vim pelo site e gostaria de agendar psicoterapia para meu filho(a)."
+      whatsApp={WHATSAPP_PAGINAS.psicologoInfantil}
       paraQuemTitulo="Quando procurar um psicólogo infantil"
       paraQuem={['Ansiedade e medos', 'Comportamento', 'Dificuldades na escola', 'Luto e separação dos pais', 'Socialização', 'Adolescência']}
       publicoNota="Atendemos crianças a partir de 2 anos e adolescentes. A idade mínima varia conforme o profissional."

@@ -3,6 +3,7 @@ import { Inter, Playfair_Display } from 'next/font/google'
 import Script from 'next/script'
 import { clinicaLD } from '@/lib/jsonld'
 import WhatsAppConversionTracker from '@/components/WhatsAppConversionTracker'
+import OrigemAdsDetector from '@/components/OrigemAdsDetector'
 import './globals.css'
 
 const inter = Inter({
@@ -83,6 +84,7 @@ export default function RootLayout({
           `}
         </Script>
         <WhatsAppConversionTracker />
+        <OrigemAdsDetector />
         {children}
       </body>
     </html>

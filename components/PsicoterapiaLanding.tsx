@@ -10,12 +10,11 @@ import HeroNeuralBackground from '@/components/HeroNeuralBackground'
 import ScrollReveal from '@/components/ScrollReveal'
 import WhatsAppFab from '@/components/WhatsAppFab'
 import WhatsAppBarraMobile from '@/components/WhatsAppBarraMobile'
-import WhatsAppAdsMessage from '@/components/WhatsAppAdsMessage'
+import WhatsAppMensagemOrigem from '@/components/WhatsAppMensagemOrigem'
 import EquipeExpansivel from '@/components/EquipeExpansivel'
 import WhatsAppConversaoAgendamento from '@/components/WhatsAppConversaoAgendamento'
+import { montarLinkWhatsApp, type WhatsAppPagina } from '@/lib/whatsapp-origem'
 
-// WhatsApp do setor de agendamento (psicoterapia)
-export const WA_AGENDAMENTO = '5548998056893'
 const GOOGLE_REVIEWS_LINK = 'https://maps.app.goo.gl/mhVodvAMZFhw5gqT8'
 
 export type PsicoterapiaLandingProps = {
@@ -24,8 +23,8 @@ export type PsicoterapiaLandingProps = {
   tituloDestaque: string
   tituloDepois?: string
   subtitulo: string
-  textoWhatsApp: string
-  textoWhatsAppAnuncio: string
+  // número, mensagem e código de origem Google Ads (lib/whatsapp-origem.ts)
+  whatsApp: WhatsAppPagina
   paraQuemTitulo: string
   paraQuem: string[]
   publicoNota: string
@@ -63,7 +62,7 @@ const garantias = [
 ]
 
 export default function PsicoterapiaLanding(props: PsicoterapiaLandingProps) {
-  const waLink = `https://wa.me/${WA_AGENDAMENTO}?text=${encodeURIComponent(props.textoWhatsApp)}`
+  const waLink = montarLinkWhatsApp(props.whatsApp, false)
   const faqLD = gerarFaqLD(props.faqItems)
 
   const botaoWhats = (texto: string) => (
@@ -328,7 +327,7 @@ export default function PsicoterapiaLanding(props: PsicoterapiaLandingProps) {
       </div>
       <WhatsAppBarraMobile href={waLink} />
       <WhatsAppConversaoAgendamento />
-      <WhatsAppAdsMessage numero={WA_AGENDAMENTO} textoAnuncio={props.textoWhatsAppAnuncio} />
+      <WhatsAppMensagemOrigem pagina={props.whatsApp} />
     </div>
   )
 }
