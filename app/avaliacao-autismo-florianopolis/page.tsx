@@ -13,7 +13,8 @@ import HeroNeuralBackground from '@/components/HeroNeuralBackground'
 import ScrollReveal from '@/components/ScrollReveal'
 import WhatsAppFab from '@/components/WhatsAppFab'
 import WhatsAppBarraMobile from '@/components/WhatsAppBarraMobile'
-import WhatsAppAdsMessage from '@/components/WhatsAppAdsMessage'
+import WhatsAppMensagemOrigem from '@/components/WhatsAppMensagemOrigem'
+import { WHATSAPP_PAGINAS, montarLinkWhatsApp } from '@/lib/whatsapp-origem'
 import DevNav from '@/components/DevNav'
 
 export const metadata: Metadata = {
@@ -43,8 +44,8 @@ export const metadata: Metadata = {
   },
 }
 
-const WA_NEURO_LINK =
-  'https://wa.me/5548991908715?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20sobre%20a%20Avalia%C3%A7%C3%A3o%20de%20Autismo%20%28TEA%29.'
+// Link com textoSite; com origem Google Ads o WhatsAppMensagemOrigem troca para textoAnuncio no clique
+const WA_NEURO_LINK = montarLinkWhatsApp(WHATSAPP_PAGINAS.autismo, false)
 
 const paragrafosOQueE = [
   'A avaliação de autismo é feita por meio de uma avaliação neuropsicológica completa. Investigamos sinais relacionados ao Transtorno do Espectro Autista (TEA), como habilidades sociais, comunicação, comportamento e desenvolvimento, junto com atenção, memória, linguagem e funções executivas.',
@@ -1158,7 +1159,7 @@ export default function AvaliacaoAutismoPage() {
         <WhatsAppFab href={WA_NEURO_LINK} />
       </div>
       <WhatsAppBarraMobile href={WA_NEURO_LINK} />
-      <WhatsAppAdsMessage textoAnuncio="Olá! Vim pelo site e gostaria de saber sobre a Avaliação de Autismo (TEA)." />
+      <WhatsAppMensagemOrigem pagina={WHATSAPP_PAGINAS.autismo} />
     </div>
   )
 }

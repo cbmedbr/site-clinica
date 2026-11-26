@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   },
 }
 
-// Link sem código de origem; com origem Google Ads o WhatsAppMensagemOrigem acrescenta (G1) no clique
+// Link com textoSite; com origem Google Ads o WhatsAppMensagemOrigem troca para textoAnuncio no clique
 const WA_NEURO_LINK = montarLinkWhatsApp(WHATSAPP_PAGINAS.neuro, false)
 
 const paragrafosOQueE = [
