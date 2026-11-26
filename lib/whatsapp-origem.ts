@@ -5,24 +5,30 @@
 export const ORIGEM_ADS_KEY = 'origem_ads'
 export const ORIGEM_GOOGLE = 'google'
 
-export type WhatsAppPagina = { numero: string; texto: string; codigo: string }
+export type WhatsAppPagina = { numero: string; textoSite: string; textoAnuncio: string }
 
-// Mensagens das páginas de anúncio. O código vai no fim só para quem veio do Google Ads.
+// Mensagens das páginas de anúncio. Quem veio do Google Ads manda textoAnuncio ("Oi!..."),
+// os demais mandam textoSite ("Olá! Vim pelo site..."). Assim a recepção distingue a origem.
 export const WHATSAPP_PAGINAS = {
   neuro: {
     numero: '5548991908715',
-    texto: 'Olá! Vim pelo site e gostaria de informações sobre a avaliação neuropsicológica.',
-    codigo: '(G1)',
+    textoAnuncio: 'Oi! Gostaria de saber mais sobre a avaliação neuropsicológica.',
+    textoSite: 'Olá! Vim pelo site e gostaria de informações sobre a avaliação neuropsicológica.',
+  },
+  autismo: {
+    numero: '5548991908715',
+    textoAnuncio: 'Oi! Gostaria de saber mais sobre a avaliação de autismo (TEA).',
+    textoSite: 'Olá! Vim pelo site e gostaria de saber sobre a avaliação de autismo (TEA).',
   },
   psicologo: {
     numero: '5548998056893',
-    texto: 'Olá! Vim pelo site e gostaria de agendar uma sessão de psicoterapia.',
-    codigo: '(G2)',
+    textoAnuncio: 'Oi! Gostaria de agendar uma sessão de psicoterapia.',
+    textoSite: 'Olá! Vim pelo site e gostaria de agendar uma sessão de psicoterapia.',
   },
   psicologoInfantil: {
     numero: '5548998056893',
-    texto: 'Olá! Vim pelo site e gostaria de agendar psicoterapia para meu filho(a).',
-    codigo: '(G3)',
+    textoAnuncio: 'Oi! Gostaria de agendar psicoterapia para meu filho(a).',
+    textoSite: 'Olá! Vim pelo site e gostaria de agendar psicoterapia para meu filho(a).',
   },
 } satisfies Record<string, WhatsAppPagina>
 
@@ -36,7 +42,7 @@ export function urlVeioDoGoogleAds(search: string): boolean {
 }
 
 export function montarLinkWhatsApp(pagina: WhatsAppPagina, origemGoogle: boolean): string {
-  const texto = origemGoogle ? `${pagina.texto} ${pagina.codigo}` : pagina.texto
+  const texto = origemGoogle ? pagina.textoAnuncio : pagina.textoSite
   return `https://wa.me/${pagina.numero}?text=${encodeURIComponent(texto)}`
 }
 

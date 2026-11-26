@@ -20,21 +20,29 @@ function linkNoClique(entrada, pagina) {
 
 const casos = [
   ['/avaliacao-neuropsicologica', 'neuro', '5548991908715',
-    'Olá! Vim pelo site e gostaria de informações sobre a avaliação neuropsicológica.', '(G1)'],
+    'Olá! Vim pelo site e gostaria de informações sobre a avaliação neuropsicológica.',
+    'Oi! Gostaria de saber mais sobre a avaliação neuropsicológica.'],
+  ['/avaliacao-autismo-florianopolis', 'autismo', '5548991908715',
+    'Olá! Vim pelo site e gostaria de saber sobre a avaliação de autismo (TEA).',
+    'Oi! Gostaria de saber mais sobre a avaliação de autismo (TEA).'],
   ['/psicologo-florianopolis', 'psicologo', '5548998056893',
-    'Olá! Vim pelo site e gostaria de agendar uma sessão de psicoterapia.', '(G2)'],
+    'Olá! Vim pelo site e gostaria de agendar uma sessão de psicoterapia.',
+    'Oi! Gostaria de agendar uma sessão de psicoterapia.'],
   ['/psicologo-infantil-florianopolis', 'psicologoInfantil', '5548998056893',
-    'Olá! Vim pelo site e gostaria de agendar psicoterapia para meu filho(a).', '(G3)'],
+    'Olá! Vim pelo site e gostaria de agendar psicoterapia para meu filho(a).',
+    'Oi! Gostaria de agendar psicoterapia para meu filho(a).'],
 ]
 
-for (const [rota, chave, numero, texto, codigo] of casos) {
+for (const [rota, chave, numero, textoSite, textoAnuncio] of casos) {
   for (const query of ['', '?gclid=teste']) {
     const url = linkNoClique(query, chave)
     const u = new URL(url)
     const msg = u.searchParams.get('text')
     assert.equal(u.host + u.pathname, `wa.me/${numero}`)
-    assert.equal(msg, query ? `${texto} ${codigo}` : texto)
-    console.log(`${rota}${query}\n  ${decodeURIComponent(url)}`)
+    assert.equal(msg, query ? textoAnuncio : textoSite)
+    assert.ok(!msg.includes('(G'), `mensagem com código: ${msg}`)
+    console.log(`${rota}${query}
+  ${decodeURIComponent(url)}`)
   }
 }
 
