@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import {
   ArrowLeft, Check, ChevronDown, MapPin, MessageCircle, ExternalLink, Star,
@@ -14,6 +15,7 @@ import WhatsAppMensagemOrigem from '@/components/WhatsAppMensagemOrigem'
 import EquipeExpansivel from '@/components/EquipeExpansivel'
 import WhatsAppConversaoAgendamento from '@/components/WhatsAppConversaoAgendamento'
 import { montarLinkWhatsApp, type WhatsAppPagina } from '@/lib/whatsapp-origem'
+import { convenios } from '@/lib/convenios'
 
 const GOOGLE_REVIEWS_LINK = 'https://maps.app.goo.gl/mhVodvAMZFhw5gqT8'
 
@@ -56,7 +58,7 @@ const passos = [
 const garantias = [
   'Psicólogos registrados no CRP',
   'Atendimento presencial ou online',
-  'Sessão particular de R$ 150',
+  'Atendemos particular e planos de saúde',
   'Sigilo profissional absoluto',
   'Clínica no Centro de Florianópolis',
 ]
@@ -145,7 +147,7 @@ export default function PsicoterapiaLanding(props: PsicoterapiaLandingProps) {
               className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full"
               style={{ background: 'rgba(255,255,255,0.08)', color: 'rgba(255,255,255,0.7)', border: '1px solid rgba(255,255,255,0.15)' }}
             >
-              Sessão particular R$ 150
+              Particular e planos de saúde
             </span>
           </div>
           <div className="flex flex-col sm:flex-row gap-3">
@@ -193,6 +195,40 @@ export default function PsicoterapiaLanding(props: PsicoterapiaLandingProps) {
                 </li>
               ))}
             </ul>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* PLANOS DE SAÚDE */}
+      <section id="planos" className="py-16 px-5 sm:px-8" style={{ background: '#FEF8E6' }}>
+        <div className="max-w-5xl mx-auto">
+          <ScrollReveal>
+            {rotulo('PLANOS DE SAÚDE')}
+            <h2 className="font-serif font-bold mb-8" style={h2Style}>Atendemos o seu plano</h2>
+          </ScrollReveal>
+          <ScrollReveal>
+            <ul className="grid grid-cols-3 md:grid-cols-5 gap-2 sm:gap-3">
+              {convenios.map(({ nome, logo, scale, alt }) => (
+                <li
+                  key={nome}
+                  className="flex items-center justify-center rounded-2xl p-2 sm:p-4 h-16 sm:h-24 overflow-hidden"
+                  style={{ background: 'white', border: '1px solid rgba(124,44,59,0.1)' }}
+                >
+                  <Image
+                    src={logo}
+                    alt={alt ?? nome}
+                    width={120}
+                    height={56}
+                    sizes="120px"
+                    className={`object-contain w-full h-8 sm:h-14 ${scale ?? ''}`}
+                  />
+                </li>
+              ))}
+            </ul>
+            <p className="text-sm mt-6 mb-6" style={{ color: '#5a4044' }}>
+              Também atendemos particular. Confirme a cobertura do seu plano pelo WhatsApp.
+            </p>
+            {botaoWhats('Consultar meu plano no WhatsApp')}
           </ScrollReveal>
         </div>
       </section>
@@ -304,7 +340,7 @@ export default function PsicoterapiaLanding(props: PsicoterapiaLandingProps) {
             {props.ctaTitulo}
           </p>
           <p className="text-sm mb-8 max-w-md mx-auto" style={{ color: '#7a5a5e' }}>
-            Sessão particular de R$ 150, presencial ou online, com ética e sigilo absoluto.
+            Particular ou pelo seu plano de saúde, presencial ou online, com ética e sigilo absoluto.
           </p>
           <div className="flex justify-center mb-8">{botaoWhats('Agendar pelo WhatsApp')}</div>
           <p className="text-xs font-semibold" style={{ color: '#5a4044' }}>(48) 99805-6893</p>

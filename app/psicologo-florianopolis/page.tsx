@@ -6,11 +6,11 @@ import { WHATSAPP_PAGINAS } from '@/lib/whatsapp-origem'
 export const metadata: Metadata = {
   title: 'Psicólogo em Florianópolis | Terapia para Ansiedade | Clínica Luciano Noceti',
   description:
-    'Psicoterapia para adultos em Florianópolis: ansiedade, depressão, luto e estresse. Presencial no Centro (Sala 204) ou online. Sessão particular R$ 150. Agende pelo WhatsApp.',
+    'Psicoterapia para adultos em Florianópolis: ansiedade, depressão, luto e estresse. Presencial no Centro (Sala 204) ou online. Agende pelo WhatsApp.',
   alternates: { canonical: '/psicologo-florianopolis' },
   openGraph: {
     title: 'Psicólogo em Florianópolis | Clínica Luciano Noceti',
-    description: 'Psicoterapia presencial ou online, no Centro de Florianópolis. Sessão particular R$ 150.',
+    description: 'Psicoterapia presencial ou online, no Centro de Florianópolis.',
     type: 'website',
     locale: 'pt_BR',
     url: 'https://www.lucianonoceti.com.br/psicologo-florianopolis',
@@ -26,7 +26,8 @@ const equipe = profissionais
 const faqItems = [
   {
     pergunta: 'Quanto custa a sessão?',
-    resposta: 'A sessão particular custa R$ 150.',
+    resposta:
+      'Os valores e as condições são informados pelo nosso setor de agendamento no WhatsApp. Atendemos particular e diversos planos de saúde.',
   },
   {
     pergunta: 'O atendimento é presencial ou online?',
@@ -46,7 +47,7 @@ const faqItems = [
   {
     pergunta: 'Vocês atendem por plano de saúde?',
     resposta:
-      'Esta página é para atendimento particular. Alguns profissionais da equipe também atendem por planos de saúde; consulte o setor de agendamento.',
+      'Sim. Atendemos os planos listados nesta página, além de atendimento particular. Confirme a cobertura do seu plano pelo WhatsApp.',
   },
   {
     pergunta: 'O atendimento é sigiloso?',
