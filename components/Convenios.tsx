@@ -2,26 +2,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Building2, Camera, CheckCircle2, MessageCircle } from 'lucide-react'
 import { SALAS } from '@/lib/consultorios'
+import { convenios } from '@/lib/convenios'
 
 const WA_LINK = 'https://wa.me/5548998056893'
-
-// Logos salvas em /public/logo/ (singular)
-// scale: aplica transform para logos com muito espaço transparente interno
-const convenios = [
-  { nome: 'Unimed',      logo: '/logo/unimed.png'     },
-  { nome: 'SIM Saúde',   logo: '/logo/sim.jpeg'        },
-  { nome: 'SC Saúde',    logo: '/logo/scsaude.png',   scale: 'scale-[1.6]' },
-  { nome: 'Petrobras',   logo: '/logo/petrobras.png', scale: 'scale-[1.5]' },
-  { nome: 'GEAP Saúde',  logo: '/logo/geapsaude.png' },
-  { nome: 'Saudesc',     logo: '/logo/saudesc.jpeg',  scale: 'scale-[1.5]' },
-  { nome: 'CASACARESC',  logo: '/logo/casacaresc.png',scale: 'scale-[1.6]' },
-  { nome: 'ABEPOM',      logo: '/logo/abepom.avif',   scale: 'scale-[1.5]' },
-  { nome: 'EloSaúde',    logo: '/logo/elosaude.jpg'   },
-  { nome: 'Celos',       logo: '/logo/celos.avif'     },
-  { nome: 'FUSEx',       logo: '/logo/fusex.png',     scale: 'scale-[1.5]' },
-  { nome: 'Sidesc',      logo: '/logo/sidesc.jpg',    scale: 'scale-[0.85]' },
-  { nome: 'Polícia Militar de SC', logo: '/logo/pmsc.png', scale: 'scale-[1.4]', alt: 'Logo do Plano de Saúde da Polícia Militar de Santa Catarina' },
-]
 
 const locacaoItems = [
   'Consultórios climatizados e mobiliados',

@@ -6,11 +6,11 @@ import { WHATSAPP_PAGINAS } from '@/lib/whatsapp-origem'
 export const metadata: Metadata = {
   title: 'Psicólogo Infantil em Florianópolis | Crianças e Adolescentes | Clínica Luciano Noceti',
   description:
-    'Psicoterapia para crianças a partir de 2 anos e adolescentes em Florianópolis. Presencial no Centro (Sala 204) ou online. Sessão particular R$ 150. Agende pelo WhatsApp.',
+    'Psicoterapia para crianças a partir de 2 anos e adolescentes em Florianópolis. Presencial no Centro (Sala 204) ou online. Agende pelo WhatsApp.',
   alternates: { canonical: '/psicologo-infantil-florianopolis' },
   openGraph: {
     title: 'Psicólogo Infantil em Florianópolis | Clínica Luciano Noceti',
-    description: 'Psicoterapia para crianças e adolescentes no Centro de Florianópolis. Sessão particular R$ 150.',
+    description: 'Psicoterapia para crianças e adolescentes no Centro de Florianópolis.',
     type: 'website',
     locale: 'pt_BR',
     url: 'https://www.lucianonoceti.com.br/psicologo-infantil-florianopolis',
@@ -39,7 +39,8 @@ const faqItems = [
   },
   {
     pergunta: 'Quanto custa a sessão?',
-    resposta: 'A sessão particular custa R$ 150.',
+    resposta:
+      'Os valores e as condições são informados pelo nosso setor de agendamento no WhatsApp. Atendemos particular e diversos planos de saúde.',
   },
   {
     pergunta: 'É presencial ou online?',
@@ -49,7 +50,7 @@ const faqItems = [
   {
     pergunta: 'Vocês atendem por plano de saúde?',
     resposta:
-      'Esta página é para atendimento particular. Alguns profissionais da equipe também atendem por planos de saúde; consulte o setor de agendamento.',
+      'Sim. Atendemos os planos listados nesta página, além de atendimento particular. Confirme a cobertura do seu plano pelo WhatsApp.',
   },
 ]
 
